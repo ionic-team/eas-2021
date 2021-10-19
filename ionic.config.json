@@ -1,0 +1,7 @@
+{
+  "name": "enterprise-summit-2021",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
