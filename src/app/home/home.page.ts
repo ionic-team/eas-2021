@@ -11,7 +11,7 @@ export class HomePage {
   constructor(private pushNoteService: PushNotificationService) {}
 
   ngOnInit() {
-    this.pushNoteService.setup();
+    this.pushNoteService.initPush();
   }
 
 }

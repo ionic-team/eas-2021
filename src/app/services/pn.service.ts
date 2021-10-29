@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Capacitor } from '@capacitor/core';
 import {
   ActionPerformed,
   PushNotificationSchema,
@@ -11,7 +12,13 @@ import {
 })
 export class PushNotificationService  {
 
-  async setup() {
+  initPush() {
+    if (Capacitor.getPlatform() !== 'web') {
+      this.registerPush();
+    }
+  }
+
+  async registerPush() {
     // Request permission to use push notifications
     // iOS will prompt user and return if they granted permission or not
     // Android will just grant without prompting
@@ -21,6 +28,7 @@ export class PushNotificationService  {
         PushNotifications.register();
       } else {
         // Show some error
+        console.log("error: " + result.receive);
       }
     });
 
@@ -40,10 +48,14 @@ export class PushNotificationService  {
       },
     );
 
+    // handle deep links
+    // https://devdactic.com/push-notifications-ionic-capacitor/
     PushNotifications.addListener(
       'pushNotificationActionPerformed',
       (notification: ActionPerformed) => {
         alert('Push action performed: ' + JSON.stringify(notification));
+        const data = notification.notification.data;
+        console.log(data);
       },
     );
   }
