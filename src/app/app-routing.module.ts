@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'swag',
+    loadChildren: () => import('./swag/swag.module').then( m => m.SwagPageModule)
+  },
 ];
 
 @NgModule({
