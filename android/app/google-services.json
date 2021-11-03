@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "747479840904",
+    "project_id": "eas-2021",
+    "storage_bucket": "eas-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747479840904:android:c355a7e8920f2258b1073d",
+        "android_client_info": {
+          "package_name": "io.ionic.conferences.eas2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747479840904-ts0i5on7tuo9biqhmm44n8k9376de1i5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT3kBBaQ8jhXgp7Y5T9ax5azHdMHTTFVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747479840904-ts0i5on7tuo9biqhmm44n8k9376de1i5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

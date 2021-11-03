@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PushNotificationService } from '../services/pn.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private pushNoteService: PushNotificationService) {}
+
+  ngOnInit() {
+    this.pushNoteService.initPush();
+  }
 
 }
