@@ -1,0 +1,25 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Agenda
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Agenda</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding">
+    <app-agenda-card
+      *ngFor="let item of agenda; trackBy: trackItems"
+      [title]="item.title"
+      [speakerId]="item.speakerId"
+      [startTime]="item.startTime"
+      [endTime]="item.endTime"
+    ></app-agenda-card>
+  </div>
+</ion-content>

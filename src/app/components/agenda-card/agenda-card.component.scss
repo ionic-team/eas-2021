@@ -1,0 +1,33 @@
+ion-card {
+  border-radius: 16px;
+
+  margin: 0 0 16px 0;
+
+  background: white;
+  box-shadow: none;
+}
+
+ion-avatar {
+  margin: 0 0 16px 0;
+}
+
+ion-card-header {
+  padding-bottom: 2px;
+}
+
+ion-card-title {
+  margin: 0 0 8px 0;
+
+  font-size: 18px;
+}
+
+ion-card-subtitle {
+  text-transform: none;
+
+  font-weight: 500;
+  font-size: 14px;
+}
+
+ion-card-content {
+  font-size: 12px;
+}
