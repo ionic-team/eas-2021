@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="page-content" [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Agenda</ion-title>
@@ -16,6 +16,7 @@
   <div class="ion-padding">
     <app-agenda-card
       *ngFor="let item of agenda; trackBy: trackItems"
+      [id]="item.id"
       [title]="item.title"
       [speakerId]="item.speakerId"
       [startTime]="item.startTime"

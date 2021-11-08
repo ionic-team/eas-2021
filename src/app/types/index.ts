@@ -1,6 +1,7 @@
 export interface AgendaItem {
   id: number;
   title: string;
+  description: string;
   speakerId: number;
   startTime: string;
   endTime: string;

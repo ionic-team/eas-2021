@@ -1,0 +1,54 @@
+.header {
+  text-align: center;
+
+  margin: 20px 0;
+}
+
+.header ion-avatar {
+  margin: 0 auto 16px auto;
+
+  width: 96px;
+  height: 96px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+
+  margin: 0 0 8px 0;
+
+  color: var(--ion-color-step-950);
+}
+
+.header h2 {
+  font-size: 16px;
+  font-weight: 500;
+
+  margin: 0;
+
+  color: var(--ion-color-step-650);
+}
+
+ion-list.list-inset {
+  margin-top: 8px;
+}
+
+ion-list-header {
+  color: var(--ion-color-step-950);
+}
+
+.description-list ion-item ion-text {
+  padding: 16px 0;
+
+  color: var(--ion-color-step-650);
+}
+
+.when-list ion-item ion-label {
+  font-weight: 600;
+}
+
+.when-list ion-item ion-note {
+  font-size: 14px;
+
+  color: var(--ion-color-step-650);
+}
