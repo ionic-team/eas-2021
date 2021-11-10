@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HubspotService } from '../services/hubspot.service';
+import { IonRouterOutlet, ModalController, ToastController } from '@ionic/angular';
+import { SwagModalPage } from '../swag-modal/swag-modal.page';
+
 
 @Component({
   selector: 'app-swag',
@@ -8,13 +10,38 @@ import { HubspotService } from '../services/hubspot.service';
 })
 export class SwagPage implements OnInit {
 
-  constructor(private hubspotService: HubspotService) { }
+  constructor(public modalController: ModalController, 
+    private routerOutlet: IonRouterOutlet, public toastController: ToastController) { }
 
   ngOnInit() {
     
   }
 
-  public async submit() {
-    await this.hubspotService.submitToHubspot();
+  async openSwagModal() {
+    const modal: HTMLIonModalElement = await this.modalController.create({
+      component: SwagModalPage,
+      swipeToClose: true,
+      presentingElement: this.routerOutlet.nativeEl,
+      componentProps: { }
+    });
+     
+    modal.onDidDismiss().then((result) => {
+      // Data will be undefined if modal was swiped closed or back button used
+      if (result.data) {
+        this.presentToast();
+      }
+    });
+    
+    return await modal.present();
+  }
+
+  private async presentToast(): Promise<void> {
+    const toast = await this.toastController.create({
+      message: "Thanks! Winners will be notified by email.",
+      duration: 2000,
+      color: "tertiary"
+    });
+    
+    await toast.present();
   }
 }

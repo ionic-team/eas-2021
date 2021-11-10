@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="closeModal()" slot="start" fill="clear">Cancel</ion-button>
+    <ion-title>Enter to win</ion-title>
+    <ion-button (click)="submit()" slot="end" fill="clear">Submit</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>
+    <ion-label color="ios-lh-labl-gray">Contact Info</ion-label>
+  </ion-list-header>
+  <ion-list>
+    <ion-item>
+      <ion-label>First Name</ion-label>
+      <ion-input placeholder="John" [(ngModel)]="hubspotData.firstname" name="firstname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Last Name</ion-label>
+      <ion-input placeholder="John" [(ngModel)]="hubspotData.lastname" name="lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Work Email</ion-label>
+      <ion-input placeholder="jdoe@email.com" [(ngModel)]="hubspotData.email" name="email"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list-header>
+    <ion-label color="ios-lh-labl-gray">Mailing Address</ion-label>
+  </ion-list-header>
+  <ion-list>
+    <ion-item>
+      <ion-label>Street</ion-label>
+      <ion-input placeholder="Required" [(ngModel)]="hubspotData.address" name="address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>City</ion-label>
+      <ion-input placeholder="Required" [(ngModel)]="hubspotData.city" name="city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Zip</ion-label>
+      <ion-input placeholder="Required" [(ngModel)]="hubspotData.zip" name="zip"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Country</ion-label>
+      <ion-input placeholder="Required" [(ngModel)]="hubspotData.country" name="country"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="submitForm()">Submit</ion-button>
+</ion-content>

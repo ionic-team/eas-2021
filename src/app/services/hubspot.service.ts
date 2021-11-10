@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HubspotFormData } from '../types';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,8 @@ export class HubspotService  {
 
   FORM_SUBMIT_URL = "https://api.hsforms.com/submissions/v3/integration/submit/3776657/75127e93-3da1-4368-b3a7-c680d53483ac";
   
-  public async submitToHubspot() {
-    const data = {
+  public async submitToHubspot(data: HubspotFormData) {
+    const data2 = {
       "fields": [
         {
           "name": "firstname",
@@ -49,15 +50,16 @@ export class HubspotService  {
       ]
     };
 
-    const response = await fetch(this.FORM_SUBMIT_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
+    // const response = await fetch(this.FORM_SUBMIT_URL, {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'Accept': 'application/json'
+    //     },
+    //     body: JSON.stringify(data2)
+    //   });
 
-    console.log(response);
-    }
+    //return response.ok;
+    return true;
+  }
 }
