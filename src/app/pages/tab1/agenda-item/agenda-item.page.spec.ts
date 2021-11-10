@@ -4,12 +4,12 @@ import { IonicModule } from '@ionic/angular';
 import { AgendaItemPage } from './agenda-item.page';
 
 describe('AgendaItemPage', () => {
-  let component: AgendaItemPage;
+  let component: LiamPage;
   let fixture: ComponentFixture<AgendaItemPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AgendaItemPage],
+      declarations: [ AgendaItemPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
