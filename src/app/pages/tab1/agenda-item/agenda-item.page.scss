@@ -1,3 +1,4 @@
+@use "sass:math";
 $agenda-margin: 16px;
 
 .header {
@@ -17,7 +18,7 @@ $agenda-margin: 16px;
   font-size: 24px;
   font-weight: 700;
 
-  margin: 0 0 #{$agenda-margin / 2} 0;
+  margin: 0 0 #{math.div($agenda-margin, 2)} 0;
 
   color: var(--ion-color-step-950);
 }
