@@ -1,3 +1,5 @@
+$agenda-margin: 16px;
+
 .header {
   text-align: center;
 
@@ -5,7 +7,7 @@
 }
 
 .header ion-avatar {
-  margin: 0 auto 16px auto;
+  margin: 0 auto #{$agenda-margin} auto;
 
   width: 96px;
   height: 96px;
@@ -15,7 +17,7 @@
   font-size: 24px;
   font-weight: 700;
 
-  margin: 0 0 8px 0;
+  margin: 0 0 #{$agenda-margin / 2} 0;
 
   color: var(--ion-color-step-950);
 }
@@ -33,14 +35,8 @@ ion-list.list-inset {
   margin-top: 8px;
 }
 
-ion-list-header {
-  color: var(--ion-color-step-950);
-}
-
 .description-list ion-item ion-text {
-  padding: 16px 0;
-
-  color: var(--ion-color-step-650);
+  color: var(--ion-color-step-800);
 }
 
 .when-list ion-item ion-label {
@@ -49,6 +45,7 @@ ion-list-header {
 
 .when-list ion-item ion-note {
   font-size: 14px;
+  font-weight: 500;
 
   color: var(--ion-color-step-650);
 }

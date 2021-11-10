@@ -19,7 +19,7 @@
   <ion-list-header>About this talk</ion-list-header>
   <ion-list [inset]="true" class="description-list">
     <ion-item>
-      <ion-text>
+      <ion-text class="ion-padding-top ion-padding-bottom">
         {{ agendaItem.description }}
       </ion-text>
     </ion-item>
@@ -37,8 +37,8 @@
 
   <ion-list-header>Watch</ion-list-header>
   <ion-list [inset]="true">
-    <ion-item>
-      <ion-label>Watch live at <a href="https://ionic.io/events">ionic.io/events</a></ion-label>
+    <ion-item [button]="true" [detail]="false" class="text-color-primary">
+      <ion-label>Watch live at ionic.io/events</ion-label>
     </ion-item>
     <ion-item [button]="true">
       <ion-label>Remind Me</ion-label>
