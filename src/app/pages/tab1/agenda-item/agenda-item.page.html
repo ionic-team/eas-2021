@@ -8,12 +8,17 @@
 
 <ion-content class="page-content" [fullscreen]="true">
   <div class="header ion-padding">
-    <ion-avatar>
-      <img [src]="speaker.photoUrl" />
-    </ion-avatar>
+
+    <div class="avatars">
+      <app-agenda-avatars size="96px" [urls]="photoUrls"></app-agenda-avatars>
+    </div>
 
     <h1>{{ agendaItem.title }}</h1>
-    <h2>{{ speaker.firstName }} {{ speaker.lastName }}, {{ speaker.role }}, {{ company.name }}</h2>
+    <h2>
+      <div *ngFor="let speaker of speakers">
+        {{ speaker.firstName }} {{ speaker.lastName }}, {{ speaker.role }}, {{ company.name }}
+      </div>
+    </h2>
   </div>
 
   <ion-list-header>About this talk</ion-list-header>

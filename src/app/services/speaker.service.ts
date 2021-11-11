@@ -147,8 +147,10 @@ export class SpeakerService {
 
   constructor() {}
 
-  getSpeakers(): Speaker[] {
-    return this.speakers;
+  getSpeakers(ids?: number[]): Speaker[] {
+    if (ids === undefined) { return this.speakers; }
+
+    return this.speakers.filter(speaker => ids.includes(speaker.id));
   }
 
   getSpeaker(id: number): Speaker | undefined {
