@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Speaker } from '../types';
 
+const LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque accumsan lacus, vel rhoncus quam. Maecenas metus tellus, convallis sed convallis eu, bibendum vulputate nisl. Vivamus et odio sit amet ex porttitor tempor et eget nunc. Suspendisse nibh augue, vestibulum in nibh et, rutrum vulputate est. Aenean eu bibendum libero. Morbi non dapibus mauris, eget ultricies purus. Nam malesuada, dui ac pretium sodales, purus sem aliquet orci, non venenatis turpis tortor sit amet arcu. Nulla facilisis, orci a fermentum facilisis, ipsum ligula faucibus ligula, vel bibendum turpis dolor eget nunc.';
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +15,8 @@ export class SpeakerService {
       lastName: 'Lynch',
       role: 'Co-founder',
       company: 'Ionic',
-      photoUrl: 'assets/photos/max.jpg'
+      photoUrl: 'assets/photos/max.jpg',
+      biography: LOREM_IPSUM
     },
     {
       id: 2,
@@ -20,7 +24,8 @@ export class SpeakerService {
       lastName: 'Ingoglia',
       role: 'Director of Enterprise Architecture',
       company: 'US Foods',
-      photoUrl: 'assets/photos/tom.jpg'
+      photoUrl: 'assets/photos/tom.jpg',
+      biography: LOREM_IPSUM
     },
     {
       id: 3,
@@ -28,7 +33,8 @@ export class SpeakerService {
       lastName: 'Jankowski',
       role: 'Design & User Experience Strategist',
       company: 'Volkswagen',
-      photoUrl: 'https://picsum.photos/id/1/200'
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
     },
     {
       id: 4,
@@ -36,14 +42,16 @@ export class SpeakerService {
       lastName: 'Tobon',
       role: 'Front-End Engineer',
       company: 'Amazon',
-      photoUrl: 'assets/photos/michael.jpg'
+      photoUrl: 'assets/photos/michael.jpg',
+      biography: LOREM_IPSUM
     },
     { id: 5,
       firstName: 'Stanci',
       lastName: 'Soderstrom',
       role: 'Manager of Learning Technology Strategy',
       company: 'T-Mobile',
-      photoUrl: 'assets/photos/stanci.jpg'
+      photoUrl: 'assets/photos/stanci.jpg',
+      biography: LOREM_IPSUM
     },
     {
       id: 6,
@@ -51,7 +59,8 @@ export class SpeakerService {
       lastName: 'Madsen',
       role: 'Learning Solutions Manager',
       company: 'T-Mobile',
-      photoUrl: 'assets/photos/eric.jpg'
+      photoUrl: 'assets/photos/eric.jpg',
+      biography: LOREM_IPSUM
     },
     {
       id: 7,
@@ -59,7 +68,8 @@ export class SpeakerService {
       lastName: 'Bakke',
       role: 'Solution Architect Leader',
       company: 'Doosan',
-      photoUrl: 'assets/photos/brandon.jpg'
+      photoUrl: 'assets/photos/brandon.jpg',
+      biography: LOREM_IPSUM
     },
     {
       id: 8,
@@ -67,7 +77,8 @@ export class SpeakerService {
       lastName: 'Rodriguez',
       role: 'Mobile Developer',
       company: 'Norwex',
-      photoUrl: 'assets/photos/daniel.jpg'
+      photoUrl: 'assets/photos/daniel.jpg',
+      biography: LOREM_IPSUM
     },
     {
       id: 9,
@@ -75,7 +86,8 @@ export class SpeakerService {
       lastName: 'Gore',
       role: 'Director of Mobile Architecture',
       company: 'Norwex',
-      photoUrl: 'assets/photos/rob.jpg'
+      photoUrl: 'assets/photos/rob.jpg',
+      biography: LOREM_IPSUM
     },
     {
       id: 10,
@@ -83,7 +95,8 @@ export class SpeakerService {
       lastName: 'Sahu',
       role: 'Sr. Principal Software Engineer Digital',
       company: 'Amtrak',
-      photoUrl: 'assets/photos/simanchal.jpg'
+      photoUrl: 'assets/photos/simanchal.jpg',
+      biography: LOREM_IPSUM
     },
     {
       id: 11,
@@ -91,7 +104,8 @@ export class SpeakerService {
       lastName: 'Weller',
       role: 'CEO',
       company: 'Open Forge',
-      photoUrl: 'https://picsum.photos/id/1/200'
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
     },
     {
       id: 12,
@@ -99,7 +113,8 @@ export class SpeakerService {
       lastName: 'G',
       role: 'Lead Software Engineer',
       company: 'Open Forge',
-      photoUrl: 'https://picsum.photos/id/1/200'
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
     },
     {
       id: 13,
@@ -107,7 +122,8 @@ export class SpeakerService {
       lastName: '',
       role: 'Role',
       company: 'Modus',
-      photoUrl: 'https://picsum.photos/id/1/200'
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
     },
     {
       id: 14,
@@ -115,7 +131,8 @@ export class SpeakerService {
       lastName: 'Violland',
       role: 'Role',
       company: 'AAA',
-      photoUrl: 'https://picsum.photos/id/1/200'
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
     },
     {
       id: 15,
@@ -123,7 +140,8 @@ export class SpeakerService {
       lastName: 'Last',
       role: 'Role',
       company: 'Azure',
-      photoUrl: 'https://picsum.photos/id/1/200'
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
     }
   ];
 

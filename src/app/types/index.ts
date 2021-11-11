@@ -14,4 +14,5 @@ export interface Speaker {
   company: string;
   role: string;
   photoUrl: string;
+  biography: string;
 }
