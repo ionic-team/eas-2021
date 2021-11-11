@@ -110,7 +110,7 @@ export class SpeakerService {
     {
       id: 12,
       firstName: 'Paulina',
-      lastName: 'G',
+      lastName: 'Gallo',
       role: 'Lead Software Engineer',
       company: 'Open Forge',
       photoUrl: 'https://picsum.photos/id/1/200',
@@ -118,8 +118,8 @@ export class SpeakerService {
     },
     {
       id: 13,
-      firstName: 'David',
-      lastName: '',
+      firstName: 'Robert',
+      lastName: 'Flagg',
       role: 'Role',
       company: 'Modus',
       photoUrl: 'https://picsum.photos/id/1/200',
