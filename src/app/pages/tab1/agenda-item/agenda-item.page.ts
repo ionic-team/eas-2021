@@ -12,8 +12,9 @@ import { AgendaItem, Company, Speaker } from '../../../types';
 })
 export class AgendaItemPage {
   private agendaItem: AgendaItem;
-  private speaker: Speaker;
+  private speakers: Speaker[];
   private company: Company;
+  private photoUrls: string[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -23,7 +24,8 @@ export class AgendaItemPage {
   ) {
     const agendaId = route.snapshot.paramMap.get('agendaId');
     this.agendaItem = agendaService.getAgendaItem(parseInt(agendaId, 10))
-    this.speaker = speakerService.getSpeaker(this.agendaItem.speakerId);
-    this.company = companyService.getCompany(this.speaker.companyId);
+    this.speakers = speakerService.getSpeakers(this.agendaItem.speakerIds);
+    this.company = companyService.getCompany(this.speakers[0].companyId);
+    this.photoUrls = this.speakers.map(speaker => speaker.photoUrl);
   }
 }

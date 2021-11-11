@@ -14,8 +14,9 @@ export class AgendaCardComponent implements OnInit {
   @Input() id: number;
 
   private agenda: AgendaItem;
-  private speaker: Speaker;
+  private speakers: Speaker[];
   private company: Company;
+  private photoUrls: string[] = [];
 
   constructor(
     private agendaService: AgendaService,
@@ -26,8 +27,9 @@ export class AgendaCardComponent implements OnInit {
 
   ngOnInit() {
     this.agenda = this.agendaService.getAgendaItem(this.id);
-    this.speaker = this.speakerService.getSpeaker(this.agenda.speakerId);
-    this.company = this.companyService.getCompany(this.speaker.companyId);
+    this.speakers = this.speakerService.getSpeakers(this.agenda.speakerIds);
+    this.company = this.companyService.getCompany(this.speakers[0].companyId);
+    this.photoUrls = this.speakers.map(speaker => speaker.photoUrl);
   }
 
   navigateToAgendaItemPage() {

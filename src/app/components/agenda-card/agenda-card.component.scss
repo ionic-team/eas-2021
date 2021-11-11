@@ -13,12 +13,8 @@ ion-card-header {
   padding-bottom: 2px;
 }
 
-ion-card-header ion-avatar {
-  margin: 0 0 #{$card-margin} 0;
-}
-
 ion-card-header ion-card-title {
-  margin: 0 0 #{$card-margin / 2} 0;
+  margin: #{$card-margin} 0 #{$card-margin / 2} 0;
 
   font-size: 18px;
 }

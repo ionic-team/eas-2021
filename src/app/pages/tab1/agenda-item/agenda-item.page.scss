@@ -7,11 +7,15 @@ $agenda-margin: 16px;
   margin: 20px 0;
 }
 
-.header ion-avatar {
-  margin: 0 auto #{$agenda-margin} auto;
+.header .avatars {
+  display: flex;
+  justify-content: center;
 
-  width: 96px;
-  height: 96px;
+  margin: 0 0 #{$agenda-margin} 0;
+}
+
+app-agenda-avatars {
+  --outline-color: var(--ion-color-light);
 }
 
 .header h1 {
