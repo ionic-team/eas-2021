@@ -1,3 +1,16 @@
 <ion-content>
+  <ion-buttons id="close-button">
+    <ion-button color="dark" (click)="closeModal()">
+      <ion-icon name="close-circle" size="large"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
   <app-speaker-card [id]="id"></app-speaker-card>
+
+  <div class="ion-padding">
+    <h2>About {{ speaker.firstName }}</h2>
+    <p>Lorem ipsum</p>
+
+    <h2>Connect with {{ speaker.firstName }}</h2>
+  </div>
 </ion-content>
