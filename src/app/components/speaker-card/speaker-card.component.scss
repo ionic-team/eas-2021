@@ -42,3 +42,12 @@ ion-card-header ion-card-subtitle {
   font-weight: 500;
   font-size: 16px;
 }
+
+ion-card-content img {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  height: 30px;
+}
