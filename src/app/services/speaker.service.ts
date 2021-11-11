@@ -14,7 +14,7 @@ export class SpeakerService {
       firstName: 'Max',
       lastName: 'Lynch',
       role: 'Co-founder',
-      company: 'Ionic',
+      companyId: 1,
       photoUrl: 'assets/photos/max.jpg',
       biography: LOREM_IPSUM
     },
@@ -23,7 +23,7 @@ export class SpeakerService {
       firstName: 'Tom',
       lastName: 'Ingoglia',
       role: 'Director of Enterprise Architecture',
-      company: 'US Foods',
+      companyId: 2,
       photoUrl: 'assets/photos/tom.jpg',
       biography: LOREM_IPSUM
     },
@@ -32,7 +32,7 @@ export class SpeakerService {
       firstName: 'Thorsten',
       lastName: 'Jankowski',
       role: 'Design & User Experience Strategist',
-      company: 'Volkswagen',
+      companyId: 3,
       photoUrl: 'https://picsum.photos/id/1/200',
       biography: LOREM_IPSUM
     },
@@ -41,7 +41,7 @@ export class SpeakerService {
       firstName: 'Michel',
       lastName: 'Tobon',
       role: 'Front-End Engineer',
-      company: 'Amazon',
+      companyId: 4,
       photoUrl: 'assets/photos/michael.jpg',
       biography: LOREM_IPSUM
     },
@@ -49,7 +49,7 @@ export class SpeakerService {
       firstName: 'Stanci',
       lastName: 'Soderstrom',
       role: 'Manager of Learning Technology Strategy',
-      company: 'T-Mobile',
+      companyId: 5,
       photoUrl: 'assets/photos/stanci.jpg',
       biography: LOREM_IPSUM
     },
@@ -58,7 +58,7 @@ export class SpeakerService {
       firstName: 'Eric',
       lastName: 'Madsen',
       role: 'Learning Solutions Manager',
-      company: 'T-Mobile',
+      companyId: 5,
       photoUrl: 'assets/photos/eric.jpg',
       biography: LOREM_IPSUM
     },
@@ -67,7 +67,7 @@ export class SpeakerService {
       firstName: 'Brandon',
       lastName: 'Bakke',
       role: 'Solution Architect Leader',
-      company: 'Doosan',
+      companyId: 6,
       photoUrl: 'assets/photos/brandon.jpg',
       biography: LOREM_IPSUM
     },
@@ -76,7 +76,7 @@ export class SpeakerService {
       firstName: 'Daniel',
       lastName: 'Rodriguez',
       role: 'Mobile Developer',
-      company: 'Norwex',
+      companyId: 7,
       photoUrl: 'assets/photos/daniel.jpg',
       biography: LOREM_IPSUM
     },
@@ -85,7 +85,7 @@ export class SpeakerService {
       firstName: 'Rob',
       lastName: 'Gore',
       role: 'Director of Mobile Architecture',
-      company: 'Norwex',
+      companyId: 7,
       photoUrl: 'assets/photos/rob.jpg',
       biography: LOREM_IPSUM
     },
@@ -94,7 +94,7 @@ export class SpeakerService {
       firstName: 'Simanchal',
       lastName: 'Sahu',
       role: 'Sr. Principal Software Engineer Digital',
-      company: 'Amtrak',
+      companyId: 8,
       photoUrl: 'assets/photos/simanchal.jpg',
       biography: LOREM_IPSUM
     },
@@ -103,7 +103,7 @@ export class SpeakerService {
       firstName: 'Jedidiah',
       lastName: 'Weller',
       role: 'CEO',
-      company: 'Open Forge',
+      companyId: 9,
       photoUrl: 'https://picsum.photos/id/1/200',
       biography: LOREM_IPSUM
     },
@@ -112,7 +112,7 @@ export class SpeakerService {
       firstName: 'Paulina',
       lastName: 'Gallo',
       role: 'Lead Software Engineer',
-      company: 'Open Forge',
+      companyId: 9,
       photoUrl: 'https://picsum.photos/id/1/200',
       biography: LOREM_IPSUM
     },
@@ -121,7 +121,7 @@ export class SpeakerService {
       firstName: 'Robert',
       lastName: 'Flagg',
       role: 'Role',
-      company: 'Modus',
+      companyId: 10,
       photoUrl: 'https://picsum.photos/id/1/200',
       biography: LOREM_IPSUM
     },
@@ -130,7 +130,7 @@ export class SpeakerService {
       firstName: 'Eric',
       lastName: 'Violland',
       role: 'Role',
-      company: 'AAA',
+      companyId: 11,
       photoUrl: 'https://picsum.photos/id/1/200',
       biography: LOREM_IPSUM
     },
@@ -139,7 +139,7 @@ export class SpeakerService {
       firstName: 'First',
       lastName: 'Last',
       role: 'Role',
-      company: 'Azure',
+      companyId: 12,
       photoUrl: 'https://picsum.photos/id/1/200',
       biography: LOREM_IPSUM
     }

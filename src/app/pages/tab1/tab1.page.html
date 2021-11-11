@@ -17,10 +17,6 @@
     <app-agenda-card
       *ngFor="let item of agenda; trackBy: trackItems"
       [id]="item.id"
-      [title]="item.title"
-      [speakerId]="item.speakerId"
-      [startTime]="item.startTime"
-      [endTime]="item.endTime"
     ></app-agenda-card>
   </div>
 </ion-content>
