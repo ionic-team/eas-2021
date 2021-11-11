@@ -12,6 +12,9 @@ h2 {
   font-weight: 700;
 }
 
+ion-content {
+  --padding-bottom: var(--ion-safe-area-bottom);
+}
 
 ion-text {
   color: var(--ion-color-step-650);
