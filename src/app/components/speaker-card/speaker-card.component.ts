@@ -16,6 +16,7 @@ export class SpeakerCardComponent implements OnInit {
 
   @Input() id: number;
   @Input() button: boolean = false;
+  @Input() safeArea: boolean = false;
 
   constructor(
     private speakerService: SpeakerService,

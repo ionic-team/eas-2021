@@ -1,7 +1,7 @@
 #close-button {
   position: fixed;
 
-  top: calc(16px + var(--ion-safe-area-top));
+  top: max(var(--ion-safe-area-top), 16px);
   right: 8px;
 }
 

@@ -51,3 +51,8 @@ ion-card-content img {
 
   height: 30px;
 }
+
+ion-card.safe-area ion-card-content img {
+  top: max(var(--ion-safe-area-top), 16px);
+}
+
