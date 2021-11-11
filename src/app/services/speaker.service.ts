@@ -1,26 +1,148 @@
 import { Injectable } from '@angular/core';
 import { Speaker } from '../types';
 
+const LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque accumsan lacus, vel rhoncus quam. Maecenas metus tellus, convallis sed convallis eu, bibendum vulputate nisl. Vivamus et odio sit amet ex porttitor tempor et eget nunc. Suspendisse nibh augue, vestibulum in nibh et, rutrum vulputate est. Aenean eu bibendum libero. Morbi non dapibus mauris, eget ultricies purus. Nam malesuada, dui ac pretium sodales, purus sem aliquet orci, non venenatis turpis tortor sit amet arcu. Nulla facilisis, orci a fermentum facilisis, ipsum ligula faucibus ligula, vel bibendum turpis dolor eget nunc.';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class SpeakerService {
   private speakers: Speaker[] = [
-    { id: 1, name: 'Max Lynch', role: 'Co-founder', company: 'Ionic', photoUrl: 'assets/photos/max.jpg' },
-    { id: 2, name: 'Tom Ingoglia', role: 'Director of Enterprise Architecture', company: 'US Foods', photoUrl: 'assets/photos/tom.jpg' },
-    { id: 3, name: 'Thorsten Jankowski', role: 'Design & User Experience Strategist', company: 'Volkswagen', photoUrl: 'https://picsum.photos/id/1/200' },
-    { id: 4, name: 'Michel Tobon', role: 'Front-End Engineer', company: 'Amazon', photoUrl: 'assets/photos/michael.jpg' },
-    { id: 5, name: 'Stanci Soderstrom', role: 'Manager of Learning Technology Strategy', company: 'T-Mobile', photoUrl: 'assets/photos/stanci.jpg' },
-    { id: 6, name: 'Eric Madsen', role: 'Learning Solutions Manager', company: 'T-Mobile', photoUrl: 'assets/photos/eric.jpg' },
-    { id: 7, name: 'Brandon Bakke', role: 'Solution Architect Leader', company: 'Doosan', photoUrl: 'assets/photos/brandon.jpg' },
-    { id: 8, name: 'Daniel Rodriguez', role: 'Mobile Developer', company: 'Norwex', photoUrl: 'https://picsum.photos/id/1/200' },
-    { id: 9, name: 'Rob Gore', role: 'Director of Mobile Architecture', company: 'Norwex', photoUrl: 'assets/photos/rob.jpg' },
-    { id: 10, name: 'Simanchal Sahu', role: 'Sr. Principal Software Engineer Digital', company: 'Amtrak', photoUrl: 'assets/photos/simanchal.jpg' },
-    { id: 11, name: 'Jedidiah Weller', role: 'CEO', company: 'Open Forge', photoUrl: 'https://picsum.photos/id/1/200' },
-    { id: 12, name: 'Paulina G', role: 'Lead Software Engineer', company: 'Open Forge', photoUrl: 'https://picsum.photos/id/1/200' },
-    { id: 13, name: 'David', role: 'Role', company: 'Modus', photoUrl: 'https://picsum.photos/id/1/200' },
-    { id: 14, name: 'Eric Violland', role: 'Role', company: 'AAA', photoUrl: 'https://picsum.photos/id/1/200' },
-    { id: 15, name: 'Name', role: 'Role', company: 'Azure', photoUrl: 'https://picsum.photos/id/1/200' }
+    {
+      id: 1,
+      firstName: 'Max',
+      lastName: 'Lynch',
+      role: 'Co-founder',
+      companyId: 1,
+      photoUrl: 'assets/photos/max.jpg',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 2,
+      firstName: 'Tom',
+      lastName: 'Ingoglia',
+      role: 'Director of Enterprise Architecture',
+      companyId: 2,
+      photoUrl: 'assets/photos/tom.jpg',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 3,
+      firstName: 'Thorsten',
+      lastName: 'Jankowski',
+      role: 'Design & User Experience Strategist',
+      companyId: 3,
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 4,
+      firstName: 'Michel',
+      lastName: 'Tobon',
+      role: 'Front-End Engineer',
+      companyId: 4,
+      photoUrl: 'assets/photos/michael.jpg',
+      biography: LOREM_IPSUM
+    },
+    { id: 5,
+      firstName: 'Stanci',
+      lastName: 'Soderstrom',
+      role: 'Manager of Learning Technology Strategy',
+      companyId: 5,
+      photoUrl: 'assets/photos/stanci.jpg',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 6,
+      firstName: 'Eric',
+      lastName: 'Madsen',
+      role: 'Learning Solutions Manager',
+      companyId: 5,
+      photoUrl: 'assets/photos/eric.jpg',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 7,
+      firstName: 'Brandon',
+      lastName: 'Bakke',
+      role: 'Solution Architect Leader',
+      companyId: 6,
+      photoUrl: 'assets/photos/brandon.jpg',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 8,
+      firstName: 'Daniel',
+      lastName: 'Rodriguez',
+      role: 'Mobile Developer',
+      companyId: 7,
+      photoUrl: 'assets/photos/daniel.jpg',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 9,
+      firstName: 'Rob',
+      lastName: 'Gore',
+      role: 'Director of Mobile Architecture',
+      companyId: 7,
+      photoUrl: 'assets/photos/rob.jpg',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 10,
+      firstName: 'Simanchal',
+      lastName: 'Sahu',
+      role: 'Sr. Principal Software Engineer Digital',
+      companyId: 8,
+      photoUrl: 'assets/photos/simanchal.jpg',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 11,
+      firstName: 'Jedidiah',
+      lastName: 'Weller',
+      role: 'CEO',
+      companyId: 9,
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 12,
+      firstName: 'Paulina',
+      lastName: 'Gallo',
+      role: 'Lead Software Engineer',
+      companyId: 9,
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 13,
+      firstName: 'Robert',
+      lastName: 'Flagg',
+      role: 'Role',
+      companyId: 10,
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 14,
+      firstName: 'Eric',
+      lastName: 'Violland',
+      role: 'Role',
+      companyId: 11,
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
+    },
+    {
+      id: 15,
+      firstName: 'First',
+      lastName: 'Last',
+      role: 'Role',
+      companyId: 12,
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: LOREM_IPSUM
+    }
   ];
 
   constructor() {}

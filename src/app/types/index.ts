@@ -9,8 +9,16 @@ export interface AgendaItem {
 
 export interface Speaker {
   id: number;
-  name: string;
-  company: string;
+  firstName: string;
+  lastName: string;
+  companyId: number;
   role: string;
   photoUrl: string;
+  biography: string;
+}
+
+export interface Company {
+  id: number;
+  name: string;
+  logoUrl: string;
 }

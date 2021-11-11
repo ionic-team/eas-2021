@@ -1,0 +1,21 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Speakers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="page-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Speakers</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding">
+    <app-speaker-card
+      *ngFor="let item of speakers; trackBy: trackItems"
+      [id]="item.id"
+      [button]="true"
+    ></app-speaker-card>
+  </div>
+</ion-content>
