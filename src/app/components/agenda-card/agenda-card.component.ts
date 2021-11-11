@@ -29,5 +29,4 @@ export class AgendaCardComponent implements OnInit {
   navigateToAgendaItemPage() {
     this.router.navigate([`/agenda/${this.id}`]);
   }
-
 }

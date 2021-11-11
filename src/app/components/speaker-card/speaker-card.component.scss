@@ -1,0 +1,44 @@
+$card-margin: 16px;
+
+ion-card.card-button {
+  border-radius: 16px;
+}
+
+ion-card {
+  margin: 0 0 #{$card-margin} 0;
+
+  border-radius: 0px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: none;
+
+  aspect-ratio: 1 / 1;
+}
+
+ion-card-header {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+ion-card-title,
+ion-card-subtitle {
+  color: white;
+}
+
+ion-card-header ion-card-title {
+  margin: 0 0 6px 0;
+
+  font-size: 22px;
+}
+
+ion-card-header ion-card-subtitle {
+  text-transform: none;
+
+  font-weight: 500;
+  font-size: 16px;
+}

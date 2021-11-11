@@ -13,7 +13,7 @@ export class SpeakerService {
     { id: 5, name: 'Stanci Soderstrom', role: 'Manager of Learning Technology Strategy', company: 'T-Mobile', photoUrl: 'assets/photos/stanci.jpg' },
     { id: 6, name: 'Eric Madsen', role: 'Learning Solutions Manager', company: 'T-Mobile', photoUrl: 'assets/photos/eric.jpg' },
     { id: 7, name: 'Brandon Bakke', role: 'Solution Architect Leader', company: 'Doosan', photoUrl: 'assets/photos/brandon.jpg' },
-    { id: 8, name: 'Daniel Rodriguez', role: 'Mobile Developer', company: 'Norwex', photoUrl: 'https://picsum.photos/id/1/200' },
+    { id: 8, name: 'Daniel Rodriguez', role: 'Mobile Developer', company: 'Norwex', photoUrl: 'assets/photos/daniel.jpg' },
     { id: 9, name: 'Rob Gore', role: 'Director of Mobile Architecture', company: 'Norwex', photoUrl: 'assets/photos/rob.jpg' },
     { id: 10, name: 'Simanchal Sahu', role: 'Sr. Principal Software Engineer Digital', company: 'Amtrak', photoUrl: 'assets/photos/simanchal.jpg' },
     { id: 11, name: 'Jedidiah Weller', role: 'CEO', company: 'Open Forge', photoUrl: 'https://picsum.photos/id/1/200' },
