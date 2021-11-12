@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { HomePage } from './home.page';
+import { AgendaAvatarsComponent } from './agenda-avatars.component';
 
-describe('HomePage', () => {
-  let component: HomePage;
-  let fixture: ComponentFixture<HomePage>;
+describe('AgendaAvatarsComponent', () => {
+  let component: AgendaAvatarsComponent;
+  let fixture: ComponentFixture<AgendaAvatarsComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomePage ],
+      declarations: [ AgendaAvatarsComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HomePage);
+    fixture = TestBed.createComponent(AgendaAvatarsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
