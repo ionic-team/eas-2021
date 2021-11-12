@@ -7,6 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "appflow:build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -26,6 +27,7 @@
     "@capacitor/ios": "^3.2.5",
     "@capacitor/keyboard": "^1.1.2",
     "@capacitor/push-notifications": "^1.0.6",
+    "@capacitor/splash-screen": "^1.1.6",
     "@capacitor/status-bar": "^1.0.5",
     "@ionic/angular": "^6.0.0-rc.2",
     "cordova-plugin-ionic": "^5.5.1",

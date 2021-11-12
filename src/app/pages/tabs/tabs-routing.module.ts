@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../speakers/speakers.module').then(m => m.SpeakersPageModule)
       },
       {
+        path: 'swag',
+        loadChildren: () => import('../swag/swag.module').then(m => m.SwagPageModule)
+      },
+      {
         path: '',
         redirectTo: '/agenda',
         pathMatch: 'full'

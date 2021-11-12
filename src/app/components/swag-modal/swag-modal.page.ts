@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { HubspotService } from '../services/hubspot.service';
-import { HubspotFormData } from '../types';
+import { HubspotService } from '../../services/hubspot.service';
+import { HubspotFormData } from '../../types';
 
 @Component({
   selector: 'app-swag-modal',

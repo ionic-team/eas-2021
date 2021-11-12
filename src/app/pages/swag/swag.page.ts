@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonRouterOutlet, ModalController, ToastController } from '@ionic/angular';
-import { SwagModalPage } from '../swag-modal/swag-modal.page';
+import { SwagModalPage } from '../../components/swag-modal/swag-modal.page';
 
 
 @Component({
