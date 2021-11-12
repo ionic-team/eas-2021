@@ -1,0 +1,25 @@
+$card-margin: 16px;
+
+ion-card {
+  margin: 0 0 #{$card-margin} 0;
+
+  border-radius: 16px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: none;
+
+  aspect-ratio: 1.5 / 1;
+
+  display: flex;
+}
+
+ion-card::part(native) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 60%;
+}

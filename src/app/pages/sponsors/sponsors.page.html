@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Sponsors</ion-title>
   </ion-toolbar>
@@ -10,5 +10,41 @@
       <ion-title size="large">Sponsors</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list-header>Platinum</ion-list-header>
+  <div class="ion-padding">
+    <app-sponsor-card
+      *ngFor="let sponsor of platinumSponsors"
+      [id]="sponsor.id"
+    >
+    </app-sponsor-card>
+  </div>
+
+  <ion-list-header>Gold</ion-list-header>
+  <div class="ion-padding">
+    <app-sponsor-card
+      *ngFor="let sponsor of goldSponsors"
+      [id]="sponsor.id"
+    >
+    </app-sponsor-card>
+  </div>
+
+  <ion-list-header>Silver</ion-list-header>
+  <div class="ion-padding">
+    <app-sponsor-card
+      *ngFor="let sponsor of silverSponsors"
+      [id]="sponsor.id"
+    >
+    </app-sponsor-card>
+  </div>
+
+  <ion-list-header>Bronze</ion-list-header>
+  <div class="ion-padding">
+    <app-sponsor-card
+      *ngFor="let sponsor of bronzeSponsors"
+      [id]="sponsor.id"
+    >
+    </app-sponsor-card>
+  </div>
 
 </ion-content>

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { SponsorsPageRoutingModule } from './sponsors-routing.module';
 
 import { SponsorsPage } from './sponsors.page';
+import { SponsorCardComponentModule } from '../../components/sponsor-card/sponsor-card.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SponsorsPageRoutingModule
+    SponsorsPageRoutingModule,
+    SponsorCardComponentModule
   ],
   declarations: [SponsorsPage]
 })

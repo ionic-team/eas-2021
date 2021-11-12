@@ -1,3 +1,9 @@
+export enum SponsorTier {
+  Platinum = 'platinum',
+  Gold = 'gold',
+  Silver = 'silver',
+  Bronze = 'bronze'
+}
 export class HubspotFormData {
   firstname: string;
   lastname: string;
@@ -33,4 +39,12 @@ export interface Company {
   id: number;
   name: string;
   logoUrl: string;
+}
+
+export interface Sponsor {
+  id: number;
+  name: string;
+  logoUrl: string;
+  accentColor: string;
+  tier: SponsorTier;
 }
