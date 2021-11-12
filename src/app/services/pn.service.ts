@@ -33,7 +33,6 @@ export class PushNotificationService  {
     });
 
     PushNotifications.addListener('registration', (token: Token) => {
-      alert('Push registration success, token: ' + token.value);
       console.log("push registration success, token:");
       console.log(token.value);
     });
@@ -45,7 +44,7 @@ export class PushNotificationService  {
     PushNotifications.addListener(
       'pushNotificationReceived',
       (notification: PushNotificationSchema) => {
-        alert('Push received: ' + JSON.stringify(notification));
+        console.log('Push received: ' + JSON.stringify(notification));
       },
     );
 
@@ -54,7 +53,7 @@ export class PushNotificationService  {
     PushNotifications.addListener(
       'pushNotificationActionPerformed',
       (notification: ActionPerformed) => {
-        alert('Push action performed: ' + JSON.stringify(notification));
+        console.log('Push action performed: ' + JSON.stringify(notification));
         const data = notification.notification.data;
         console.log(data);
       },
