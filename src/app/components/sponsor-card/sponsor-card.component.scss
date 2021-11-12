@@ -1,9 +1,13 @@
 $card-margin: 16px;
 
+ion-card.card-button {
+  border-radius: 16px;
+}
+
 ion-card {
   margin: 0 0 #{$card-margin} 0;
 
-  border-radius: 16px;
+  border-radius: 0px;
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,9 +16,11 @@ ion-card {
   aspect-ratio: 1.5 / 1;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-ion-card::part(native) {
+ion-card.card-button::part(native) {
   display: flex;
   justify-content: center;
   align-items: center;

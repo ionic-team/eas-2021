@@ -1,3 +1,10 @@
-<ion-card [button]="true" [style.--background]="sponsor.accentColor">
+<ion-card
+  [ngClass]="{
+    'card-button': button
+  }"
+  [button]="button"
+  [style.--background]="sponsor.accentColor"
+  (click)="presentModal()"
+>
   <img [src]="sponsor.logoUrl" />
 </ion-card>

@@ -8,6 +8,7 @@ import { SponsorsPageRoutingModule } from './sponsors-routing.module';
 
 import { SponsorsPage } from './sponsors.page';
 import { SponsorCardComponentModule } from '../../components/sponsor-card/sponsor-card.module';
+import { SponsorViewComponentModule } from '../../components/sponsor-view/sponsor-view.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { SponsorCardComponentModule } from '../../components/sponsor-card/sponso
     FormsModule,
     IonicModule,
     SponsorsPageRoutingModule,
-    SponsorCardComponentModule
+    SponsorCardComponentModule,
+    SponsorViewComponentModule
   ],
   declarations: [SponsorsPage]
 })
