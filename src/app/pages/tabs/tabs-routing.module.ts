@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('../sponsors/sponsors.module').then(m => m.SponsorsPageModule)
       },
       {
+        path: 'swag',
+        loadChildren: () => import('../swag/swag.module').then(m => m.SwagPageModule)
+      },
+      {
         path: '',
         redirectTo: '/agenda',
         pathMatch: 'full'

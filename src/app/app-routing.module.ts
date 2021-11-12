@@ -10,6 +10,14 @@ const routes: Routes = [
     path: 'sponsors',
     loadChildren: () => import('./pages/sponsors/sponsors.module').then( m => m.SponsorsPageModule)
   },
+  {
+    path: 'swag',
+    loadChildren: () => import('./pages/swag/swag.module').then( m => m.SwagPageModule)
+  },
+  {
+    path: 'swag-modal',
+    loadChildren: () => import('./components/swag-modal/swag-modal.module').then( m => m.SwagModalPageModule)
+  },
 ];
 
 @NgModule({
