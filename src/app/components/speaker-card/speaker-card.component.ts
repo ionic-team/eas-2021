@@ -12,7 +12,7 @@ import { CompanyService } from '../../services/company.service';
 })
 export class SpeakerCardComponent implements OnInit {
   public speaker: Speaker;
-  private company: Company;
+  public company: Company;
 
   @Input() id: number;
   @Input() button: boolean = false;

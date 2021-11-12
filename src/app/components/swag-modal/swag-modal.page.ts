@@ -12,7 +12,7 @@ export class SwagModalPage implements OnInit {
 
   constructor(private hubspotService: HubspotService, private modalController: ModalController) { }
 
-  private hubspotData: HubspotFormData = new HubspotFormData();
+  public hubspotData: HubspotFormData = new HubspotFormData();
 
   ngOnInit() { }
 

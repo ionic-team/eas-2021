@@ -13,10 +13,10 @@ import { AgendaItem, Speaker, Company } from '../../types';
 export class AgendaCardComponent implements OnInit {
   @Input() id: number;
 
-  private agenda: AgendaItem;
-  private speakers: Speaker[];
-  private company: Company;
-  private photoUrls: string[] = [];
+  public agenda: AgendaItem;
+  public speakers: Speaker[];
+  public company: Company;
+  public photoUrls: string[] = [];
 
   constructor(
     private agendaService: AgendaService,

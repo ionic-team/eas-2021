@@ -11,10 +11,10 @@ import { AgendaItem, Company, Speaker } from '../../../types';
   styleUrls: ['./agenda-item.page.scss'],
 })
 export class AgendaItemPage {
-  private agendaItem: AgendaItem;
-  private speakers: Speaker[];
-  private company: Company;
-  private photoUrls: string[] = [];
+  public agendaItem: AgendaItem;
+  public speakers: Speaker[];
+  public company: Company;
+  public photoUrls: string[] = [];
 
   constructor(
     private route: ActivatedRoute,

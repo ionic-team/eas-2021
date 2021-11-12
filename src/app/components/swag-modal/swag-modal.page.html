@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-button (click)="closeModal()" slot="start" fill="clear">Cancel</ion-button>
     <ion-title>Enter to win</ion-title>
-    <ion-button (click)="submit()" slot="end" fill="clear">Submit</ion-button>
+    <ion-button (click)="submitForm()" slot="end" fill="clear">Submit</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -42,7 +42,7 @@
     </ion-item>
     <ion-item>
       <ion-label>Country</ion-label>
-      <ion-input placeholder="Required" [(ngModel)]="hubspotData.country" name="country"></ion-input>
+      <ion-input placeholder="Required" [(ngModel)]="hubspotData.country_pl_" name="country"></ion-input>
     </ion-item>
   </ion-list>
 
