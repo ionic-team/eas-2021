@@ -5,11 +5,6 @@ const config: CapacitorConfig = {
   appName: 'enterprise-summit-2021',
   webDir: 'www',
   bundledWebRuntime: false,
-  plugins: {
-    LocalNotifications: {
-      iconColor: "#1B4DFF",
-    },
-  },
 };
 
 export default config;
