@@ -1,3 +1,4 @@
+@use "sass:math";
 $card-margin: 16px;
 
 ion-card {
@@ -14,7 +15,7 @@ ion-card-header {
 }
 
 ion-card-header ion-card-title {
-  margin: #{$card-margin} 0 #{$card-margin / 2} 0;
+  margin: #{$card-margin} 0 math.div($card-margin, 2) 0;
 
   font-size: 18px;
 }
