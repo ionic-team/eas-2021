@@ -43,13 +43,19 @@ ion-card-header ion-card-subtitle {
   font-size: 16px;
 }
 
+ion-card-content {
+  height: 60px;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
 ion-card-content img {
   position: absolute;
 
   top: 20px;
   left: 20px;
 
-  height: 30px;
+  height: 24px;
 }
 
 ion-card.safe-area ion-card-content img {
