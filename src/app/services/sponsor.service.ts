@@ -12,7 +12,7 @@ export class SponsorService {
     {
       id: 1,
       name: 'Modus',
-      logoUrl: 'assets/logos/ionic.png',
+      logoUrl: 'assets/logos/sponsor-modus.png',
       accentColor: '#ffffff',
       tier: SponsorTier.Platinum,
       biography: LOREM_IPSUM
@@ -20,7 +20,7 @@ export class SponsorService {
     {
       id: 2,
       name: 'OpenForge',
-      logoUrl: 'assets/logos/ionic.png',
+      logoUrl: 'assets/logos/sponsor-openforge.png',
       accentColor: '#ffffff',
       tier: SponsorTier.Platinum,
       biography: LOREM_IPSUM
@@ -28,7 +28,7 @@ export class SponsorService {
     {
       id: 3,
       name: 'auth0',
-      logoUrl: 'assets/logos/ionic.png',
+      logoUrl: 'assets/logos/sponsor-auth0.png',
       accentColor: '#000000',
       tier: SponsorTier.Gold,
       biography: LOREM_IPSUM
@@ -36,7 +36,7 @@ export class SponsorService {
     {
       id: 4,
       name: 'Nrwl',
-      logoUrl: 'assets/logos/ionic.png',
+      logoUrl: 'assets/logos/sponsor-nrwl.png',
       accentColor: '#ffffff',
       tier: SponsorTier.Gold,
       biography: LOREM_IPSUM
@@ -44,7 +44,7 @@ export class SponsorService {
     {
       id: 5,
       name: 'CouchBase',
-      logoUrl: 'assets/logos/ionic.png',
+      logoUrl: 'assets/logos/sponsor-couchbase.png',
       accentColor: '#ed2226',
       tier: SponsorTier.Gold,
       biography: LOREM_IPSUM
@@ -52,7 +52,7 @@ export class SponsorService {
     {
       id: 6,
       name: 'LaunchPad Labs',
-      logoUrl: 'assets/logos/ionic.png',
+      logoUrl: 'assets/logos/sponsor-launchpad-lab.png',
       accentColor: '#ffffff',
       tier: SponsorTier.Gold,
       biography: LOREM_IPSUM
@@ -60,7 +60,7 @@ export class SponsorService {
     {
       id: 7,
       name: 'strapi',
-      logoUrl: 'assets/logos/ionic.png',
+      logoUrl: 'assets/logos/sponsor-strapi.png',
       accentColor: '#8e75ff',
       tier: SponsorTier.Silver,
       biography: LOREM_IPSUM
@@ -68,7 +68,7 @@ export class SponsorService {
     {
       id: 8,
       name: 'Vue Mastery',
-      logoUrl: 'assets/logos/ionic.png',
+      logoUrl: 'assets/logos/sponsor-vue-mastery.png',
       accentColor: '#2c8097',
       tier: SponsorTier.Bronze,
       biography: LOREM_IPSUM
