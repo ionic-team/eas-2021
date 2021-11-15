@@ -1,9 +1,28 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Swag Raffle</ion-title>
+    <ion-title>Swag</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button (click)="openSwagModal()">Enter to win</ion-button>
+<ion-content [fullscreen]="true" class="page-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Swag</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h2 class="ion-padding-start ion-padding-end">Enter the Ionic swag raffle</h2>
+
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/raffle.png" />
+
+      <ion-card-title>EAS Swag</ion-card-title>
+      <ion-card-subtitle>Enter your info for a change to get free Ionic and EAS21 swag.</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button expand="block" (click)="openSwagModal()">Enter to Win</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
