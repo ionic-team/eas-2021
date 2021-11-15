@@ -9,62 +9,62 @@ export class CompanyService {
     {
       id: 1,
       name: 'Ionic',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-ionic.png'
     },
     {
       id: 2,
       name: 'US Foods',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-us-foods.png'
     },
     {
       id: 3,
       name: 'Volkswagen',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-volkswagen.png'
     },
     {
       id: 4,
       name: 'Amazon',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-amazon.png'
     },
     {
       id: 5,
       name: 'T-Mobile',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-t-mobile.png'
     },
     {
       id: 6,
-      name: 'Doosan',
-      logoUrl: 'assets/logos/ionic.png'
+      name: 'Doosan (Bobcat)',
+      logoUrl: 'assets/logos/company-bobcat.png'
     },
     {
       id: 7,
       name: 'Norwex',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-norwex.png'
     },
     {
       id: 8,
       name: 'Amtrak',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-amtrak.png'
     },
     {
       id: 9,
       name: 'OpenForge',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-ionic.png'
     },
     {
       id: 10,
       name: 'Modus',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-ionic.png'
     },
     {
       id: 11,
       name: 'AAA',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-ionic.png'
     },
     {
       id: 12,
       name: 'Azure',
-      logoUrl: 'assets/logos/ionic.png'
+      logoUrl: 'assets/logos/company-ionic.png'
     },
   ];
 

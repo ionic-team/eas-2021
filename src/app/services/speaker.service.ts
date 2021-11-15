@@ -33,7 +33,7 @@ export class SpeakerService {
       lastName: 'Jankowski',
       role: 'Design & User Experience Strategist',
       companyId: 3,
-      photoUrl: 'https://picsum.photos/id/1/200',
+      photoUrl: 'assets/photos/thorsten.jpg',
       biography: LOREM_IPSUM
     },
     {
@@ -104,7 +104,7 @@ export class SpeakerService {
       lastName: 'Weller',
       role: 'CEO',
       companyId: 9,
-      photoUrl: 'https://picsum.photos/id/1/200',
+      photoUrl: 'assets/photos/jedidiah.jpg',
       biography: LOREM_IPSUM
     },
     {
@@ -122,7 +122,7 @@ export class SpeakerService {
       lastName: 'Flagg',
       role: 'Role',
       companyId: 10,
-      photoUrl: 'https://picsum.photos/id/1/200',
+      photoUrl: 'assets/photos/robert.jpg',
       biography: LOREM_IPSUM
     },
     {

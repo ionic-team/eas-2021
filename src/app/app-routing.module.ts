@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: 'sponsors',
+    loadChildren: () => import('./pages/sponsors/sponsors.module').then( m => m.SponsorsPageModule)
+  },
+  {
     path: 'swag',
     loadChildren: () => import('./pages/swag/swag.module').then( m => m.SwagPageModule)
   },

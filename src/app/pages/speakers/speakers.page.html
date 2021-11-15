@@ -11,7 +11,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="ion-padding">
+  <div class="ion-padding grid">
     <app-speaker-card
       *ngFor="let item of speakers; trackBy: trackItems"
       [id]="item.id"

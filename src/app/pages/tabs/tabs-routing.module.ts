@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../speakers/speakers.module').then(m => m.SpeakersPageModule)
       },
       {
+        path: 'sponsors',
+        loadChildren: () => import('../sponsors/sponsors.module').then(m => m.SponsorsPageModule)
+      },
+      {
         path: 'swag',
         loadChildren: () => import('../swag/swag.module').then(m => m.SwagPageModule)
       },
