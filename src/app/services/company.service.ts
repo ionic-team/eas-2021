@@ -49,22 +49,22 @@ export class CompanyService {
     {
       id: 9,
       name: 'OpenForge',
-      logoUrl: 'assets/logos/company-ionic.png'
+      logoUrl: 'assets/logos/company-openforge.png'
     },
     {
       id: 10,
       name: 'Modus',
-      logoUrl: 'assets/logos/company-ionic.png'
+      logoUrl: 'assets/logos/company-modus.png'
     },
     {
       id: 11,
       name: 'AAA',
-      logoUrl: 'assets/logos/company-ionic.png'
+      logoUrl: 'assets/logos/company-aaa.png'
     },
     {
       id: 12,
       name: 'Azure',
-      logoUrl: 'assets/logos/company-ionic.png'
+      logoUrl: 'assets/logos/company-azure.png'
     },
   ];
 
