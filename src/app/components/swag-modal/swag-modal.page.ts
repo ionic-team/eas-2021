@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { HubspotService } from '../../services/hubspot.service';
 import { HubspotFormData } from '../../types';
@@ -8,25 +9,31 @@ import { HubspotFormData } from '../../types';
   templateUrl: './swag-modal.page.html',
   styleUrls: ['./swag-modal.page.scss'],
 })
-export class SwagModalPage implements OnInit {
+export class SwagModalPage {
+  @ViewChild('hubspotForm') hubspotForm: NgForm;
 
-  constructor(private hubspotService: HubspotService, private modalController: ModalController) { }
+  constructor(
+    private hubspotService: HubspotService,
+    private modalController: ModalController
+  ) { }
 
   public hubspotData: HubspotFormData = new HubspotFormData();
 
-  ngOnInit() { }
+  submitForm() {
+    this.hubspotForm.onSubmit(undefined);
+  }
 
-  
-  public async submitForm() {
+  public async onSubmit() {
+    if (!this.hubspotForm.valid) { return }
+
     const success = await this.hubspotService.submitToHubspot(this.hubspotData);
 
     if (success) {
-      await this.modalController.dismiss(success);  
+      await this.modalController.dismiss(success);
     }
   }
 
   async closeModal() {
     await this.modalController.dismiss(null);
   }
-
 }
