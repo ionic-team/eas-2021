@@ -42,10 +42,10 @@
 
   <ion-list-header class="eas-header-small">Watch</ion-list-header>
   <ion-list [inset]="true">
-    <ion-item [button]="true" [detail]="false" class="watch-live">
+    <ion-item [button]="true" [detail]="false" lines="none" class="watch-live">
       <ion-label>Watch live at ionic.io/events</ion-label>
     </ion-item>
-    <ion-item [button]="true" (click)="setReminder(agendaItem)"  lines="none">
+    <ion-item [button]="true" (click)="setReminder(agendaItem)" lines="none">
       <ion-label>Remind Me</ion-label>
     </ion-item>
   </ion-list>
