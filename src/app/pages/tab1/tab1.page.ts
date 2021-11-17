@@ -20,7 +20,7 @@ export class Tab1Page {
     this.agenda = this.agendaService.getAgenda();
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.presentModal();
   }
 
@@ -33,10 +33,11 @@ export class Tab1Page {
     if (Capacitor.getPlatform() !== 'web' && !(await this.storageService.getPushNotesModalShown())) {
       const modal = await this.modalController.create({
         component: PermissionsModalComponent,
-        initialBreakpoint: 0.40,
-        breakpoints: [0, 0.40, 1]
+        initialBreakpoint: 1,
+        breakpoints: [0, 1],
+        cssClass: 'permissions-modal'
       });
       return await modal.present();
-    }
+   }
   }
 }

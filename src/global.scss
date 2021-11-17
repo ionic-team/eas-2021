@@ -25,9 +25,72 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+.md .eas-header-small {
+  font-size: 16px;
+  font-weight: 500;
+
+  min-height: 20px;
+}
+
+.ios .eas-header-small {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.md .eas-header-medium {
+  font-size: 16px;
+  font-weight: 500;
+
+  min-height: 20px;
+}
+
+.ios .eas-header-medium {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.md .eas-header-large {
+  font-size: 20px;
+  font-weight: 500;
+
+  min-height: 20px;
+}
+
+.ios .eas-header-large {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
 ion-content.page-content,
 ion-content.page-content ion-toolbar {
   --background: var(--ion-color-light);
+}
+
+.permissions-modal {
+  --height: 260px;
+}
+
+ion-list.list-inset.md {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  border-radius: 12px;
+}
+
+.connect-button.md {
+  --box-shadow: none;
+  --border-radius: 16px;
+
+  width: 56px !important;
+}
+
+.connect-button.md ion-label {
+  display: none;
+}
+
+.connect-button.md ion-icon {
+  width: 24px !important;
 }
 
 .grid {
