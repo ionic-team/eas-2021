@@ -15,9 +15,12 @@ export class SwagModalPage {
   constructor(
     private hubspotService: HubspotService,
     private modalController: ModalController
-  ) { }
+  ) {
+    this.states = hubspotService.getStates();
+   }
 
   public hubspotData: HubspotFormData = new HubspotFormData();
+  public states: string[] = [];
 
   submitForm() {
     this.hubspotForm.onSubmit(undefined);
