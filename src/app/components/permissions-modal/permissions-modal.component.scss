@@ -1,0 +1,18 @@
+ion-toolbar {
+  --padding-top: 8px;
+  --background: transparent;
+  --border-color: transparent;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+
+  margin: 0 0 0 4px;
+}
+
+ion-text {
+  color: var(--ion-color-step-650);
+  font-size: 16px;
+  line-height: 22px;
+}

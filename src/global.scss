@@ -30,6 +30,10 @@ ion-content.page-content ion-toolbar {
   --background: var(--ion-color-light);
 }
 
+.permissions-modal {
+  --height: 260px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
