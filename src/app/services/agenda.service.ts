@@ -7,25 +7,6 @@ const LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ae
   providedIn: 'root'
 })
 export class AgendaService {
-  public formatTalkTime(agendaItem: AgendaItem) {
-    return `${this.convertToTwelveHourFormat(agendaItem.startTime)} - ${this.convertToTwelveHourFormat(agendaItem.endTime)} CT`;
-  }
-
-  // Talk times are stored in military time to make it easier to work with 
-  // local notifications. Convert to 12 hour clock format.
-  // Likely better ways to do this with Date object.
-
-  // time: 08:00 AM, 12:30 PM, 14:00 PM etc.
-  private convertToTwelveHourFormat(time: string) {
-    let hour = parseInt(time.substring(0,2));
-
-    if (hour > 12) {
-      hour = hour - 12;
-    }
-
-    return hour + time.slice(2);
-  }
-
   private agenda: AgendaItem[] = [
     {
       id: 1,
@@ -141,5 +122,24 @@ export class AgendaService {
 
   getAgendaItem(id: number): AgendaItem | undefined {
     return this.agenda.find(agenda => agenda.id === id);
+  }
+
+  public formatTalkTime(agendaItem: AgendaItem) {
+    return `${this.convertToTwelveHourFormat(agendaItem.startTime)} - ${this.convertToTwelveHourFormat(agendaItem.endTime)} CT`;
+  }
+
+  // Talk times are stored in military time to make it easier to work with 
+  // local notifications. Convert to 12 hour clock format.
+  // Likely better ways to do this with Date object.
+
+  // time: 08:00 AM, 12:30 PM, 14:00 PM etc.
+  private convertToTwelveHourFormat(time: string) {
+    let hour = parseInt(time.substring(0,2));
+
+    if (hour > 12) {
+      hour = hour - 12;
+    }
+
+    return hour + time.slice(2);
   }
 }
