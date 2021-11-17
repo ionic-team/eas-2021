@@ -27,13 +27,13 @@ export class TalkReminderService  {
     reminderDate.setMinutes(reminderDate.getMinutes() - 5);
     
     // Schedule reminder
-    const result = await LocalNotifications.schedule({
+    await LocalNotifications.schedule({
       notifications: [
         {
           id: 1,
           title: "Talk starting soon!",
           body: agendaItem.title,
-          //schedule: { at: reminderDate },
+          schedule: { at: reminderDate },
           extra: {
             agendaId: agendaItem.id
           }
