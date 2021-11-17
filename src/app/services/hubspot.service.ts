@@ -9,6 +9,8 @@ export class HubspotService  {
   FORM_SUBMIT_URL = "https://api.hsforms.com/submissions/v3/integration/submit/3776657/75127e93-3da1-4368-b3a7-c680d53483ac";
   
   public async submitToHubspot(data: HubspotFormData) {
+    console.log(data);
+    
     const data2 = {
       "fields": [
         {
