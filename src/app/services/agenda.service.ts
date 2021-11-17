@@ -61,55 +61,55 @@ export class AgendaService {
       title: 'Customer Showcase',
       speakerIds: [8, 9],
       startTime: '12:30',
-      endTime: '1:00',
+      endTime: '13:00',
       description: LOREM_IPSUM
     },
     {
       id: 8,
       title: 'Customer Interview',
       speakerIds: [10],
-      startTime: '1:00',
-      endTime: '2:00',
+      startTime: '13:00',
+      endTime: '14:00',
       description: LOREM_IPSUM
     },
     {
       id: 9,
       title: 'Partner Session',
       speakerIds: [11, 12],
-      startTime: '2:00',
-      endTime: '2:30',
+      startTime: '14:00',
+      endTime: '14:30',
       description: LOREM_IPSUM
     },
     {
       id: 10,
       title: 'Partner Session',
       speakerIds: [13],
-      startTime: '2:30',
-      endTime: '3:00',
+      startTime: '14:30',
+      endTime: '15:00',
       description: LOREM_IPSUM
     },
     {
       id: 11,
       title: 'Customer Showcase',
       speakerIds: [14],
-      startTime: '3:00',
-      endTime: '3:30',
+      startTime: '15:00',
+      endTime: '15:30',
       description: LOREM_IPSUM
     },
     {
       id: 12,
       title: 'TBD',
       speakerIds: [15],
-      startTime: '3:30',
-      endTime: '4:00',
+      startTime: '15:30',
+      endTime: '16:00',
       description: LOREM_IPSUM
     },
     {
       id: 13,
       title: 'End',
       speakerIds: [1],
-      startTime: '4:00',
-      endTime: '4:30',
+      startTime: '16:00',
+      endTime: '16:30',
       description: LOREM_IPSUM
     }
   ];

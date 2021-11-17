@@ -31,7 +31,7 @@ export class AgendaItemPage {
     this.photoUrls = this.speakers.map(speaker => speaker.photoUrl);
   }
 
-  async setReminder() {
-    await this.talkReminderService.scheduleReminder();
+  async setReminder(agendaItem: AgendaItem) {
+    await this.talkReminderService.scheduleReminder(agendaItem);
   }
 }
