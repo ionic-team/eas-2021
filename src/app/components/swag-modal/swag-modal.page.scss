@@ -12,3 +12,10 @@ ion-list-header {
 ion-list {
   margin-top: 8px !important;
 }
+
+/**
+ * This might be an Ionic bug
+ */
+ion-item {
+  --padding-start: 16px !important;
+}
