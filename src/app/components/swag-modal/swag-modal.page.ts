@@ -39,8 +39,4 @@ export class SwagModalPage {
   async closeModal() {
     await this.modalController.dismiss(null);
   }
-
-  compareWith(o1: string, o2: string) {
-    return o1 && o2 ? o1 === o2 : o1 === o2;
-  }
 }
