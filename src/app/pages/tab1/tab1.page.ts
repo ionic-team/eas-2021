@@ -20,7 +20,7 @@ export class Tab1Page {
     this.agenda = this.agendaService.getAgenda();
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.presentModal();
   }
 
