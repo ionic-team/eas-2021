@@ -8,21 +8,21 @@
   <app-sponsor-card [id]="id"></app-sponsor-card>
 
   <div class="ion-padding">
-    <h2>About {{ sponsor.name }}</h2>
+    <h2 class="eas-header-large">About {{ sponsor.name }}</h2>
     <ion-text>{{ sponsor.biography }}</ion-text><br /><br />
 
-    <h2>Connect with {{ sponsor.name }}</h2>
+    <h2 class="eas-header-large">Connect with {{ sponsor.name }}</h2>
     <ion-button color="light" class="connect-button">
       <div>
         <ion-icon name="logo-linkedin"></ion-icon><br />
-        <span>LinkedIn</span>
+        <ion-label>LinkedIn</ion-label>
       </div>
     </ion-button>
 
     <ion-button color="light" class="connect-button">
       <div>
         <ion-icon name="logo-github"></ion-icon><br />
-        <div>GitHub</div>
+        <ion-label>GitHub</ion-label>
       </div>
     </ion-button>
 
