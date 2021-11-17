@@ -35,4 +35,8 @@ export class AgendaCardComponent implements OnInit {
   navigateToAgendaItemPage() {
     this.router.navigate([`/agenda/${this.id}`]);
   }
+
+  formatTalkTime(agendaItem: AgendaItem) {
+    return this.agendaService.formatTalkTime(agendaItem);
+  }
 }

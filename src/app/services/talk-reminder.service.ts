@@ -21,18 +21,17 @@ export class TalkReminderService  {
   }
   
   async scheduleReminder(agendaItem: AgendaItem) {
-    // Set reminder for 5 minutes before the talk begins
-    const reminderDate = new Date(`December 8, 2021 ${agendaItem.startTime}:00`);
-    console.log(reminderDate);
+    // Set reminder 5 minutes before the talk begins
+    const timeSlice = agendaItem.startTime.substring(0, 5);
+    const reminderDate = new Date(`December 8, 2021 ${timeSlice}:00`);
     reminderDate.setMinutes(reminderDate.getMinutes() - 5);
-    console.log(reminderDate);
     
     // Schedule reminder
     const result = await LocalNotifications.schedule({
       notifications: [
         {
           id: 1,
-          title: "Starting soon!",
+          title: "Talk starting soon!",
           body: agendaItem.title,
           //schedule: { at: reminderDate },
           extra: {

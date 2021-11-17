@@ -5,6 +5,7 @@ import { AgendaService } from '../../../services/agenda.service';
 import { CompanyService } from '../../../services/company.service';
 import { AgendaItem, Company, Speaker } from '../../../types';
 import { TalkReminderService } from 'src/app/services/talk-reminder.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-agenda-item',
@@ -22,7 +23,8 @@ export class AgendaItemPage {
     private speakerService: SpeakerService,
     private agendaService: AgendaService,
     private companyService: CompanyService,
-    private talkReminderService: TalkReminderService
+    private talkReminderService: TalkReminderService,
+    private toastController: ToastController
   ) {
     const agendaId = route.snapshot.paramMap.get('agendaId');
     this.agendaItem = agendaService.getAgendaItem(parseInt(agendaId, 10))
@@ -33,5 +35,18 @@ export class AgendaItemPage {
 
   async setReminder(agendaItem: AgendaItem) {
     await this.talkReminderService.scheduleReminder(agendaItem);
+
+    // set reminder for 5 minutes before!
+    const toast = await this.toastController.create({
+      message: "Reminder set for 5 minutes before the talk begins",
+      duration: 2000,
+      color: "primary"
+    });
+    
+    await toast.present();
+  }
+
+  formatTalkTime(agendaItem: AgendaItem) {
+    return this.agendaService.formatTalkTime(agendaItem);
   }
 }

@@ -39,7 +39,7 @@ export class SwagPage implements OnInit {
     const toast = await this.toastController.create({
       message: "Thanks! Winners will be notified by email.",
       duration: 2000,
-      color: "tertiary"
+      color: "primary"
     });
     
     await toast.present();
