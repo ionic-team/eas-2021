@@ -67,6 +67,10 @@ ion-content.page-content ion-toolbar {
   --background: var(--ion-color-light);
 }
 
+.permissions-modal {
+  --height: 260px;
+}
+
 ion-list.list-inset.md {
   padding-top: 0px;
   padding-bottom: 0px;
