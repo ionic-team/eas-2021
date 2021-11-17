@@ -323,19 +323,21 @@
           <ion-select-option value="Wisconsin">Wisconsin</ion-select-option>
           <ion-select-option value="Wyoming">Wyoming</ion-select-option>
         </ion-select>
+        <ion-text class="ion-padding-bottom" slot="error" *ngIf="!state.valid && hubspotData.country_pl_ === 'United States' && (!state.pristine || hubspotForm.submitted)">State is required</ion-text>
       </ion-item>
     </ion-list>
     <ion-list-header>Preferences</ion-list-header>
     <ion-list [inset]="true">
       <ion-item>
         <ion-label>T-shirt Size</ion-label>
-        <ion-select [(ngModel)]="hubspotData.t_shirt_size" value="Small" name="tshirt" okText="OK" cancelText="Dismiss" required>
+        <ion-select [(ngModel)]="hubspotData.t_shirt_size" value="Small" #tshirt="ngModel" name="tshirt" okText="OK" cancelText="Dismiss" required>
           <ion-select-option value="Small">Small</ion-select-option>
           <ion-select-option value="Medium">Medium</ion-select-option>
           <ion-select-option value="Large">Large</ion-select-option>
           <ion-select-option value="X-Large">X-Large</ion-select-option>
           <ion-select-option value="2X- Large">2X-Large</ion-select-option>
         </ion-select>
+        <ion-text class="ion-padding-bottom" slot="error" *ngIf="!tshirt.valid && (!tshirt.pristine || hubspotForm.submitted)">T-shirt Size is required</ion-text>
       </ion-item>
     </ion-list>
   </form>
