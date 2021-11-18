@@ -67,7 +67,7 @@ For more than 20 years, Stanci has managed high-profile communication programs, 
       id: 6,
       firstName: 'Eric',
       lastName: 'Madsen',
-      role: 'Learning Solutions Manager',
+      role: 'Learning Solutions Architect',
       companyId: 5,
       photoUrl: 'assets/photos/eric.jpg',
       biography: `Eric Madsen is a learning technology architect at T-Mobile.
