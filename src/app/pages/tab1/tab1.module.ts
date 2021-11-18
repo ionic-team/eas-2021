@@ -6,6 +6,7 @@ import { Tab1Page } from './tab1.page';
 import { AgendaCardComponentModule } from '../../components/agenda-card/agenda-card.module';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { PermissionsModalComponentModule } from 'src/app/components/permissions-modal/permissions-modal.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     AgendaCardComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    PermissionsModalComponentModule
   ],
   declarations: [Tab1Page]
 })

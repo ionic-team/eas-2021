@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ExploreContainerComponent } from './explore-container.component';
+import { PermissionsModalComponent } from './permissions-modal.component';
 
 @NgModule({
   imports: [ CommonModule, FormsModule, IonicModule],
-  declarations: [ExploreContainerComponent],
-  exports: [ExploreContainerComponent]
+  declarations: [PermissionsModalComponent],
+  exports: [PermissionsModalComponent]
 })
-export class ExploreContainerComponentModule {}
+export class PermissionsModalComponentModule {}

@@ -11,7 +11,7 @@ import { Sponsor } from '../../types';
 export class SponsorViewComponent implements OnInit {
   @Input() id: number;
 
-  private sponsor: Sponsor;
+  public sponsor: Sponsor;
 
   constructor(
     private sponsorService: SponsorService,
