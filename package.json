@@ -22,6 +22,7 @@
     "@angular/router": "~12.1.1",
     "@capacitor/android": "^3.2.5",
     "@capacitor/app": "^1.0.5",
+    "@capacitor/browser": "^1.0.6",
     "@capacitor/core": "^3.2.5",
     "@capacitor/haptics": "^1.1.2",
     "@capacitor/ios": "^3.2.5",
