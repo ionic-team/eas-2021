@@ -24,9 +24,7 @@
   <ion-list-header class="eas-header-small">About this talk</ion-list-header>
   <ion-list [inset]="true" class="description-list">
     <ion-item lines="none">
-      <ion-text class="ion-padding-top ion-padding-bottom">
-        {{ agendaItem.description }}
-      </ion-text>
+      <ion-text class="ion-padding-top ion-padding-bottom" [innerHtml]="agendaItem.description"></ion-text>
     </ion-item>
   </ion-list>
 

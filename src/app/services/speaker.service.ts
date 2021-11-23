@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Speaker } from '../types';
 
-const LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque accumsan lacus, vel rhoncus quam. Maecenas metus tellus, convallis sed convallis eu, bibendum vulputate nisl. Vivamus et odio sit amet ex porttitor tempor et eget nunc. Suspendisse nibh augue, vestibulum in nibh et, rutrum vulputate est. Aenean eu bibendum libero. Morbi non dapibus mauris, eget ultricies purus. Nam malesuada, dui ac pretium sodales, purus sem aliquet orci, non venenatis turpis tortor sit amet arcu. Nulla facilisis, orci a fermentum facilisis, ipsum ligula faucibus ligula, vel bibendum turpis dolor eget nunc.';
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +10,7 @@ export class SpeakerService {
       id: 1,
       firstName: 'Max',
       lastName: 'Lynch',
-      role: 'Co-founder',
+      role: 'CEO and Co-founder',
       companyId: 1,
       photoUrl: 'assets/photos/max.jpg',
       biography: `Max Lynch is the co-founder and CEO of Ionic.
@@ -51,7 +48,7 @@ For the past 17 years at Volkswagen, Thorsten has grown from IT system analyst t
       photoUrl: 'assets/photos/michael.jpg',
       biography: `Michel Tobon is a front-end engineer at Amazon.
 
-Michel began his time at Amazon working primarily with React and SASS, sometimes with Java and Node. Now almost five years into his tenure, he works with web components built with Ionic’s Stencil JS and micro front-end architecture.`
+After working as a back-end developer in his home country of Mexico, Michel moved to Seattle and began working at Amazon, primarily with React and SASS, sometimes with Java and Node. Now almost five years into his tenure, he works with web components built with Ionic’s Stencil JS and micro front-end architecture.`
     },
     { id: 5,
       firstName: 'Stanci',
@@ -133,10 +130,10 @@ He speaks and mentors at startup events across the world, including the Thailand
       lastName: 'Gallo',
       role: 'Lead Software Engineer',
       companyId: 9,
-      photoUrl: 'https://picsum.photos/id/1/200',
+      photoUrl: 'assets/photos/paulina.jpg',
       biography: `Paulina Gallo is the lead software engineer at OpenForge.
 
-For over three and a half years, Paulina has worked with OpenForge to lead multiple app development projects for many clients. She uses a variety of tools and technologies—including Ionic—to deliver the best experiences for her clients and their customers.`
+Paulina has over five years of experience leading multiple app development projects for many clients. She uses a variety of tools and technologies—including Ionic and Capacitor—to deliver the best experiences for her clients and their customers.`
     },
     {
       id: 13,
@@ -160,12 +157,36 @@ Robert is a passionate software developer with nearly 40 years of experience dev
     },
     {
       id: 15,
-      firstName: 'First',
-      lastName: 'Last',
-      role: 'Role',
-      companyId: 12,
-      photoUrl: 'https://picsum.photos/id/1/200',
-      biography: LOREM_IPSUM
+      firstName: 'Fernando',
+      lastName: 'Del Olmo',
+      role: 'Software Engineer',
+      companyId: 9,
+      photoUrl: 'assets/photos/fernando.jpg',
+      biography: `Fernando is a software engineer at OpenForge.
+      
+Based in Madrid, Spain, Fernando studied computer engineering and taught himself Ionic and Angular frameworks. He is interested in everything related to the web, but mostly web components and Progressive Web Apps.`
+    },
+    {
+      id: 16,
+      firstName: 'María',
+      lastName: 'José Méndez',
+      role: 'Senior Software Engineer',
+      companyId: 9,
+      photoUrl: 'assets/photos/maria.jpg',
+      biography: `Maria Jose Mendez is a software engineer at OpenForge.
+
+Maria is from Costa Rica and loves to learn, teach, and code in the middle of amazing beaches, living the Pura Vida life!`
+    },
+    {
+      id: 17,
+      firstName: 'Theo',
+      lastName: 'Rushin Jr.',
+      role: 'Lead Software Engineer',
+      companyId: 8,
+      photoUrl: 'assets/photos/theo.jpeg',
+      biography: `Theo Rushin Jr is a lead software engineer within Customer, Architecture and Platform Services (CAPS) at Amtrak.
+
+Theo is a creative, results-oriented professional with decades of application development and training experience. At Amtrak, he leads the deployment of new functionality, enhancements, and fixes to the Amtrak Rider mobile app. Theo is responsible for bringing new technology trends to enterprise and customer-facing hybrid mobile applications.`
     }
   ];
 
