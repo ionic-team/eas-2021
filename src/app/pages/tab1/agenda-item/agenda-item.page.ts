@@ -49,7 +49,7 @@ export class AgendaItemPage {
   }
 
   async triggerBrowser() {
-    await Browser.open({ url: "https://www.youtube.com/watch?v=CdsJrIpGWSg&ab_channel=JoshuaMorony"})
+    await Browser.open({ url: "https://ionic.io/events"})
   }
 
   formatTalkTime(agendaItem: AgendaItem) {
