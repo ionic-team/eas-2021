@@ -18,6 +18,20 @@ ion-card {
   align-items: center;
 }
 
+@supports not (aspect-ratio: 1.5 / 1) {
+  ion-card::before {
+    float: left;
+    padding-top: 66.67%;
+    content: '';
+  }
+
+  ion-card::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
 ion-card.card-button::part(native) {
   display: flex;
   justify-content: center;
