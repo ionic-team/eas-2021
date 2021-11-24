@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Capacitor } from '@capacitor/core';
 import {
   ActionPerformed,
   PushNotificationSchema,

@@ -5,11 +5,11 @@ const config: CapacitorConfig = {
   appName: 'enterprise-summit-2021',
   webDir: 'www',
   bundledWebRuntime: false,
-  cordova: {
-    preferences: {
-      "DisableDeploy": "true"
-    }
-  }
+  // cordova: {
+  //   preferences: {
+  //     "DisableDeploy": "true"
+  //   }
+  // }
 };
 
 export default config;
