@@ -38,7 +38,7 @@ export class AgendaService {
       speakerIds: [4],
       startTime: '11:00 AM',
       endTime: '11:30 AM',
-      description: 'LOREM_IPSUM'
+      description: 'Managing the Front-End for large organizations can be a difficult task; the larger the application, the greater the need to divide it into smaller and more manageable, de-centralized artifacts in order to deliver a clean and consistent user experience.<p>In this talk we will explore multiple ways in which enterprises can leverage Micro-Front-end Architecture and Web Components compiled by Stencil JS in order to simplify the development, deployment, and consumption of third party content into large Front-End applications.</p>'
     },
     {
       id: 5,
@@ -58,7 +58,7 @@ export class AgendaService {
     },
     {
       id: 7,
-      title: 'Leveraging Mono Repositories for Enterprise Projects (Startup Wars Case Study)',
+      title: 'Leveraging Mono Repositories for Enterprise Projects',
       speakerIds: [11, 12, 15, 16],
       startTime: '12:30 PM',
       endTime: '13:15 PM',
@@ -67,7 +67,7 @@ export class AgendaService {
     {
       id: 8,
       title: 'Safe Travels: Making Contact-Free Travel Easy, Convenient, and Secure',
-      speakerIds: [17],
+      speakerIds: [17,18],
       startTime: '13:30 PM',
       endTime: '14:30 PM',
       description: `The Amtrak app allows travelers to book reservations, board the train, check the train status, and more all from their mobile devices. How did Amtrak engineers develop an application that handles so many important travel details?<p>

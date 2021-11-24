@@ -11,14 +11,15 @@ import {
   providedIn: 'root'
 })
 export class PushNotificationService  {
-
-  initPush() {
-    if (Capacitor.getPlatform() !== 'web') {
-      this.registerPush();
-    }
+  async checkPermissionStatus() {
+    return (await PushNotifications.checkPermissions()).receive;
   }
 
   async registerPush() {
+    await PushNotifications.register();
+  }
+
+  async promptPushRegistration() {
     // Request permission to use push notifications
     // iOS will prompt user and return if they granted permission or not
     // Android will just grant without prompting
@@ -33,8 +34,7 @@ export class PushNotificationService  {
     });
 
     PushNotifications.addListener('registration', (token: Token) => {
-      console.log("push registration success, token:");
-      console.log(token.value);
+      console.log("push registration success");
     });
 
     PushNotifications.addListener('registrationError', (error: any) => {

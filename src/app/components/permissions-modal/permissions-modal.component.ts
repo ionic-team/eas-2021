@@ -16,7 +16,7 @@ export class PermissionsModalComponent implements OnInit {
   ngOnInit() {}
 
   async onContinue() {
-    await this.pushService.initPush();
+    await this.pushService.promptPushRegistration();
     await this.storageService.setPushNotesModalShown();
     this.closeModal();
   }

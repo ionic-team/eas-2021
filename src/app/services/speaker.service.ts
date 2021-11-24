@@ -105,15 +105,6 @@ At Norwex, Daniel leads the production and release of an international B2C app f
 For more than half a decade, Rob has led multiple mobile development projects at Norwex, including the design, development, and international release of Norwex Shopping. He is currently leading the development of the next generation enterprise ecommerce mobile application to be deployed in over eleven countries.`
     },
     {
-      id: 10,
-      firstName: 'Simanchal',
-      lastName: 'Sahu',
-      role: 'Sr. Principal Software Engineer Digital',
-      companyId: 8,
-      photoUrl: 'assets/photos/simanchal.jpg',
-      biography: 'Simanchal Sahu is the senior principal technologist at Amtrak.'
-    },
-    {
       id: 11,
       firstName: 'Jedidiah',
       lastName: 'Weller',
@@ -134,26 +125,6 @@ He speaks and mentors at startup events across the world, including the Thailand
       biography: `Paulina Gallo is the lead software engineer at OpenForge.
 
 Paulina has over five years of experience leading multiple app development projects for many clients. She uses a variety of tools and technologies—including Ionic and Capacitor—to deliver the best experiences for her clients and their customers.`
-    },
-    {
-      id: 13,
-      firstName: 'Robert',
-      lastName: 'Flagg',
-      role: 'Director of Engineering',
-      companyId: 10,
-      photoUrl: 'assets/photos/robert.jpg',
-      biography: `Robert Flagg is the director of engineering at Modus Create, Inc.
-
-Robert is a passionate software developer with nearly 40 years of experience developing full stack applications. His most recent work specializes in Ionic-based mobile solutions using Angular and web components.`
-    },
-    {
-      id: 14,
-      firstName: 'Eric',
-      lastName: 'Violland',
-      role: 'Director of Club Application Services',
-      companyId: 11,
-      photoUrl: 'https://picsum.photos/id/1/200',
-      biography: 'Eric Violland is the director of club application services at AAA.'
     },
     {
       id: 15,
@@ -178,15 +149,57 @@ Based in Madrid, Spain, Fernando studied computer engineering and taught himself
 Maria is from Costa Rica and loves to learn, teach, and code in the middle of amazing beaches, living the Pura Vida life!`
     },
     {
+      id: 13,
+      firstName: 'Robert',
+      lastName: 'Flagg',
+      role: 'Director of Engineering',
+      companyId: 10,
+      photoUrl: 'assets/photos/robert.jpg',
+      biography: `Robert Flagg is the director of engineering at Modus Create, Inc.
+
+Robert is a passionate software developer with nearly 40 years of experience developing full stack applications. His most recent work specializes in Ionic-based mobile solutions using Angular and web components.`
+    },
+    {
+      id: 14,
+      firstName: 'Ralph',
+      lastName: 'Borges',
+      role: 'Product Manager',
+      companyId: 11,
+      photoUrl: 'https://picsum.photos/id/1/200',
+      biography: `Ralph Borges is the product manager at AAA National.
+
+For over half a decade, Ralph has provided strategic design and solutions for AAA customers using iOS and Android devices. His focus is on team and client support, and building and managing a strong working organization that enables the highest level of ethics, customer care, and project delivery.`
+    },
+    {
       id: 17,
       firstName: 'Theo',
       lastName: 'Rushin Jr.',
       role: 'Lead Software Engineer',
       companyId: 8,
       photoUrl: 'assets/photos/theo.jpeg',
-      biography: `Theo Rushin Jr is a lead software engineer within Customer, Architecture and Platform Services (CAPS) at Amtrak.
+      biography: `Theo Rushin Jr is a lead software engineer at Amtrak. 
 
-Theo is a creative, results-oriented professional with decades of application development and training experience. At Amtrak, he leads the deployment of new functionality, enhancements, and fixes to the Amtrak Rider mobile app. Theo is responsible for bringing new technology trends to enterprise and customer-facing hybrid mobile applications.`
+Theo is a creative, results-oriented professional with decades of application development and training experience. At Amtrak, he leads the deployment of new functionality, enhancements, and fixes to the Amtrak mobile app. Theo is responsible for bringing new technology trends to enterprise and customer-facing hybrid mobile applications.`
+    },
+    {
+      id: 18,
+      firstName: 'Kalyan',
+      lastName: 'Sury',
+      role: 'Senior Software Engineering Manager',
+      companyId: 8,
+      photoUrl: 'assets/photos/kalyan.jpg',
+      biography: `Kalyan Sury is the senior software engineering manager of e-commerce and digital experience at Amtrak.
+
+Kalyan is an accomplished leader with expertise in software engineering, application development, service management, technical program & people management for e-commerce, custom architectures, and platforms. At Amtrak, he is responsible for design, development, and delivery of critical e-commerce systems including amtrak.com and the Amtrak mobile app accounting for a majority of the ticketing revenues.`
+    },
+    {
+      id: 19,
+      firstName: 'Dallas',
+      lastName: 'James',
+      role: 'Product Manager',
+      companyId: 1,
+      photoUrl: 'assets/photos/dallas.jpg',
+      biography: `Dallas James is Ionic's platform extensions product manager.`
     }
   ];
 
