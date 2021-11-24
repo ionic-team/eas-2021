@@ -3,6 +3,8 @@ import { ModalController } from '@ionic/angular';
 import { Sponsor, SponsorTier } from '../../types';
 import { SponsorService } from '../../services/sponsor.service';
 import { SponsorViewComponent } from '../sponsor-view/sponsor-view.component';
+import { Browser } from '@capacitor/browser';
+
 @Component({
   selector: 'app-sponsor-card',
   templateUrl: './sponsor-card.component.html',
@@ -23,17 +25,8 @@ export class SponsorCardComponent implements OnInit {
     this.sponsor = this.sponsorService.getSponsor(this.id);
   }
 
-  async presentModal() {
-    if (!this.button) { return; }
-
-    const modal = await this.modalController.create({
-      component: SponsorViewComponent,
-      componentProps: {
-        id: this.id
-      }
-    });
-
-    modal.present();
+  async openLink(link: string) {
+    await Browser.open({ url: link})
   }
 
 }

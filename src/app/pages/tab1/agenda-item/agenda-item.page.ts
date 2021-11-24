@@ -6,6 +6,8 @@ import { CompanyService } from '../../../services/company.service';
 import { AgendaItem, Company, Speaker } from '../../../types';
 import { TalkReminderService } from 'src/app/services/talk-reminder.service';
 import { ToastController } from '@ionic/angular';
+import { Browser } from '@capacitor/browser';
+
 
 @Component({
   selector: 'app-agenda-item',
@@ -44,6 +46,10 @@ export class AgendaItemPage {
     });
     
     await toast.present();
+  }
+
+  async triggerBrowser() {
+    await Browser.open({ url: "https://ionic.io/events"})
   }
 
   formatTalkTime(agendaItem: AgendaItem) {

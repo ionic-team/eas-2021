@@ -48,4 +48,5 @@ export interface Sponsor {
   accentColor: string;
   tier: SponsorTier;
   biography: string;
+  homepage: string;
 }

@@ -14,7 +14,8 @@ export class SponsorService {
       logoUrl: 'assets/logos/sponsor-modus.png',
       accentColor: '#ffffff',
       tier: SponsorTier.Platinum,
-      biography: LOREM_IPSUM
+      biography: LOREM_IPSUM,
+      homepage: "https://moduscreate.com/"
     },
     {
       id: 2,
@@ -22,7 +23,8 @@ export class SponsorService {
       logoUrl: 'assets/logos/sponsor-openforge.png',
       accentColor: '#ffffff',
       tier: SponsorTier.Platinum,
-      biography: LOREM_IPSUM
+      biography: LOREM_IPSUM,
+      homepage: "https://openforge.io/"
     },
     {
       id: 3,
@@ -30,7 +32,8 @@ export class SponsorService {
       logoUrl: 'assets/logos/sponsor-auth0.png',
       accentColor: '#000000',
       tier: SponsorTier.Gold,
-      biography: LOREM_IPSUM
+      biography: LOREM_IPSUM,
+      homepage: "https://auth0.com/"
     },
     {
       id: 4,
@@ -38,7 +41,8 @@ export class SponsorService {
       logoUrl: 'assets/logos/sponsor-nrwl.png',
       accentColor: '#ffffff',
       tier: SponsorTier.Gold,
-      biography: LOREM_IPSUM
+      biography: LOREM_IPSUM,
+      homepage: "https://nrwl.io/"
     },
     {
       id: 5,
@@ -46,15 +50,17 @@ export class SponsorService {
       logoUrl: 'assets/logos/sponsor-couchbase.png',
       accentColor: '#ed2226',
       tier: SponsorTier.Gold,
-      biography: LOREM_IPSUM
+      biography: LOREM_IPSUM,
+      homepage: "https://couchbase.com/"
     },
     {
       id: 6,
-      name: 'LaunchPad Labs',
+      name: 'LaunchPad Lab',
       logoUrl: 'assets/logos/sponsor-launchpad-lab.png',
       accentColor: '#ffffff',
       tier: SponsorTier.Gold,
-      biography: LOREM_IPSUM
+      biography: LOREM_IPSUM,
+      homepage: "https://launchpadlab.com/"
     },
     {
       id: 7,
@@ -62,7 +68,8 @@ export class SponsorService {
       logoUrl: 'assets/logos/sponsor-strapi.png',
       accentColor: '#8e75ff',
       tier: SponsorTier.Silver,
-      biography: LOREM_IPSUM
+      biography: LOREM_IPSUM,
+      homepage: "https://strapi.io/"
     },
     {
       id: 8,
@@ -70,7 +77,8 @@ export class SponsorService {
       logoUrl: 'assets/logos/sponsor-vue-mastery.png',
       accentColor: '#2c8097',
       tier: SponsorTier.Bronze,
-      biography: LOREM_IPSUM
+      biography: LOREM_IPSUM,
+      homepage: "https://vuemastery.com/"
     }
   ];
 
