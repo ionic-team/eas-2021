@@ -1,8 +1,8 @@
 {
   "name": "enterprise-summit-2021",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Ionic",
-  "homepage": "https://ionic.io",
+  "homepage": "https://ionic.io/events/enterprise-app-summit-21",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
