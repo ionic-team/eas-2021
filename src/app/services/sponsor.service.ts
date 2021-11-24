@@ -79,7 +79,43 @@ export class SponsorService {
       tier: SponsorTier.Bronze,
       biography: LOREM_IPSUM,
       homepage: "https://vuemastery.com/"
-    }
+    },
+    {
+      id: 9,
+      name: 'Briebug',
+      logoUrl: 'assets/logos/sponsor-briebug.png',
+      accentColor: '#ffffff',
+      tier: SponsorTier.Silver,
+      biography: LOREM_IPSUM,
+      homepage: "https://briebug.com/"
+    },
+    {
+      id: 10,
+      name: 'jnesis',
+      logoUrl: 'assets/logos/sponsor-jnesis.png',
+      accentColor: '#ffffff',
+      tier: SponsorTier.Silver,
+      biography: LOREM_IPSUM,
+      homepage: "https://jnesis.com/"
+    },
+    {
+      id: 11,
+      name: 'Hybrid Mob',
+      logoUrl: 'assets/logos/sponsor-hybridmob.png',
+      accentColor: '#ffffff',
+      tier: SponsorTier.Silver,
+      biography: LOREM_IPSUM,
+      homepage: "https://hybridmob.com/"
+    },
+    {
+      id: 12,
+      name: 'beNovelty',
+      logoUrl: 'assets/logos/sponsor-benoveltylimited.png',
+      accentColor: '#ffffff',
+      tier: SponsorTier.Silver,
+      biography: LOREM_IPSUM,
+      homepage: "https://benovelty.com/"
+    },
   ];
 
   constructor() {}

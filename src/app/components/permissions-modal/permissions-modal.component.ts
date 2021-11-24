@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { PushNotificationService } from 'src/app/services/push-notification.service';
-import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-permissions-modal',
@@ -10,19 +9,16 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class PermissionsModalComponent implements OnInit {
 
-  constructor(private modalController: ModalController, private pushService: PushNotificationService,
-    private storageService: StorageService) { }
+  constructor(private modalController: ModalController, private pushService: PushNotificationService) { }
 
   ngOnInit() {}
 
   async onContinue() {
-    await this.pushService.initPush();
-    await this.storageService.setPushNotesModalShown();
+    await this.pushService.promptPushRegistration();
     this.closeModal();
   }
 
   async closeModal() {
-    await this.storageService.setPushNotesModalShown();
     await this.modalController.dismiss(null);
   }
 }
