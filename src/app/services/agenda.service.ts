@@ -83,11 +83,11 @@ Join Amtrak software engineers in a discussion with Dallas James, Ionic’s plat
     },
     {
       id: 10,
-      title: 'Coming Soon',
+      title: 'Accelerated Solution Delivery with Micro-frontends',
       speakerIds: [13],
       startTime: '15:00 PM',
       endTime: '15:30 PM',
-      description: LOREM_IPSUM
+      description: 'Discover how a micro-frontend architecture can accelerate multi-channel feature delivery with Ionic Hybrid, Portals, and Appflow. Robert Flagg, Engineering Director at Modus Create, will share how micro-frontends can impact cost, delivery cadence, and operational efficiencies.<p>You will also discover real examples of several enterprises that have achieved success with a micro-frontend architecture.</p>'
     },
     {
       id: 11,
