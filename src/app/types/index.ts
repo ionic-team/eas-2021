@@ -33,6 +33,9 @@ export interface Speaker {
   role: string;
   photoUrl: string;
   biography: string;
+  linkedin?: string;
+  twitter?: string;
+  github?: string;
 }
 
 export interface Company {

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Speaker } from '../../types';
 import { SpeakerService } from '../../services/speaker.service';
+import { Browser } from '@capacitor/browser';
 
 @Component({
   selector: 'app-speaker-view',
@@ -24,6 +25,10 @@ export class SpeakerViewComponent implements OnInit {
 
   closeModal() {
     this.modalController.dismiss();
+  }
+
+  async openLink(link: string) {
+    await Browser.open({ url: link})
   }
 
 }

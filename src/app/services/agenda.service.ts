@@ -50,11 +50,11 @@ export class AgendaService {
     },
     {
       id: 6,
-      title: 'Geotargeting and Remote Management: Bringing Wireless Technology to Construction Equipment',
+      title: 'Fleet Management: Bringing Wireless Technology to Construction Equipment',
       speakerIds: [7],
       startTime: '12:00 PM',
       endTime: '12:30 PM',
-      description: 'Bobcat Machine IQ is a digital telematics system that helps Bobcat equipment owners access machine info in real time from any location or device. Owners can check the health, maintenance, security, and performance of each connected machine at any time. How did the engineers behind Machine IQ decide the best technology stack for their needs? <p>Learn how Doosan Bobcat integrated native functionality like geotargeting and geotracking in their application, and how they tested the functionality and user experience for their owners.</p>'
+      description: 'Bobcat Machine IQ is a digital telematics system that helps Bobcat equipment owners access machine info in real time from any location or device. Owners can check the health, maintenance, security, and performance of each connected machine at any time. How did the engineers behind Machine IQ decide the best technology stack for their needs? <p>Learn how Doosan Bobcat integrated functionality like geofencing in their application, and how they incorporated Ionic Appflow into their CI/CD pipeline.</p>'
     },
     {
       id: 7,

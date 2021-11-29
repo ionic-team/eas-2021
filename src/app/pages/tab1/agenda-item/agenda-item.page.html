@@ -43,8 +43,9 @@
     <ion-item [detail]="false" lines="none" class="watch-live" (click)="triggerBrowser()">
       <ion-label>Watch live at ionic.io/events</ion-label>
     </ion-item>
-    <ion-item [button]="true" (click)="setReminder(agendaItem)" lines="none">
+    <ion-item (click)="setReminder(agendaItem)" lines="none">
       <ion-label>Remind Me</ion-label>
+      <ion-toggle color="primary"></ion-toggle>
     </ion-item>
   </ion-list>
 </ion-content>
