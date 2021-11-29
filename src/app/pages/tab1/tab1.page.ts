@@ -34,7 +34,6 @@ export class Tab1Page {
     // Call register every time the app launches
     // Show permission prompt the first time app is launched
     if (Capacitor.getPlatform() !== 'web') {
-      await this.storageService.setPushNotesModalShown();
       const permStatus = await this.pushNotificationService.checkPermissionStatus();
 
       if (permStatus === 'granted') {
@@ -43,6 +42,8 @@ export class Tab1Page {
       }
       else if (permStatus === 'prompt' && !(await this.storageService.getPushNotesModalShown())) {
         // On iOS, ask the user for permission first. only once.
+        await this.storageService.setPushNotesModalShown();
+        
         const modal = await this.modalController.create({
           component: PermissionsModalComponent,
           initialBreakpoint: 1,
