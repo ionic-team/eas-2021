@@ -5,11 +5,11 @@ const config: CapacitorConfig = {
   appName: 'EAS 21',
   webDir: 'www',
   bundledWebRuntime: false,
-  cordova: {
-    preferences: {
-      "DisableDeploy": "true"
-    }
-  }
+  // cordova: {
+  //   preferences: {
+  //     "DisableDeploy": "true"
+  //   }
+  // }
 };
 
 export default config;
