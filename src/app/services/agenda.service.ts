@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AgendaItem } from '../types';
 
-const LOREM_IPSUM = 'Coming soon';
-
 @Injectable({
   providedIn: 'root'
 })
