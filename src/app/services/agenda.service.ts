@@ -9,7 +9,7 @@ export class AgendaService {
     {
       id: 1,
       title: 'The Future of Enterprise App Development',
-      speakerIds: [1],
+      speakerIds: [1,21],
       startTime: '08:00 AM',
       endTime: '09:00 AM',
       description: 'Enterprise IT leaders are under pressure to deliver more and better mobile experiences. <p>A crushing lack of mobile developer talent makes it hard to keep up. Low-code tools promise a remedy, but their black box approach is costly and adds risk over the long-term.</p><p>Thankfully, a new generation of open source solutions are empowering web development teams to build enterprise-grade mobile apps - or extend existing mobile apps - using familiar tools and open standards.</p>'
@@ -97,12 +97,20 @@ Join Amtrak software engineers in a discussion with Dallas James, Ionic’s plat
     },
     {
       id: 12,
-      title: 'Conference Wrap-up',
-      speakerIds: [1],
+      title: 'Micro Frontends with Ionic Portals',
+      speakerIds: [20],
       startTime: '16:00 PM',
       endTime: '16:30 PM',
       description: 'End of the day wrap-up with final thoughts.'
-    }
+    },
+    {
+      id: 13,
+      title: 'Conference Wrap-up',
+      speakerIds: [21],
+      startTime: '16:30 PM',
+      endTime: '17:00 PM',
+      description: 'End of the day wrap-up with final thoughts.'
+    },
   ];
 
   constructor() {}

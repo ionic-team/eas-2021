@@ -19,44 +19,6 @@ export class SpeakerService {
 
 Max started Ionic to make app development easier for millions of developers around the world. Over the past ten years, Ionic has grown from a purely open source developer project into a fully-featured enterprise platform powering thousands of the biggest companies on earth.`
     },
-    {
-      id: 2,
-      firstName: 'Tom',
-      lastName: 'Ingoglia',
-      role: 'Director of Enterprise Architecture',
-      companyId: 2,
-      photoUrl: 'assets/photos/tom.jpg',
-      linkedin: "https://www.linkedin.com/in/thomasingoglia/",
-      biography: `Thomas Ingoglia is the director of enterprise architecture at US Foods.
-
-Thomas has a passion for software development and over 20 years industry experience. At US Foods, he leads a team of engineers who develops B2B mobile applications for customers to order, record, and manage their inventory from any device.`
-    },
-    {
-      id: 3,
-      firstName: 'Thorsten',
-      lastName: 'Jankowski',
-      role: 'Design & User Experience Strategist',
-      companyId: 3,
-      photoUrl: 'assets/photos/thorsten.jpg',
-      twitter: "https://twitter.com/ux_wob",
-      linkedin: "https://www.linkedin.com/in/thorstenjankowski/",
-      biography: `Thorsten is the design & user experience strategist at Volkswagen AG.
-
-For the past 17 years at Volkswagen, Thorsten has grown from IT system analyst to user experience lead. He currently leads UX design management including definition and delivery of assets, methods, and tools for a creative and efficient design organization.`
-    },
-    {
-      id: 4,
-      firstName: 'Michel',
-      lastName: 'Tobon',
-      role: 'Front-End Engineer',
-      companyId: 4,
-      photoUrl: 'assets/photos/michael.jpg',
-      linkedin: "https://www.linkedin.com/in/michel-tobon/",
-      github: "https://github.com/micheltobon",
-      biography: `Michel Tobon is a front-end engineer at Amazon.
-
-After working as a back-end developer in his home country of Mexico, Michel moved to Seattle and began working at Amazon, primarily with React and SASS, sometimes with Java and Node. Now almost five years into his tenure, he works with web components built with Ionic’s Stencil JS and micro front-end architecture.`
-    },
     { id: 5,
       firstName: 'Stanci',
       lastName: 'Soderstrom',
@@ -67,54 +29,6 @@ After working as a back-end developer in his home country of Mexico, Michel move
       biography: `Stanci Soderstrom is the manager of learning technology strategy at T-Mobile.
 
 For more than 20 years, Stanci has managed high-profile communication programs, as well as learning technology and strategy across multiple organizations. At T-Mobile, she cares about the employee experience and fostering collaborative relationships between teams to grow opportunity and learning.`
-    },
-    {
-      id: 6,
-      firstName: 'Eric',
-      lastName: 'Madsen',
-      role: 'Learning Solutions Architect',
-      companyId: 5,
-      photoUrl: 'assets/photos/eric.jpg',
-      linkedin: "https://www.linkedin.com/in/ericmadsendesign/",
-      biography: `Eric Madsen is a learning technology architect at T-Mobile.
-
-Eric is a dedicated and passionate leader. At T-Mobile, he applies his creative and divergent thinking, design, and technical skills to help professionals communicate effectively and improve end user performance.`
-    },
-    {
-      id: 7,
-      firstName: 'Brandon',
-      lastName: 'Bakke',
-      role: 'Solution Architect Leader',
-      companyId: 6,
-      photoUrl: 'assets/photos/brandon.jpg',
-      linkedin: "https://www.linkedin.com/in/brandonbakke/",
-      biography: `Brandon Bakke is a solution architect at Doosan Bobcat.
-
-At Bobcat, Brandon works on the architectural design and technology selection for Machine IQ which serves as the company’s first digital, subscription-based product leveraging IoT technologies.`
-    },
-    {
-      id: 8,
-      firstName: 'Daniel',
-      lastName: 'Rodriguez',
-      role: 'Mobile Developer',
-      companyId: 7,
-      photoUrl: 'assets/photos/daniel.jpg',
-      linkedin: "https://www.linkedin.com/in/danielrdzm/",
-      biography: `Daniel Rodriguez is the lead mobile developer at Norwex.
-
-At Norwex, Daniel leads the production and release of an international B2C app for the Australia and New Zealand market. He also works closely with business partners, project managers, and team members to clearly define scope of work for mobile app builts.`
-    },
-    {
-      id: 9,
-      firstName: 'Rob',
-      lastName: 'Gore',
-      role: 'Director of Mobile Architecture',
-      companyId: 7,
-      photoUrl: 'assets/photos/rob.jpg',
-      linkedin: "https://www.linkedin.com/in/robgore/",
-      biography: `Rob Gore is the director of mobile applications at Norwex.
-
-For more than half a decade, Rob has led multiple mobile development projects at Norwex, including the design, development, and international release of Norwex Shopping. He is currently leading the development of the next generation enterprise ecommerce mobile application to be deployed in over eleven countries.`
     },
     {
       id: 11,
@@ -167,28 +81,29 @@ Based in Madrid, Spain, Fernando studied computer engineering and taught himself
 Maria is from Costa Rica and loves to learn, teach, and code in the middle of amazing beaches, living the Pura Vida life!`
     },
     {
-      id: 13,
-      firstName: 'Robert',
-      lastName: 'Flagg',
-      role: 'Director of Engineering',
-      companyId: 10,
-      photoUrl: 'assets/photos/robert.jpg',
-      linkedin: "https://www.linkedin.com/in/robert-flagg-ab62b819/",
-      biography: `Robert Flagg is the director of engineering at Modus Create, Inc.
+      id: 2,
+      firstName: 'Tom',
+      lastName: 'Ingoglia',
+      role: 'Director of Enterprise Architecture',
+      companyId: 2,
+      photoUrl: 'assets/photos/tom.jpg',
+      linkedin: "https://www.linkedin.com/in/thomasingoglia/",
+      biography: `Thomas Ingoglia is the director of enterprise architecture at US Foods.
 
-Robert is a passionate software developer with nearly 40 years of experience developing full stack applications. His most recent work specializes in Ionic-based mobile solutions using Angular and web components.`
+Thomas has a passion for software development and over 20 years industry experience. At US Foods, he leads a team of engineers who develops B2B mobile applications for customers to order, record, and manage their inventory from any device.`
     },
     {
-      id: 14,
-      firstName: 'Ralph',
-      lastName: 'Borges',
-      role: 'Product Manager',
-      companyId: 11,
-      photoUrl: 'https://picsum.photos/id/1/200',
-      linkedin: "https://www.linkedin.com/in/ralph-borges-10a91335/",
-      biography: `Ralph Borges is the product manager at AAA National.
+      id: 3,
+      firstName: 'Thorsten',
+      lastName: 'Jankowski',
+      role: 'Design & User Experience Strategist',
+      companyId: 3,
+      photoUrl: 'assets/photos/thorsten.jpg',
+      twitter: "https://twitter.com/ux_wob",
+      linkedin: "https://www.linkedin.com/in/thorstenjankowski/",
+      biography: `Thorsten is the design & user experience strategist at Volkswagen AG.
 
-For over half a decade, Ralph has provided strategic design and solutions for AAA customers using iOS and Android devices. His focus is on team and client support, and building and managing a strong working organization that enables the highest level of ethics, customer care, and project delivery.`
+For the past 17 years at Volkswagen, Thorsten has grown from IT system analyst to user experience lead. He currently leads UX design management including definition and delivery of assets, methods, and tools for a creative and efficient design organization.`
     },
     {
       id: 17,
@@ -215,6 +130,91 @@ Theo is a creative, results-oriented professional with decades of application de
 Kalyan is an accomplished leader with expertise in software engineering, application development, service management, technical program & people management for e-commerce, custom architectures, and platforms. At Amtrak, he is responsible for design, development, and delivery of critical e-commerce systems including amtrak.com and the Amtrak mobile app accounting for a majority of the ticketing revenues.`
     },
     {
+      id: 4,
+      firstName: 'Michel',
+      lastName: 'Tobon',
+      role: 'Front-End Engineer',
+      companyId: 4,
+      photoUrl: 'assets/photos/michael.jpg',
+      linkedin: "https://www.linkedin.com/in/michel-tobon/",
+      github: "https://github.com/micheltobon",
+      biography: `Michel Tobon is a front-end engineer at Amazon.
+
+After working as a back-end developer in his home country of Mexico, Michel moved to Seattle and began working at Amazon, primarily with React and SASS, sometimes with Java and Node. Now almost five years into his tenure, he works with web components built with Ionic’s Stencil JS and micro front-end architecture.`
+    },
+    {
+      id: 6,
+      firstName: 'Eric',
+      lastName: 'Madsen',
+      role: 'Learning Solutions Architect',
+      companyId: 5,
+      photoUrl: 'assets/photos/eric.jpg',
+      linkedin: "https://www.linkedin.com/in/ericmadsendesign/",
+      biography: `Eric Madsen is a learning technology architect at T-Mobile.
+
+Eric is a dedicated and passionate leader. At T-Mobile, he applies his creative and divergent thinking, design, and technical skills to help professionals communicate effectively and improve end user performance.`
+    },
+    {
+      id: 7,
+      firstName: 'Brandon',
+      lastName: 'Bakke',
+      role: 'Solution Architect Leader',
+      companyId: 6,
+      photoUrl: 'assets/photos/brandon.jpg',
+      linkedin: "https://www.linkedin.com/in/brandonbakke/",
+      biography: `Brandon Bakke is a solution architect at Doosan Bobcat.
+
+At Bobcat, Brandon works on the architectural design and technology selection for Machine IQ which serves as the company’s first digital, subscription-based product leveraging IoT technologies.`
+    },
+    {
+      id: 8,
+      firstName: 'Daniel',
+      lastName: 'Rodriguez',
+      role: 'Mobile Developer',
+      companyId: 7,
+      photoUrl: 'assets/photos/daniel.jpg',
+      linkedin: "https://www.linkedin.com/in/danielrdzm/",
+      biography: `Daniel Rodriguez is the lead mobile developer at Norwex.
+
+At Norwex, Daniel leads the production and release of an international B2C app for the Australia and New Zealand market. He also works closely with business partners, project managers, and team members to clearly define scope of work for mobile app builts.`
+    },
+    {
+      id: 9,
+      firstName: 'Rob',
+      lastName: 'Gore',
+      role: 'Director of Mobile Architecture',
+      companyId: 7,
+      photoUrl: 'assets/photos/rob.jpg',
+      linkedin: "https://www.linkedin.com/in/robgore/",
+      biography: `Rob Gore is the director of mobile applications at Norwex.
+
+For more than half a decade, Rob has led multiple mobile development projects at Norwex, including the design, development, and international release of Norwex Shopping. He is currently leading the development of the next generation enterprise ecommerce mobile application to be deployed in over eleven countries.`
+    },
+    {
+      id: 13,
+      firstName: 'Robert',
+      lastName: 'Flagg',
+      role: 'Director of Engineering',
+      companyId: 10,
+      photoUrl: 'assets/photos/robert.jpg',
+      linkedin: "https://www.linkedin.com/in/robert-flagg-ab62b819/",
+      biography: `Robert Flagg is the director of engineering at Modus Create, Inc.
+
+Robert is a passionate software developer with nearly 40 years of experience developing full stack applications. His most recent work specializes in Ionic-based mobile solutions using Angular and web components.`
+    },
+    {
+      id: 14,
+      firstName: 'Ralph',
+      lastName: 'Borges',
+      role: 'Product Manager',
+      companyId: 11,
+      photoUrl: 'https://picsum.photos/id/1/200',
+      linkedin: "https://www.linkedin.com/in/ralph-borges-10a91335/",
+      biography: `Ralph Borges is the product manager at AAA National.
+
+For over half a decade, Ralph has provided strategic design and solutions for AAA customers using iOS and Android devices. His focus is on team and client support, and building and managing a strong working organization that enables the highest level of ethics, customer care, and project delivery.`
+    },
+    {
       id: 19,
       firstName: 'Dallas',
       lastName: 'James',
@@ -223,6 +223,48 @@ Kalyan is an accomplished leader with expertise in software engineering, applica
       photoUrl: 'assets/photos/dallas.jpg',
       linkedin: "https://www.linkedin.com/in/dallastjames/",
       biography: `Dallas James is Ionic's platform extensions product manager.`
+    },
+    {
+      id: 20,
+      firstName: 'Matt',
+      lastName: 'Netkow',
+      role: 'Head of Product Marketing',
+      companyId: 1,
+      photoUrl: 'assets/photos/netkow.jpg',
+      linkedin: "https://www.linkedin.com/in/matthewnetkow/",
+      twitter: "https://twitter.com/dotNetkow",
+      biography: `Matt Netkow is .`
+    },
+    {
+      id: 21,
+      firstName: 'Matt',
+      lastName: 'Kremer',
+      role: 'Director of Product Management',
+      companyId: 1,
+      photoUrl: 'assets/photos/kremer.jpeg',
+      linkedin: "https://www.linkedin.com/in/matthewkremer/",
+      biography: `Matt Netkow is .`
+    },
+    {
+      id: 22,
+      firstName: 'Eric',
+      lastName: 'Horodyski',
+      role: 'Solutions Architect',
+      companyId: 1,
+      photoUrl: 'assets/photos/erich.jpeg',
+      linkedin: "https://www.linkedin.com/in/eric-horodyski-74029130/",
+      biography: `Matt Netkow is .`
+    },
+    {
+      id: 23,
+      firstName: 'Josh',
+      lastName: 'Thomas',
+      role: 'Product Manager',
+      companyId: 1,
+      photoUrl: 'assets/photos/josht.jpeg',
+      linkedin: "https://www.linkedin.com/in/eric-horodyski-74029130/",
+      twitter: "https://twitter.com/jthoms1",
+      biography: `Matt Netkow is .`
     }
   ];
 
