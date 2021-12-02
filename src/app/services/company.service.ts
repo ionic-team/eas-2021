@@ -66,6 +66,11 @@ export class CompanyService {
       name: 'Azure',
       logoUrl: 'assets/logos/company-azure.png'
     },
+    {
+      id: 13,
+      name: 'MAN Truck & Bus SE',
+      logoUrl: 'assets/logos/company-man.png'
+    }
   ];
 
   constructor() {}

@@ -208,7 +208,7 @@ Robert is a passionate software developer with nearly 40 years of experience dev
       lastName: 'Borges',
       role: 'Product Manager',
       companyId: 11,
-      photoUrl: 'https://picsum.photos/id/1/200',
+      photoUrl: 'assets/photos/ralph.jpeg',
       linkedin: "https://www.linkedin.com/in/ralph-borges-10a91335/",
       biography: `Ralph Borges is the product manager at AAA National.
 
@@ -233,7 +233,9 @@ For over half a decade, Ralph has provided strategic design and solutions for AA
       photoUrl: 'assets/photos/netkow.jpg',
       linkedin: "https://www.linkedin.com/in/matthewnetkow/",
       twitter: "https://twitter.com/dotNetkow",
-      biography: `Matt Netkow is .`
+      biography: `Matt leads technical product marketing at Ionic.
+
+Matt is a full stack developer, product marketer, and hobbyist entrepreneur, specializing in .NET enterprise solutions and cross-platform web-based application development. At Ionic, he helps enterprise developers bring their web skills to mobile, desktop, and beyond.`
     },
     {
       id: 21,
@@ -243,7 +245,8 @@ For over half a decade, Ralph has provided strategic design and solutions for AA
       companyId: 1,
       photoUrl: 'assets/photos/kremer.jpeg',
       linkedin: "https://www.linkedin.com/in/matthewkremer/",
-      biography: `Matt Netkow is .`
+      twitter: "https://twitter.com/matthewkremer",
+      biography: `Product Manager at Ionic. Hobby addict, Pokemon, Alien, Sim Racing. Anything Is Possible. Strong opinions, weakly held.`
     },
     {
       id: 22,
@@ -253,7 +256,9 @@ For over half a decade, Ralph has provided strategic design and solutions for AA
       companyId: 1,
       photoUrl: 'assets/photos/erich.jpeg',
       linkedin: "https://www.linkedin.com/in/eric-horodyski-74029130/",
-      biography: `Matt Netkow is .`
+      biography: `Eric is a solutions architect at Ionic.
+
+Programming is his passion. He has been developing software since middle school, writing mods for the PC games he played. Eric had his first software gig during college, building websites for a local graphic design firm. Today, he leads development teams and transforms businesses through technology.`
     },
     {
       id: 23,
@@ -264,7 +269,19 @@ For over half a decade, Ralph has provided strategic design and solutions for AA
       photoUrl: 'assets/photos/josht.jpeg',
       linkedin: "https://www.linkedin.com/in/eric-horodyski-74029130/",
       twitter: "https://twitter.com/jthoms1",
-      biography: `Matt Netkow is .`
+      biography: `Josh is a Product Manager at Ionic, working on Capacitor, Portals, and Ionic Framework. He loves empowering web developers to build awesome cross-platform apps.`
+    },
+    {
+      id: 24,
+      firstName: 'Matthias',
+      lastName: 'Fritsch',
+      role: 'Design Lead',
+      companyId: 13,
+      photoUrl: 'assets/photos/matthias.jpg',
+      linkedin: "https://www.linkedin.com/in/fritschmatthias/",
+      biography: `Matthias is currently leading the design system at MAN Truck & Bus SE.
+      
+For over 15 years he has been dealing with the visualization and emotionalization of innovative media—what started as a hobby in the past is now a passion in his job. Matthias aims to standardize reusable digital artifacts on cross-technology for web, app, and InTruck.`
     }
   ];
 
