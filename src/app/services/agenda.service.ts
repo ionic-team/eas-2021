@@ -101,7 +101,7 @@ Join Amtrak software engineers in a discussion with Dallas James, Ionic’s plat
       speakerIds: [20,23],
       startTime: '16:00 PM',
       endTime: '16:30 PM',
-      description: 'Coming soon'
+      description: 'App development is rapidly evolving from a monolithic approach towards micro frontends, an architectural style where independently deliverable frontend applications are composed into a greater whole.<p>Micro frontends need to be reusable and portable, able to communicate with other parts of the app, seamless and virtually invisible to users, and easy to update without updating the larger app. Given these points, web technology is a great way to deliver micro experiences.</p></p>However, stock web views (the typical way of doing this) are difficult to work with and maintain.</p><p>Using Ionic Portals, a robust, secure, and extensible web view component, you’ll learn how to deliver micro experiences with the web, without the hassle of stock web views.</p>'
     },
     {
       id: 13,
