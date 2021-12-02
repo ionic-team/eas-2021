@@ -16,7 +16,7 @@
     <h1>{{ agendaItem.title }}</h1>
     <h2>
       <div *ngFor="let speaker of speakers">
-        {{ speaker.firstName }} {{ speaker.lastName }}, {{ speaker.role }}, {{ company.name }}
+        {{ speaker.firstName }} {{ speaker.lastName }}, {{ speaker.role }}, {{ getCompanyName(speaker.companyId) }}
       </div>
     </h2>
   </div>

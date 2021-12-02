@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AgendaService } from '../../services/agenda.service';
 import { SpeakerService } from '../../services/speaker.service';
 import { CompanyService } from '../../services/company.service';
-import { AgendaItem, Speaker, Company } from '../../types';
+import { AgendaItem, Speaker } from '../../types';
 
 @Component({
   selector: 'app-agenda-card',
@@ -15,7 +15,6 @@ export class AgendaCardComponent implements OnInit {
 
   public agenda: AgendaItem;
   public speakers: Speaker[];
-  public company: Company;
   public photoUrls: string[] = [];
 
   constructor(
@@ -28,12 +27,15 @@ export class AgendaCardComponent implements OnInit {
   ngOnInit() {
     this.agenda = this.agendaService.getAgendaItem(this.id);
     this.speakers = this.speakerService.getSpeakers(this.agenda.speakerIds);
-    this.company = this.companyService.getCompany(this.speakers[0].companyId);
     this.photoUrls = this.speakers.map(speaker => speaker.photoUrl);
   }
 
   navigateToAgendaItemPage() {
     this.router.navigate([`/agenda/${this.id}`]);
+  }
+
+  getCompanyName(companyId: number) {
+    return this.companyService.getCompany(companyId).name;
   }
 
   formatTalkTime(agendaItem: AgendaItem) {

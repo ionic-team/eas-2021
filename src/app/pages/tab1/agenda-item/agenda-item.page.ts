@@ -17,7 +17,6 @@ import { Browser } from '@capacitor/browser';
 export class AgendaItemPage {
   public agendaItem: AgendaItem;
   public speakers: Speaker[];
-  public company: Company;
   public photoUrls: string[] = [];
 
   constructor(
@@ -31,7 +30,6 @@ export class AgendaItemPage {
     const agendaId = route.snapshot.paramMap.get('agendaId');
     this.agendaItem = agendaService.getAgendaItem(parseInt(agendaId, 10))
     this.speakers = speakerService.getSpeakers(this.agendaItem.speakerIds);
-    this.company = companyService.getCompany(this.speakers[0].companyId);
     this.photoUrls = this.speakers.map(speaker => speaker.photoUrl);
   }
 
@@ -54,5 +52,9 @@ export class AgendaItemPage {
 
   formatTalkTime(agendaItem: AgendaItem) {
     return this.agendaService.formatTalkTime(agendaItem);
+  }
+
+  getCompanyName(companyId: number) {
+    return this.companyService.getCompany(companyId).name;
   }
 }
