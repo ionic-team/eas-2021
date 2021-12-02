@@ -9,7 +9,7 @@ export class AgendaService {
     {
       id: 1,
       title: 'The Future of Enterprise App Development',
-      speakerIds: [1],
+      speakerIds: [1,21],
       startTime: '08:00 AM',
       endTime: '09:00 AM',
       description: 'Enterprise IT leaders are under pressure to deliver more and better mobile experiences. <p>A crushing lack of mobile developer talent makes it hard to keep up. Low-code tools promise a remedy, but their black box approach is costly and adds risk over the long-term.</p><p>Thankfully, a new generation of open source solutions are empowering web development teams to build enterprise-grade mobile apps - or extend existing mobile apps - using familiar tools and open standards.</p>'
@@ -25,14 +25,14 @@ export class AgendaService {
     {
       id: 3,
       title: 'Between Standard and Flexibility: Volkswagen Group’s Multi-Brand Design System GroupUI',
-      speakerIds: [3],
+      speakerIds: [3,24],
       startTime: '10:00 AM',
       endTime: '11:00 AM',
       description: 'Volkswagen Group’s full-stack design system GroupUI delivers a seamless experience from figma and sketch to web components built with Stencil JS—Ionic’s toolchain for building reusable, scalable design systems. In a multi-brand environment featuring over five brands—with more to come soon—a perfect collaboration between teams and brands is vital for success.<p>      Discover how the designers at Volkswagen add value with maximum flexibility for their brands. Learn how they are managing collaboration, communication, and contribution in their cross-brand and interdisciplinary environment.</p>'
     },
     {
       id: 4,
-      title: 'Building Micro-Frontends with StencilJS',
+      title: 'Building Micro Frontends with StencilJS',
       speakerIds: [4],
       startTime: '11:00 AM',
       endTime: '11:30 AM',
@@ -65,7 +65,7 @@ export class AgendaService {
     {
       id: 8,
       title: 'Safe Travels: Making Contact-Free Travel Easy, Convenient, and Secure',
-      speakerIds: [17,18],
+      speakerIds: [17,18,19],
       startTime: '13:30 PM',
       endTime: '14:30 PM',
       description: `The Amtrak app allows travelers to book reservations, board the train, check the train status, and more all from their mobile devices. How did Amtrak engineers develop an application that handles so many important travel details?<p>
@@ -73,7 +73,7 @@ Join Amtrak software engineers in a discussion with Dallas James, Ionic’s plat
     },
     {
       id: 9,
-      title: 'Choosing Ionic as a Strategy for the Future',
+      title: 'Choosing a Technology Strategy for the Future',
       speakerIds: [8,9],
       startTime: '14:30 PM',
       endTime: '15:00 PM',
@@ -81,7 +81,7 @@ Join Amtrak software engineers in a discussion with Dallas James, Ionic’s plat
     },
     {
       id: 10,
-      title: 'Accelerated Solution Delivery with Micro-frontends',
+      title: 'Accelerated Solution Delivery with Micro Frontends',
       speakerIds: [13],
       startTime: '15:00 PM',
       endTime: '15:30 PM',
@@ -97,12 +97,20 @@ Join Amtrak software engineers in a discussion with Dallas James, Ionic’s plat
     },
     {
       id: 12,
-      title: 'Conference Wrap-up',
-      speakerIds: [1],
+      title: 'Micro Frontends with Ionic Portals',
+      speakerIds: [20,23],
       startTime: '16:00 PM',
       endTime: '16:30 PM',
+      description: 'Coming soon'
+    },
+    {
+      id: 13,
+      title: 'Conference Wrap-up',
+      speakerIds: [21],
+      startTime: '16:30 PM',
+      endTime: '17:00 PM',
       description: 'End of the day wrap-up with final thoughts.'
-    }
+    },
   ];
 
   constructor() {}
