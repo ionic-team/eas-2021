@@ -23,7 +23,7 @@ EAS 2021 runs on the web, iOS, and Android all from a single codebase. Try it on
 
 ## Tech Details
 
-* UI: [Ionic 6](https://ionicframework.com) and [Angular 12](https://angular.io)
+* UI: [Ionic 6](https://ionicframework.com) and [Angular 13](https://angular.io)
 * Native runtime: [Capacitor 3](https://capacitorjs.com)
 * Native features powered by Capacitor:
   * [Push Notifications](https://capacitorjs.com/docs/apis/push-notifications) powered by Firebase
