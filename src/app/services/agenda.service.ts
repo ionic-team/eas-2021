@@ -97,11 +97,11 @@ Join Amtrak software engineers in a discussion with Dallas James, Ionic’s plat
     },
     {
       id: 12,
-      title: 'Micro Frontends with Ionic Portals',
+      title: 'Micro Frontends for Mobile with Ionic Portals',
       speakerIds: [20,23],
       startTime: '16:00 PM',
       endTime: '16:30 PM',
-      description: 'App development is rapidly evolving from a monolithic approach towards micro frontends, an architectural style where independently deliverable frontend applications are composed into a greater whole.<p>Micro frontends need to be reusable and portable, able to communicate with other parts of the app, seamless and virtually invisible to users, and easy to update without updating the larger app. Given these points, web technology is a great way to deliver micro experiences.</p></p>However, stock web views (the typical way of doing this) are difficult to work with and maintain.</p><p>Using Ionic Portals, a robust, secure, and extensible web view component, you’ll learn how to deliver micro experiences with the web, without the hassle of stock web views.</p>'
+      description: 'App development is rapidly evolving. Applications were originally built using a monolithic approach—a single-tiered code base combining UI and data into a single platform. Now, companies are moving towards micro frontends, an architectural style where UI front-end are composed of independent components that can be built by different teams at different times, saving development time and costs.<p>Micro frontends need to be reusable and portable. They need to be able to communicate with other parts of the app, provide a seamless and virtually invisible to users, and be easy to update without updating the larger app. Given these points, web technology is a great way to deliver micro experiences not only for the web but for mobile as well.</p><p>Discover how using Ionic Portals will allow your team to deliver micro experiences on mobile apps.</p>'
     },
     {
       id: 13,
