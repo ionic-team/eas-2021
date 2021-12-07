@@ -64,7 +64,7 @@ Paulina has over five years of experience leading multiple app development proje
       photoUrl: 'assets/photos/fernando.jpg',
       twitter: "https://twitter.com/fdom92",
       biography: `Fernando is a software engineer at OpenForge.
-      
+
 Based in Madrid, Spain, Fernando studied computer engineering and taught himself Ionic and Angular frameworks. He is interested in everything related to the web, but mostly web components and Progressive Web Apps.`
     },
     {
@@ -114,7 +114,7 @@ For the past 17 years at Volkswagen, Thorsten has grown from IT system analyst t
       photoUrl: 'assets/photos/matthias.jpg',
       linkedin: "https://www.linkedin.com/in/fritschmatthias/",
       biography: `Matthias is currently leading the design system at MAN Truck & Bus SE.
-      
+
 For over 15 years he has been dealing with the visualization and emotionalization of innovative media—what started as a hobby in the past is now a passion in his job. Matthias aims to standardize reusable digital artifacts on cross-technology for web, app, and InTruck.`
     },
     {
@@ -283,8 +283,8 @@ Programming is his passion. He has been developing software since middle school,
       linkedin: "https://www.linkedin.com/in/liamdebeasi/",
       twitter: 'https://twitter.com/LiamDeBeasi',
       biography: `Liam is a software engineer at Ionic.
-      
-Liam is a full stack developer who builds scalable web and mobile applications. He received a degree in Computer Science from Boston University in May 2017.`
+
+Liam is a software engineer based in Boston, USA. Currently he serves as the team lead for Ionic Framework, helping developers build great app experiences with web technology.`
     },
   ];
 
