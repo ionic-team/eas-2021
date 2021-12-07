@@ -9,10 +9,10 @@ export class AgendaService {
     {
       id: 1,
       title: 'The Future of Enterprise App Development',
-      speakerIds: [1,21],
+      speakerIds: [1],
       startTime: '08:00 AM',
       endTime: '09:00 AM',
-      description: 'Enterprise IT leaders are under pressure to deliver more and better mobile experiences. <p>A crushing lack of mobile developer talent makes it hard to keep up. Low-code tools promise a remedy, but their black box approach is costly and adds risk over the long-term.</p><p>Thankfully, a new generation of open source solutions are empowering web development teams to build enterprise-grade mobile apps - or extend existing mobile apps - using familiar tools and open standards.</p>'
+      description: 'The trends in enterprise app development are constantly evolving. Ionic works closely with enterprise engineering teams from around the world to shape the way we think about developing world-class applications.<p>Learn how Ionic layers enterprise offerings on top of an open source foundation. Max Lynch, CEO and co-founder at Ionic, will dive into the newest Ionic products and solutions, uncover some of the latest industry trends involving design systems, internet-of-things, and micro frontend technology, and share his vision for the future of app development.</p>'
     },
     {
       id: 2,
@@ -49,7 +49,7 @@ export class AgendaService {
     {
       id: 6,
       title: 'Fleet Management: Bringing Wireless Technology to Construction Equipment',
-      speakerIds: [7],
+      speakerIds: [7,22],
       startTime: '12:00 PM',
       endTime: '12:30 PM',
       description: 'Bobcat Machine IQ is a digital telematics system that helps Bobcat equipment owners access machine info in real time from any location or device. Owners can check the health, maintenance, security, and performance of each connected machine at any time. How did the engineers behind Machine IQ decide the best technology stack for their needs? <p>Learn how Doosan Bobcat integrated functionality like geofencing in their application, and how they incorporated Ionic Appflow into their CI/CD pipeline.</p>'
@@ -57,19 +57,26 @@ export class AgendaService {
     {
       id: 7,
       title: 'Leveraging Mono Repositories for Enterprise Projects',
-      speakerIds: [11, 12, 15, 16],
+      speakerIds: [11, 15, 16],
       startTime: '12:30 PM',
       endTime: '13:15 PM',
       description: 'We hear about it all the time: teams have built their applications as mono repositories and have had killer success across the board. Businesses benefit, technology benefits, performance improves—you name it and we\'ve seen it! However, you may think monrepos won\'t work for you. You already have your infrastructure set up, and it would be way too much effort for your product team to migrate over, right? Wrong. <p>If you are a software lead with an existing product looking to learn how to transform your product and your team to a monorepo, then this presentation is for you. OpenForge will present to you real strategies and exact implementations for converting your current team into a monorepo team.</p>'
     },
     {
+      id: 14,
+      title: 'Fireside Chat with Enterprise App Summit App Co-creator Matt Netkow',
+      speakerIds: [20,21],
+      startTime: '13:15 PM',
+      endTime: '13:30 PM',
+      description: 'Learn more about the new Enterprise App Summit application co-created by Matt Netkow, Liam DeBeasi, and Ben Sperry.<p>Built with Ionic technology including Live Updates, Capacitor, and Ionic’s own UI framework (the upcoming Ionic 6!) this app is designed to be updated quickly to bring the latest information to event participants, and provide a seamless experience across any device.</p>'
+    },
+    {
       id: 8,
-      title: 'Safe Travels: Making Contact-Free Travel Easy, Convenient, and Secure',
-      speakerIds: [17,18,19],
+      title: 'Introducing Ionic 6: A Q&A with the Ionic Team',
+      speakerIds: [25,19],
       startTime: '13:30 PM',
       endTime: '14:30 PM',
-      description: `The Amtrak app allows travelers to book reservations, board the train, check the train status, and more all from their mobile devices. How did Amtrak engineers develop an application that handles so many important travel details?<p>
-Join Amtrak software engineers in a discussion with Dallas James, Ionic’s platform extensions product manager, about the choices they made to build the Amtrak mobile app. They will cover the key functionalities of the app including authentication, security, the ticketing system, and other features that benefit their customers.</p>`
+      description: `We're excited to announce the release of Ionic 6! This release adds improved desktop support, overhauled components, iOS and Android design changes, and so much more. <p> Learn from Liam DeBeasi, Ionic's software developer and Ionic 6 project lead, as he dives into the decisions made to develop these features, specific framework version requirements, issues addressed with the new updates, and what's coming next after Ionic 6.</p>`
     },
     {
       id: 9,
@@ -90,7 +97,7 @@ Join Amtrak software engineers in a discussion with Dallas James, Ionic’s plat
     {
       id: 11,
       title: 'Delivering Dynamic Mobile Experiences with Reusable Architecture and Live Updates',
-      speakerIds: [14],
+      speakerIds: [14,26],
       startTime: '15:30 PM',
       endTime: '16:00 PM',
       description: 'AAA offers a dynamic experience to over 60 million customers around the United States. Broken into regions, AAA can deliver unique experiences to customers in different areas. Each region is responsible for their own application experience, but customers download the same application on the app stores. How does AAA deliver brand continuity across all regions while enabling club autonomy? <p>Discover how AAA achieves a balance of unique customer experience and app parity by reusing architecture, leveraging CI/CD pipelines to deliver a seamless user flow, and maintaining brand continuity with a centralized design system.</p>'

@@ -42,11 +42,6 @@ export class CompanyService {
       logoUrl: 'assets/logos/company-norwex.png'
     },
     {
-      id: 8,
-      name: 'Amtrak',
-      logoUrl: 'assets/logos/company-amtrak.png'
-    },
-    {
       id: 9,
       name: 'OpenForge',
       logoUrl: 'assets/logos/company-openforge.png'

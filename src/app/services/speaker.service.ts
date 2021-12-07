@@ -106,28 +106,16 @@ Thomas has a passion for software development and over 20 years industry experie
 For the past 17 years at Volkswagen, Thorsten has grown from IT system analyst to user experience lead. He currently leads UX design management including definition and delivery of assets, methods, and tools for a creative and efficient design organization.`
     },
     {
-      id: 17,
-      firstName: 'Theo',
-      lastName: 'Rushin Jr.',
-      role: 'Lead Software Engineer',
-      companyId: 8,
-      photoUrl: 'assets/photos/theo.jpeg',
-      linkedin: "https://www.linkedin.com/in/therush/",
-      biography: `Theo Rushin Jr is a lead software engineer at Amtrak. 
-
-Theo is a creative, results-oriented professional with decades of application development and training experience. At Amtrak, he leads the deployment of new functionality, enhancements, and fixes to the Amtrak mobile app. Theo is responsible for bringing new technology trends to enterprise and customer-facing hybrid mobile applications.`
-    },
-    {
-      id: 18,
-      firstName: 'Kalyan',
-      lastName: 'Sury',
-      role: 'Senior Software Engineering Manager',
-      companyId: 8,
-      photoUrl: 'assets/photos/kalyan.jpg',
-      linkedin: "https://www.linkedin.com/in/kalyansury/",
-      biography: `Kalyan Sury is the senior software engineering manager of e-commerce and digital experience at Amtrak.
-
-Kalyan is an accomplished leader with expertise in software engineering, application development, service management, technical program & people management for e-commerce, custom architectures, and platforms. At Amtrak, he is responsible for design, development, and delivery of critical e-commerce systems including amtrak.com and the Amtrak mobile app accounting for a majority of the ticketing revenues.`
+      id: 24,
+      firstName: 'Matthias',
+      lastName: 'Fritsch',
+      role: 'Design Lead',
+      companyId: 13,
+      photoUrl: 'assets/photos/matthias.jpg',
+      linkedin: "https://www.linkedin.com/in/fritschmatthias/",
+      biography: `Matthias is currently leading the design system at MAN Truck & Bus SE.
+      
+For over 15 years he has been dealing with the visualization and emotionalization of innovative media—what started as a hobby in the past is now a passion in his job. Matthias aims to standardize reusable digital artifacts on cross-technology for web, app, and InTruck.`
     },
     {
       id: 4,
@@ -215,6 +203,18 @@ Robert is a passionate software developer with nearly 40 years of experience dev
 For over half a decade, Ralph has provided strategic design and solutions for AAA customers using iOS and Android devices. His focus is on team and client support, and building and managing a strong working organization that enables the highest level of ethics, customer care, and project delivery.`
     },
     {
+      id: 26,
+      firstName: 'Sesha',
+      lastName: 'Sai Ram Peteti',
+      role: 'Product Manager for ACG Group',
+      companyId: 11,
+      photoUrl: 'assets/photos/sesha.jpg',
+      linkedin: "https://www.linkedin.com/in/sesha-sai-ram-peteti-a417129/",
+      biography: `Sesha Sai Ram Peteti is the product manager for the Auto Club Group at AAA.
+
+Sesha is a multi-skilled technical architect with over 14 years of experience in the IT industry, ranging from developer to architect, which includes specializations in mobile, web, and J2EE solutions. He is a seasoned professional with strong technical and business skills that enables him to deliver high-impact solutions. Sesha has a track record of establishing credibility with customers and delivering successful projects.`
+    },
+    {
       id: 19,
       firstName: 'Dallas',
       lastName: 'James',
@@ -246,7 +246,9 @@ Matt is a full stack developer, product marketer, and hobbyist entrepreneur, spe
       photoUrl: 'assets/photos/kremer.jpeg',
       linkedin: "https://www.linkedin.com/in/matthewkremer/",
       twitter: "https://twitter.com/matthewkremer",
-      biography: `Product Manager at Ionic. Hobby addict, Pokemon, Alien, Sim Racing. Anything Is Possible. Strong opinions, weakly held.`
+      biography: `Matt is the director of product management at Ionic.
+
+ While he started at Ionic as an engineer, they don't let him write code anymore. He's passionate about the future of the web and its place in web-native. Matt also enjoys helping teams build amazing apps through Ionic's products.`
     },
     {
       id: 22,
@@ -272,17 +274,18 @@ Programming is his passion. He has been developing software since middle school,
       biography: `Josh is a Product Manager at Ionic, working on Capacitor, Portals, and Ionic Framework. He loves empowering web developers to build awesome cross-platform apps.`
     },
     {
-      id: 24,
-      firstName: 'Matthias',
-      lastName: 'Fritsch',
-      role: 'Design Lead',
-      companyId: 13,
-      photoUrl: 'assets/photos/matthias.jpg',
-      linkedin: "https://www.linkedin.com/in/fritschmatthias/",
-      biography: `Matthias is currently leading the design system at MAN Truck & Bus SE.
+      id: 25,
+      firstName: 'Liam',
+      lastName: 'DeBeasi',
+      role: 'Software Engineer',
+      companyId: 1,
+      photoUrl: 'assets/photos/liam.png',
+      linkedin: "https://www.linkedin.com/in/liamdebeasi/",
+      twitter: 'https://twitter.com/LiamDeBeasi',
+      biography: `Liam is a software engineer at Ionic.
       
-For over 15 years he has been dealing with the visualization and emotionalization of innovative media—what started as a hobby in the past is now a passion in his job. Matthias aims to standardize reusable digital artifacts on cross-technology for web, app, and InTruck.`
-    }
+Liam is a full stack developer who builds scalable web and mobile applications. He received a degree in Computer Science from Boston University in May 2017.`
+    },
   ];
 
   constructor() {}

@@ -47,7 +47,7 @@ export class AgendaItemPage {
   }
 
   async triggerBrowser() {
-    await Browser.open({ url: "https://ionic.io/events"})
+    await Browser.open({ url: "https://ionic.io/events/enterprise-app-summit-21"})
   }
 
   formatTalkTime(agendaItem: AgendaItem) {
