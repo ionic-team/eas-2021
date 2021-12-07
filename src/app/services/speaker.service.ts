@@ -279,7 +279,7 @@ Programming is his passion. He has been developing software since middle school,
       lastName: 'DeBeasi',
       role: 'Software Engineer',
       companyId: 1,
-      photoUrl: 'assets/photos/liam.png',
+      photoUrl: 'assets/photos/liam.jpg',
       linkedin: "https://www.linkedin.com/in/liamdebeasi/",
       twitter: 'https://twitter.com/LiamDeBeasi',
       biography: `Liam is a software engineer at Ionic.
