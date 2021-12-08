@@ -106,6 +106,28 @@ Thomas has a passion for software development and over 20 years industry experie
 For the past 17 years at Volkswagen, Thorsten has grown from IT system analyst to user experience lead. He currently leads UX design management including definition and delivery of assets, methods, and tools for a creative and efficient design organization.`
     },
     {
+      id: 27,
+      firstName: 'Jan',
+      lastName: 'Vornkahl',
+      role: 'Software Engineer',
+      companyId: 3,
+      photoUrl: 'assets/photos/jan.jpg',
+      biography: `Jan Vornkahl is a software engineer at the Volkswagen Group located in Germany, Wolfsburg.
+      
+From the beginning of his career, Jan has been very interested in frontend development. He also has an interest in micro frontends and all other customer-facing application topics. Since 2020, he has been part of the GroupUI development team. Developing sustainable products is his passion.`
+    },
+    {
+      id: 28,
+      firstName: 'Johannes',
+      lastName: 'Bosch',
+      role: 'Software Engineer',
+      companyId: 3,
+      photoUrl: 'assets/photos/johannes.jpg',
+      biography: `Johannes Bosch is a software engineer at the Volkswagen Group located in Germany, Wolfsburg.
+      
+His focus is on building solution with web technologies. Since Summer 2020, he has been part of the GroupUI development team. There, they are building Web Components with StencilJs.`
+    },
+    {
       id: 24,
       firstName: 'Matthias',
       lastName: 'Fritsch',
@@ -212,7 +234,7 @@ For over half a decade, Ralph has provided strategic design and solutions for AA
       linkedin: "https://www.linkedin.com/in/sesha-sai-ram-peteti-a417129/",
       biography: `Sesha Sai Ram Peteti is the product manager for the Auto Club Group at AAA.
 
-Sesha is a multi-skilled technical architect with over 14 years of experience in the IT industry, ranging from developer to architect, which includes specializations in mobile, web, and J2EE solutions. He is a seasoned professional with strong technical and business skills that enables him to deliver high-impact solutions. Sesha has a track record of establishing credibility with customers and delivering successful projects.`
+Sesha is a multi-skilled technical architect with over 20+ years of experience in the IT industry, ranging from developer to architect, which includes specializations in mobile, web, and J2EE solutions. He is a seasoned professional with strong technical and business skills that enables him to deliver high-impact solutions. Sesha has a track record of establishing credibility with customers and delivering successful projects.`
     },
     {
       id: 19,

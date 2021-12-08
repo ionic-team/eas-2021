@@ -25,7 +25,7 @@ export class AgendaService {
     {
       id: 3,
       title: 'Between Standard and Flexibility: Volkswagen Group’s Multi-Brand Design System GroupUI',
-      speakerIds: [3,24],
+      speakerIds: [3,27,28,24],
       startTime: '10:00 AM',
       endTime: '11:00 AM',
       description: 'Volkswagen Group’s full-stack design system GroupUI delivers a seamless experience from figma and sketch to web components built with Stencil JS—Ionic’s toolchain for building reusable, scalable design systems. In a multi-brand environment featuring over five brands—with more to come soon—a perfect collaboration between teams and brands is vital for success.<p>      Discover how the designers at Volkswagen add value with maximum flexibility for their brands. Learn how they are managing collaboration, communication, and contribution in their cross-brand and interdisciplinary environment.</p>'

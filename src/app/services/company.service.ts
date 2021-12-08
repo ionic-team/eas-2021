@@ -57,11 +57,6 @@ export class CompanyService {
       logoUrl: 'assets/logos/company-aaa.png'
     },
     {
-      id: 12,
-      name: 'Azure',
-      logoUrl: 'assets/logos/company-azure.png'
-    },
-    {
       id: 13,
       name: 'MAN Truck & Bus SE',
       logoUrl: 'assets/logos/company-man.png'
