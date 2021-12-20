@@ -261,7 +261,7 @@ Matt is a full stack developer, product marketer, and hobbyist entrepreneur, spe
     },
     {
       id: 21,
-      firstName: 'Matt',
+      firstName: 'Matthew',
       lastName: 'Kremer',
       role: 'Director of Product Management',
       companyId: 1,
