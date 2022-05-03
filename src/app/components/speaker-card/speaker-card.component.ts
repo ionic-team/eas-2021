@@ -11,12 +11,12 @@ import { CompanyService } from '../../services/company.service';
   styleUrls: ['./speaker-card.component.scss'],
 })
 export class SpeakerCardComponent implements OnInit {
+  @Input() id: number;
+  @Input() button = false;
+  @Input() safeArea = false;
+
   public speaker: Speaker;
   public company: Company;
-
-  @Input() id: number;
-  @Input() button: boolean = false;
-  @Input() safeArea: boolean = false;
 
   constructor(
     private speakerService: SpeakerService,
@@ -30,7 +30,9 @@ export class SpeakerCardComponent implements OnInit {
   }
 
   async presentModal() {
-    if (!this.button) return;
+    if (!this.button) {
+      return;
+    }
 
     const modal = await this.modalController.create({
       component: SpeakerViewComponent,

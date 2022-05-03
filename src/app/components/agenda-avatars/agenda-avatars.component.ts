@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AgendaAvatarsComponent implements OnInit {
   @Input() urls: string[] = [];
-  @Input() size: string = '100%';
+  @Input() size = '100%';
 
   constructor() { }
 

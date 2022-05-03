@@ -14,10 +14,10 @@ export class AppComponent {
 
   initializeApp() {
     if (Capacitor.isNativePlatform()) {
-      /* To make sure we provide the fastest app loading experience 
-          for our users, hide the splash screen automatically 
-          when the app is ready to be used:
-          
+      /* To make sure we provide the fastest app loading experience
+          for our users, hide the splash screen automatically
+          when the app is ready to be used
+
           https://capacitorjs.com/docs/apis/splash-screen#hiding-the-splash-screen
       */
       SplashScreen.hide();

@@ -28,12 +28,12 @@ export class PushNotificationService  {
         PushNotifications.register();
       } else {
         // Show some error
-        console.log("error: " + result.receive);
+        console.log('error: ' + result.receive);
       }
     });
 
     PushNotifications.addListener('registration', (token: Token) => {
-      console.log("push registration success");
+      console.log('push registration success');
     });
 
     PushNotifications.addListener('registrationError', (error: any) => {

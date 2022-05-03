@@ -28,7 +28,7 @@ export class AgendaItemPage {
     private toastController: ToastController
   ) {
     const agendaId = route.snapshot.paramMap.get('agendaId');
-    this.agendaItem = agendaService.getAgendaItem(parseInt(agendaId, 10))
+    this.agendaItem = agendaService.getAgendaItem(parseInt(agendaId, 10));
     this.speakers = speakerService.getSpeakers(this.agendaItem.speakerIds);
     this.photoUrls = this.speakers.map(speaker => speaker.photoUrl);
   }
@@ -38,16 +38,16 @@ export class AgendaItemPage {
 
     // set reminder for 5 minutes before!
     const toast = await this.toastController.create({
-      message: "Reminder set for 5 minutes before the talk begins",
+      message: 'Reminder set for 5 minutes before the talk begins',
       duration: 2000,
-      color: "primary"
+      color: 'primary'
     });
-    
+
     await toast.present();
   }
 
   async triggerBrowser() {
-    await Browser.open({ url: "https://ionic.io/events/enterprise-app-summit-21"})
+    await Browser.open({ url: 'https://ionic.io/events/enterprise-app-summit-21'});
   }
 
   formatTalkTime(agendaItem: AgendaItem) {

@@ -10,9 +10,9 @@ import { Browser } from '@capacitor/browser';
   styleUrls: ['./speaker-view.component.scss'],
 })
 export class SpeakerViewComponent implements OnInit {
-  public speaker: Speaker;
-
   @Input() id: number;
+
+  public speaker: Speaker;
 
   constructor(
     private speakerService: SpeakerService,
@@ -28,7 +28,7 @@ export class SpeakerViewComponent implements OnInit {
   }
 
   async openLink(link: string) {
-    await Browser.open({ url: link})
+    await Browser.open({ url: link});
   }
 
 }

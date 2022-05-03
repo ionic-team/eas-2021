@@ -23,30 +23,30 @@ export class SponsorsPage implements OnInit {
           this.platinumSponsors = [
             ...this.platinumSponsors,
             sponsor
-          ]
+          ];
           break;
         case SponsorTier.Gold:
           this.goldSponsors = [
             ...this.goldSponsors,
             sponsor
-          ]
+          ];
           break;
         case SponsorTier.Silver:
           this.silverSponsors = [
             ...this.silverSponsors,
             sponsor
-          ]
+          ];
           break;
         case SponsorTier.Bronze:
           this.bronzeSponsors = [
             ...this.bronzeSponsors,
             sponsor
-          ]
+          ];
           break;
         default:
           break;
       }
-    })
+    });
   }
 
   ngOnInit() {

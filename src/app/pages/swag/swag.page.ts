@@ -10,11 +10,10 @@ import { SwagModalPage } from '../../components/swag-modal/swag-modal.page';
 })
 export class SwagPage implements OnInit {
 
-  constructor(public modalController: ModalController, 
+  constructor(public modalController: ModalController,
     private routerOutlet: IonRouterOutlet, public toastController: ToastController) { }
 
   ngOnInit() {
-    
   }
 
   async openSwagModal() {
@@ -22,26 +21,26 @@ export class SwagPage implements OnInit {
       component: SwagModalPage,
       swipeToClose: true,
       presentingElement: this.routerOutlet.nativeEl,
-      componentProps: { }
+      componentProps: {}
     });
-     
+
     modal.onDidDismiss().then((result) => {
       // Data will be undefined if modal was swiped closed or back button used
       if (result.data) {
         this.presentToast();
       }
     });
-    
+
     return await modal.present();
   }
 
   private async presentToast(): Promise<void> {
     const toast = await this.toastController.create({
-      message: "Thanks! Winners will be notified by email.",
+      message: 'Thanks! Winners will be notified by email.',
       duration: 2000,
-      color: "primary"
+      color: 'primary'
     });
-    
+
     await toast.present();
   }
 }

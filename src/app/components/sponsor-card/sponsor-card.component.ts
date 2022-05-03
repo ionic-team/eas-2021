@@ -12,7 +12,7 @@ import { Browser } from '@capacitor/browser';
 })
 export class SponsorCardComponent implements OnInit {
   @Input() id: number;
-  @Input() button: boolean = false;
+  @Input() button = false;
 
   public sponsor: Sponsor;
 
@@ -26,7 +26,7 @@ export class SponsorCardComponent implements OnInit {
   }
 
   async openLink(link: string) {
-    await Browser.open({ url: link})
+    await Browser.open({ url: link});
   }
 
 }

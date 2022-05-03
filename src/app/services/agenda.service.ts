@@ -134,13 +134,13 @@ export class AgendaService {
     return `${this.convertToTwelveHourFormat(agendaItem.startTime)} - ${this.convertToTwelveHourFormat(agendaItem.endTime)} CT`;
   }
 
-  // Talk times are stored in military time to make it easier to work with 
+  // Talk times are stored in military time to make it easier to work with
   // local notifications. Convert to 12 hour clock format.
   // Likely better ways to do this with Date object.
 
   // time: 08:00 AM, 12:30 PM, 14:00 PM etc.
   private convertToTwelveHourFormat(time: string) {
-    let hour = parseInt(time.substring(0,2));
+    let hour = parseInt(time.substring(0,2), 10);
 
     if (hour > 12) {
       hour = hour - 12;
