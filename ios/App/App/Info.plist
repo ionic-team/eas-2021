@@ -28,6 +28,10 @@
 	<string>Production</string>
 	<key>IonMaxVersions</key>
 	<string>2</string>
+	<key>CFBundleURLSchemes</key>
+	<array>
+		<string>io.ionic.conferences.cs.auth</string>
+	</array>
 	<key>IonMinBackgroundDuration</key>
 	<string>30</string>
 	<key>IonUpdateMethod</key>

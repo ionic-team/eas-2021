@@ -1,4 +1,4 @@
-package io.ionic.conferences.eas2021;
+package io.ionic.conferences.cs.auth;
 
 import com.getcapacitor.BridgeActivity;
 
