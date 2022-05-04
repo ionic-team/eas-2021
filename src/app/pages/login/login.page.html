@@ -1,0 +1,16 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="frame">
+    <ion-img src="assets/ionic.svg" class="logo"></ion-img>
+    <ion-text color="light">
+      <h2>Enterprise Summit</h2>
+      <h2>&nbsp;</h2>
+    </ion-text>
+    <div class="off-center"></div>
+    <ion-button [disabled]="busy" (click)="signIn()" [hidden]="authenticated" class="first" mode="ios" color="light" fill="outline" size="default">Sign In / Up</ion-button>
+    <ion-button [disabled]="busy" (click)="signOut()" [hidden]="!authenticated" mode="ios" color="light"  fill="outline" size="default">Sign Out</ion-button>
+
+  </div>
+</ion-content>

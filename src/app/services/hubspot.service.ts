@@ -96,11 +96,7 @@ export class HubspotService  {
     return response.ok;
   }
 
-
-
   getStates(): string[] {
     return this.states;
   }
-
-
 }

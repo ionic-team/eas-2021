@@ -1,0 +1,28 @@
+ion-content {
+    // --background: url(../../../assets/splash.png) no-repeat center center / cover;
+    --background: var(--ion-color-primary);
+}
+
+.off-center {
+    height: 150px;
+}
+
+.frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+    height: 100%;
+    overflow-y: hidden;
+}
+
+ion-button {
+    min-width: 200px;
+    --border-radius: 30px;
+}
+
+.logo {
+    width: 30vw;
+    min-height: 120px;
+    max-width: 200px;
+}
