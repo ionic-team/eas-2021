@@ -58,7 +58,6 @@ export const webIonicAuthOptions: IonicAuthOptions = {
   // either for true SSO across multiple apps.
   iosWebView: 'private',
   implicitLogin: 'CURRENT',// 'POPUP',
-  //logLevel: 'DEBUG'
 };
 
 /*

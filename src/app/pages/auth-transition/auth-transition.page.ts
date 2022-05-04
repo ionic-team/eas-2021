@@ -15,20 +15,7 @@ export class AuthTransitionPage implements OnInit {
   }
 
   async ionViewDidEnter() {
-    console.log('Entering auto-transition');
-
-    const params = new URLSearchParams(window.location.hash.substr(1));
-    console.log(window.location.search);
-    console.log('token', params.get('access_token'));
-
-    await this.auth.callback(window.location.href);
-
-
-    const auth = await this.auth.isAuthenticated();
-    console.log('transitioned to auth=' + auth);
-    setTimeout(() => {
-      this.router.navigateByUrl('/');
-    }, 5000);
+    await this.auth.handleLogin(window.location.href);
+    this.router.navigateByUrl('/');
   }
-
 }

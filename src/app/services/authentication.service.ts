@@ -16,10 +16,9 @@ export class AuthenticationService extends IonicAuth {
   constructor(platform: Platform, private ngZone: NgZone, private vaultService: VaultService) {
     super(platform.is('hybrid')
       ? { ...nativeIonicAuthOptions, tokenStorageProvider: vaultService.vault }
-      : { ...webIonicAuthOptions, tokenStorageProvider: vaultService.vault }
+      : { ...webIonicAuthOptions }
     );
     this.authenticationChange$ = this.authenticationChange.asObservable();
-    //this.isAuthenticated().then((authenticated) => { this.onAuthChange(authenticated); });
   }
 
   public async onLoginSuccess(): Promise<void> {
@@ -32,13 +31,11 @@ export class AuthenticationService extends IonicAuth {
   }
 
   // Called as part of CURRENT implicit login flow only
-  async callback(url: string) {
+  async handleLogin(url: string) {
     try {
       console.log('handle login Callback', url);
-
-      // Possible bug in auth connect when there is no session data but we have logged in
-      // https://github.com/ionic-team/enterprise-auth-connect/blob/de413151eecb3ffafac750280c84bc82107e7ef8/packages/auth-connect/src/ionic-auth-web.ts#L71
       await super.handleLoginCallback(url);
+
     } catch (err) {
       console.error('handleLoginCallback', err);
     }
