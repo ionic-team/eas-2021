@@ -5,7 +5,7 @@ This is a sample application demonstrating the combination of Auth Connect and I
 ## TLDR
 
 If you like the "feel" of way Authentication is handled in this app and would like to copy and paste code here is the cheat sheet:
-- `authentication.service.ts`
+- [authentication.service.ts](app/services/authentication.service.ts)
 - TBA
 
 ## Design
