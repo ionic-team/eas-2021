@@ -4,6 +4,8 @@ import { Capacitor } from '@capacitor/core';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { AuthenticationService } from './services/authentication.service';
 import { distinct } from 'rxjs/operators';
+import { StatusBar } from '@capacitor/status-bar';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -11,33 +13,29 @@ import { distinct } from 'rxjs/operators';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private auth: AuthenticationService, private router: Router) {
+  constructor(private auth: AuthenticationService, private router: Router, private platform: Platform) {
     this.initializeApp();
+    platform.resume.subscribe(() => {
+      this.checkAuth();
+    });
   }
 
   async initializeApp() {
     if (Capacitor.isNativePlatform()) {
-      /* To make sure we provide the fastest app loading experience
-          for our users, hide the splash screen automatically
-          when the app is ready to be used
-
-          https://capacitorjs.com/docs/apis/splash-screen#hiding-the-splash-screen
-      */
+      await StatusBar.hide();
       SplashScreen.hide();
     }
 
-    this.auth.authenticationChange$.pipe(distinct()).subscribe(async (isAuthenticated) => {
-      console.log('isAuthenticated', isAuthenticated);
-      if (isAuthenticated) {
-        console.log('route to blank');
-        this.router.navigateByUrl('/');
-      } else {
-        try {
-          await this.auth.clearStorage();
-        } catch (err) {
-          console.log(err);
-        }
-      }
-    });
+    this.checkAuth();
+  }
+
+  private async checkAuth() {
+    // This will trigger a check of the vault and ensure we are authenticated
+    try {
+      await this.auth.isAuthenticated();
+    } catch (error) {
+      // Any failure we'll route to login
+      this.router.navigate(['login']);
+    }
   }
 }

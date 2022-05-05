@@ -1,4 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonicAuth } from '@ionic-enterprise/auth';
 import { Platform } from '@ionic/angular';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -13,7 +14,8 @@ export class AuthenticationService extends IonicAuth {
   public authenticated: boolean;
   private authenticationChange: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  constructor(platform: Platform, private ngZone: NgZone, private vaultService: VaultService) {
+  constructor(platform: Platform, private ngZone: NgZone,
+    private vaultService: VaultService, private router: Router) {
     super(platform.is('hybrid')
       ? { ...nativeIonicAuthOptions, tokenStorageProvider: vaultService.vault }
       : { ...webIonicAuthOptions }
@@ -23,18 +25,17 @@ export class AuthenticationService extends IonicAuth {
 
   public async onLoginSuccess(): Promise<void> {
     try {
-      console.log('onLoginSuccess');
       this.onAuthChange(true);
+      this.router.navigateByUrl('/');
     } catch (err) {
-      console.error(err);
+      console.error('onLoginSuccess', err);
     }
   }
 
   // Called as part of CURRENT implicit login flow only
-  async handleLogin(url: string) {
+  async handleLogin() {
     try {
-      console.log('handle login Callback', url);
-      await super.handleLoginCallback(url);
+      await super.handleLoginCallback();
 
     } catch (err) {
       console.error('handleLoginCallback', err);
@@ -43,6 +44,7 @@ export class AuthenticationService extends IonicAuth {
 
   public async onLogout(): Promise<void> {
     this.onAuthChange(false);
+    this.router.navigate(['login']);
   }
 
   private async onAuthChange(isAuthenticated: boolean): Promise<void> {

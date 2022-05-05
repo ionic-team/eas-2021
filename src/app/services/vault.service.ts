@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { Capacitor } from '@capacitor/core';
 import {
     BrowserVault, Device, DeviceSecurityType,
-    IdentityVaultConfig, Vault, VaultType
+    IdentityVaultConfig, Vault, VaultError, VaultType
 } from '@ionic-enterprise/identity-vault';
-import { Platform } from '@ionic/angular';
 
 @Injectable({
     providedIn: 'root'
@@ -23,7 +22,7 @@ export class VaultService {
 
     vault: Vault | BrowserVault;
 
-    constructor(private platform: Platform) {
+    constructor() {
         this.vault = Capacitor.getPlatform() === 'web' ? new BrowserVault(this.config) : new Vault(this.config);
         this.init();
     }
@@ -62,16 +61,20 @@ export class VaultService {
         this.vault.onConfigChanged(() => {
             console.log('Vault configuration was changed', this.config);
         });
+
         this.vault.onLock(() => {
             console.log('Vault was locked');
         });
+
         this.vault.onUnlock(() => {
             console.log('Vault was unlocked');
         });
-        this.vault.onError((err) => {
-            console.error('Vault error', err);
-            alert(err.code + ': ' + err.message);
+
+        this.vault.onError((error: VaultError) => {
+            console.log(error);
         });
-        await Device.setHideScreenOnBackground(true);
+
+        // If you would like the privacy screen set to true
+        await Device.setHideScreenOnBackground(false);
     }
 }

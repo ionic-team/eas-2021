@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonRouterOutlet, ModalController, ToastController } from '@ionic/angular';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { SwagModalPage } from '../../components/swag-modal/swag-modal.page';
@@ -13,9 +14,14 @@ export class SwagPage implements OnInit {
 
   constructor(public modalController: ModalController,
     private auth: AuthenticationService,
+    private router: Router,
     private routerOutlet: IonRouterOutlet, public toastController: ToastController) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+  }
+
+  async ionViewDidEnter() {
+   
   }
 
   async openSwagModal() {
@@ -38,7 +44,6 @@ export class SwagPage implements OnInit {
 
   public async signOut() {
     await this.auth.logout();
-    console.log('logout');
   }
 
   private async presentToast(): Promise<void> {

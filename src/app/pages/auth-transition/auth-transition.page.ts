@@ -15,7 +15,6 @@ export class AuthTransitionPage implements OnInit {
   }
 
   async ionViewDidEnter() {
-    await this.auth.handleLogin(window.location.href);
-    this.router.navigateByUrl('/');
+    await this.auth.handleLogin();
   }
 }

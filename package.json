@@ -34,8 +34,7 @@
     "@capacitor/storage": "1.2.5",
     "@ionic-enterprise/auth": "3.9.2",
     "@ionic-enterprise/identity-vault": "5.7.1",
-    "@ionic/angular": "6.1.3",
-    "cordova-plugin-ionic": "5.5.2",
+    "@ionic/angular": "6.1.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
@@ -58,6 +57,7 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "4.16.1",
+    "cordova-res": "0.15.4",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",

@@ -2,15 +2,20 @@
 </ion-header>
 
 <ion-content>
-  <div class="frame">
-    <ion-img src="assets/ionic.svg" class="logo"></ion-img>
-    <ion-text color="light">
+  <div class="frame" [ngClass]="showLogo ? 'show' : 'hide'">
+    <ion-img (ionImgDidLoad)="showLogo = true" [src]="isDark ? 'assets/ionic-dark.svg' : 'assets/ionic.svg'" class="logo">
+    </ion-img>
+    <ion-text color="dark">
       <h2>Enterprise Summit</h2>
       <h2>&nbsp;</h2>
     </ion-text>
-    <div class="off-center"></div>
-    <ion-button [disabled]="busy" (click)="signIn()" [hidden]="authenticated" class="first" mode="ios" color="light" fill="outline" size="default">Sign In / Up</ion-button>
-    <ion-button [disabled]="busy" (click)="signOut()" [hidden]="!authenticated" mode="ios" color="light"  fill="outline" size="default">Sign Out</ion-button>
 
+    <div class="buttons">
+      <ion-spinner [hidden]="!busy" color="dark" name="crescent"></ion-spinner>
+      <ion-button [hidden]="busy || authenticated" (click)="signIn()" mode="ios" color="dark" fill="outline"
+        size="large">Sign In / Up</ion-button>
+      <ion-button [hidden]="busy || !authenticated" (click)="signOut()" mode="ios" color="dark" fill="outline"
+        size="large">Sign Out</ion-button>
+    </div>
   </div>
 </ion-content>

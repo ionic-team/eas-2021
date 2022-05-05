@@ -1,10 +1,11 @@
 ion-content {
     // --background: url(../../../assets/splash.png) no-repeat center center / cover;
-    --background: var(--ion-color-primary);
+    --background: var(--ion-color-light);
 }
 
-.off-center {
-    height: 150px;
+.buttons {
+    margin-top:5em;
+    height: 5em;    
 }
 
 .frame {
@@ -26,3 +27,12 @@ ion-button {
     min-height: 120px;
     max-width: 200px;
 }
+
+.show {
+    opacity: 1;
+    transition: opacity 1s;
+ }
+ 
+ .hide {
+    opacity: 0;
+ }

@@ -1,15 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Swag</ion-title>
-    <ion-button (click)="signOut()" fill="clear" slot="end">Sign Out</ion-button>
+    <ion-title>Profile</ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="page-content">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Swag</ion-title>
-      
+      <ion-title size="large">Profile</ion-title>
+     
     </ion-toolbar>
   </ion-header>
 
@@ -24,7 +24,8 @@
     </ion-card-header>
 
     <ion-card-content>
-      <p>Note: Entries for the swag raffle are now closed.</p>
+      <ion-button (click)="signOut()" fill="clear" slot="end">Sign Out</ion-button>
     </ion-card-content>
   </ion-card>
+  
 </ion-content>
