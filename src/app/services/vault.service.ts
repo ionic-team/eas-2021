@@ -27,15 +27,6 @@ export class VaultService {
         this.init();
     }
 
-    public async clear() {
-        try {
-            await this.vault.clear();
-            console.log('Vault was cleared');
-        } catch (err) {
-            console.error('vault.service.ts clear()', err);
-        }
-    }
-
     /**
      * This method is called before the very first sign in is done.
      * If the device does not have biometrics then switch the vault to Secure Storage

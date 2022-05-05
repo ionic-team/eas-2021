@@ -30,9 +30,11 @@ export class AppComponent {
   }
 
   private async checkAuth() {
-    // This will trigger a check of the vault and ensure we are authenticated
     try {
-      await this.auth.isAuthenticated();
+      // This will trigger a check of the vault and ensure we are authenticated
+      if (!await this.auth.isAuthenticated()) {
+        this.router.navigate(['login']);
+      }
     } catch (error) {
       // Any failure we'll route to login
       this.router.navigate(['login']);

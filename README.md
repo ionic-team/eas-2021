@@ -1,42 +1,42 @@
-# EAS 2021
-Conference app for the 2021 [Enterprise App Summit](https://ionic.io/events/enterprise-app-summit-21), hosted by Ionic, that runs on the web, iOS, and Android. This free, one day virtual event brings together tech leaders from around the world. Learn, engage, and connect with the experts using Ionic products and services to drive innovation within their companies.
+# Enterprise Summit
 
-Use this app to view the agenda, speaker and sponsor info, and enter to win free Ionic and EAS swag.
+This is a sample application demonstrating the combination of Auth Connect and Identity Vault in a real world application that is designed to run on iOS, Android and web.
 
-## Try the App
+## TLDR
 
-EAS 2021 runs on the web, iOS, and Android all from a single codebase. Try it on your device:
+If you like the "feel" of way Authentication is handled in this app and would like to copy and paste code here is the cheat sheet:
+- `authentication.service.ts`
+- TBA
 
-- iOS: [Download on the App Store](https://apps.apple.com/us/app/eas-21/id1591534286)
-- Android: [Download on Google Play](https://play.google.com/store/apps/details?id=io.ionic.conferences.eas2021)
-- Web: [https://eas21.ionic.io](https://eas21.ionic.io) (hosted on Vercel)
+## Design
 
-## Features
+Knowing upfront how you want your authentication to be used in an Application is critical. In this application the requirements are:
 
-**Agenda**: Display the conference's agenda including speakers, times, and talk titles. The first time the app is loaded, display a sheet modal asking the user if they'd like to get push notifications, such as a reminder when the event is about to start.
+- To access the application you must sign up or sign in first
+- After sign in a user can choose to sign out on the profile page returning them to the sign in page
+- If the user exits the application but returns they must pass the biometric prompt (or be returned to sign in again)
+- If the users device is not capable of biometrics it will fall back to securely storing sensitive data on the keychain
+- On the web we trust that the user will be using their own device and will store token information in the browsers local storage
 
-**Agenda Detail**: Tap on an agenda item to view details about the talk. "Remind Me" feature registers a local notification that triggers 5 minutes before the selected talk begins. 
+## Authentication Checks
 
-**Speakers and Sponsors**: Scrollable list of speakers and sponsors with bio and social media links.
+When the application is started or resumed on a mobile device we need to check authentication. You can see these checks being done in `app.component.ts` in the `checkAuth` method.
 
-**Swag**: Enter to win free Ionic and EAS21 swag. Custom form built to collect attendee info for raffle giveaway. Powered by the Hubspot API.
+## Auth Guards
 
-## Tech Details
+An auth guard protects access to an application through a check that happens when visiting a route. In `auth-guard.service.ts` a check is made to whether a users is signed in using the service `authentication.service.ts`. You can see this applied to routes in `app-routing.module.ts`.
 
-* UI: [Ionic 6](https://ionicframework.com) and [Angular 13](https://angular.io)
-* Native runtime: [Capacitor 3](https://capacitorjs.com)
-* Native features powered by Capacitor:
-  * [Push Notifications](https://capacitorjs.com/docs/apis/push-notifications) powered by Firebase
-  * [Local Notifications](https://capacitorjs.com/docs/apis/local-notifications) - Get reminders 5 minutes before talks start
-  * [Storage](https://capacitorjs.com/docs/apis/storage) - remember user's response to push notifications prompt
-* [Dark mode](https://ionicframework.com/docs/theming/dark-mode), powered by Ionic 6
-* [Live Updates](https://ionic.io/appflow/live-updates), powered by Appflow: Deploy instant updates directly to your users. Used to immediately ship updates to the agenda/speaker schedule on the day of the event, without needing to go through the app store review process.
+## Authentication Service
 
-## How to Run
+The service `authentication.service.ts` uses Ionic Auth Connect by extending `IonicAuth` and customizing by:
+- Specifying what we want to do on a successful login and logout
+- Specifying the configuration of our OIDC provider (using the configuration from `environment.ts`)
+- Specifying a configuration of Auth Connect that uses Identity Vault to store the sensitive auth token
+- Providing a public `authenticated` boolean that can be used in our application
 
-- Install the Ionic CLI: `npm install -g @ionic/cli`
-- Clone this repository
-- Run `npm install`
-- Build the app: `ionic build` then `npx cap sync`
-- To try the app locally on the web, run `ionic serve`
-- Run the app on your device, using either `npx cap open android` or `npx cap open ios`
+## Vault Service
+
+The service `vault.service.ts` uses Identity Vault and customizes it by:
+- Specifying a default configuration of using Biometrics to store information
+- Falling back to Secure Storage of information if the device is doesnt have strong biometrics enabled or supported (eg class 2 Android devices)
+- Uses a browser vault when run on web, this stores data in Local Storage (which you need to be ok with, otherwise an in-memory option is better)
