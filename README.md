@@ -4,11 +4,15 @@ This is a sample application demonstrating the combination of Auth Connect and I
 
 ## TLDR
 
-If you like the "feel" of way Authentication is handled in this app and would like to copy and paste code here is the cheat sheet:
-- [authentication.service.ts](src/app/services/authentication.service.ts)
-- [vault.service.ts](src/app/services/vault.service.ts)
-- [auth-guard.service.ts](src/app/services/auth-guard.service.ts)
-- [app.component.ts](src/app/app.component.ts)
+If you like the way authentication is handled in this app and would like to copy paste your way to freedom:
+- [authentication.service.ts](src/app/services/authentication.service.ts) - Setup of Ionic Auth Connect with an authentication provider
+- [vault.service.ts](src/app/services/vault.service.ts) - Setup of Ionic Identity Vault to support secure encryption of the auth token using biometrics
+- [auth-guard.service.ts](src/app/services/auth-guard.service.ts) - The Angular service to check authentication when routing to a page
+- [app-routing.module.ts](src/app/app-routing.module.ts) - The configuration of which routes are protected by the auth guard
+- [app.component.ts](src/app/app.component.ts) - Authentication is checked on startup and resume
+- [environment.ts](environments/environment.ts) - Configuration of the authentication provider
+
+Interested to know more? read on....
 
 ## Design
 
