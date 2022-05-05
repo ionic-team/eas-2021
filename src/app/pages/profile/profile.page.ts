@@ -7,21 +7,21 @@ import { SwagModalPage } from '../../components/swag-modal/swag-modal.page';
 
 @Component({
   selector: 'app-swag',
-  templateUrl: './swag.page.html',
-  styleUrls: ['./swag.page.scss'],
+  templateUrl: './profile.page.html',
+  styleUrls: ['./profile.page.scss'],
 })
-export class SwagPage implements OnInit {
+export class ProfilePage implements OnInit {
 
   constructor(public modalController: ModalController,
     private auth: AuthenticationService,
-    private router: Router,
     private routerOutlet: IonRouterOutlet, public toastController: ToastController) { }
 
   async ngOnInit() {
   }
 
   async ionViewDidEnter() {
-   
+   const token = await this.auth.getAccessToken();
+   console.log(this.auth.decodeToken(token));
   }
 
   async openSwagModal() {

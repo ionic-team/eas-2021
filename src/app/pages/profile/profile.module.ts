@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
-import { SwagPageRoutingModule } from './swag-routing.module';
-
-import { SwagPage } from './swag.page';
+import { ProfilePageRoutingModule } from './profile-routing.module';
+import { ProfilePage } from './profile.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SwagPageRoutingModule
+    ProfilePageRoutingModule
   ],
-  declarations: [SwagPage]
+  declarations: [ProfilePage]
 })
-export class SwagPageModule {}
+export class ProfilePageModule {}

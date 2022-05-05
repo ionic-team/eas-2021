@@ -14,8 +14,8 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
-    path: 'swag',
-    loadChildren: () => import('./pages/swag/swag.module').then( m => m.SwagPageModule),
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule),
     canActivate: [AuthGuardService]
   },
   {

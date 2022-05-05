@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Capacitor } from '@capacitor/core';
 import {
+    BiometricSecurityStrength,
     BrowserVault, Device, DeviceSecurityType,
     IdentityVaultConfig, Vault, VaultError, VaultType
 } from '@ionic-enterprise/identity-vault';
@@ -9,7 +10,6 @@ import {
     providedIn: 'root'
 })
 export class VaultService {
-
     config: IdentityVaultConfig = {
         key: 'io.ionic.conferences.cs.auth',
         type: VaultType.DeviceSecurity,
@@ -27,23 +27,6 @@ export class VaultService {
         this.init();
     }
 
-    public async lock() {
-        try {
-            await this.vault.lock();
-        } catch (err) {
-            console.error('vault.service.ts lock()', err);
-        }
-    }
-
-    public async unlock() {
-        try {
-            await this.vault.unlock();
-        } catch (err) {
-            const msg = (typeof err == 'object') ? JSON.stringify(err) : err;
-            console.error('vault.service.ts unlock()', msg);
-        }
-    }
-
     public async clear() {
         try {
             await this.vault.clear();
@@ -53,8 +36,29 @@ export class VaultService {
         }
     }
 
-    public async hasBiometrics(): Promise<boolean> {
-        return await Device.isBiometricsEnabled();
+    /**
+     * This method is called before the very first sign in is done.
+     * If the device does not have biometrics then switch the vault to Secure Storage
+     * otherwise it will use the default configuration of a biometric vault.
+     */
+    public async configureFirstTime() {
+        if (Capacitor.getPlatform() === 'web') {
+            return;
+        }
+
+        if (!await this.hasBiometrics() && await this.vault.isEmpty()) {
+            this.vault.updateConfig({
+                ...this.config,
+                type: VaultType.SecureStorage,
+                deviceSecurityType: DeviceSecurityType.None
+            });
+        }
+    }
+
+    private async hasBiometrics(): Promise<boolean> {
+        // For this app we only want to use biometrics if the device is capable of strong encryption
+        return await Device.isBiometricsEnabled() &&
+            (await Device.getBiometricStrengthLevel() === BiometricSecurityStrength.Strong);
     }
 
     private async init() {

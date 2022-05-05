@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { VaultService } from 'src/app/services/vault.service';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +9,12 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  public authenticationChange$: Observable<boolean>;
   public busy = false;
   public authenticated: boolean;
   public showLogo = false;
   public isDark = !window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  constructor(private authenticationService: AuthenticationService, private router: Router) {
-    this.authenticationChange$ = authenticationService.authenticationChange$;
+  constructor(private authenticationService: AuthenticationService, private vaultService: VaultService) {
   }
 
   async ngOnInit() {
@@ -26,6 +24,7 @@ export class LoginPage implements OnInit {
   async signIn() {
     try {
       this.busy = true;
+      this.vaultService.configureFirstTime();
       await this.authenticationService.login();
     } finally {
       setTimeout(() => {

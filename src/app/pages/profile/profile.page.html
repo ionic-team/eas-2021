@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="page-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list-header class="ion-padding-top ion-padding-start ion-padding-end eas-header-large">Ionic Developer</ion-list-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><strong>John Smith</strong></ion-card-title>
+      <ion-card-subtitle>You are part of the Ionic organization.</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button class="right" (click)="signOut()" fill="clear" slot="end">Sign Out</ion-button>    
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

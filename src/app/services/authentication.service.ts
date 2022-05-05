@@ -1,8 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
-import { Router } from '@angular/router';
 import { IonicAuth } from '@ionic-enterprise/auth';
-import { Platform } from '@ionic/angular';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { NavController, Platform } from '@ionic/angular';
 import { nativeIonicAuthOptions, webIonicAuthOptions } from '../../environments/environment';
 import { VaultService } from './vault.service';
 
@@ -10,47 +8,60 @@ import { VaultService } from './vault.service';
   providedIn: 'root'
 })
 export class AuthenticationService extends IonicAuth {
-  public authenticationChange$: Observable<boolean>;
   public authenticated: boolean;
-  private authenticationChange: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  constructor(platform: Platform, private ngZone: NgZone,
-    private vaultService: VaultService, private router: Router) {
+  constructor(
+    private platform: Platform,
+    private ngZone: NgZone,
+    private navController: NavController,
+    private vaultService: VaultService) {
     super(platform.is('hybrid')
       ? { ...nativeIonicAuthOptions, tokenStorageProvider: vaultService.vault }
       : { ...webIonicAuthOptions }
     );
-    this.authenticationChange$ = this.authenticationChange.asObservable();
-  }
-
-  public async onLoginSuccess(): Promise<void> {
-    try {
-      this.onAuthChange(true);
-      this.router.navigateByUrl('/');
-    } catch (err) {
-      console.error('onLoginSuccess', err);
-    }
   }
 
   // Called as part of CURRENT implicit login flow only
-  async handleLogin() {
-    try {
-      await super.handleLoginCallback();
-
-    } catch (err) {
-      console.error('handleLoginCallback', err);
-    }
+  public async handleLogin() {
+    await super.handleLoginCallback();
   }
 
   public async onLogout(): Promise<void> {
-    this.onAuthChange(false);
-    this.router.navigate(['login']);
-  }
-
-  private async onAuthChange(isAuthenticated: boolean): Promise<void> {
-    this.authenticated = isAuthenticated;
+    this.navController.navigateRoot('login', { animated: false });
     this.ngZone.run(() => {
-      this.authenticationChange.next(isAuthenticated);
+      this.authenticated = false;
     });
   }
+
+  /**
+   * This code will decode a JWT token and return the JSON payload
+   * You can use this get access to claims such as the users name
+   * or profile image (depending on the OIDC provider)
+   *
+   * @param token
+   */
+  public decodeToken(token: string) {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map((c) => {
+      const v = ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      return `%${v}`;
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+  };
+
+
+  async onLoginSuccess(): Promise<void> {
+    // I've chosen to navigate to the root of the app without animation
+    // as the login window already animated out
+    this.navController.navigateRoot('/', { animated: false });
+
+    // As authenticated could be bound to a view we would want the view to change
+    // when the variable changes, so its wrapped with ngZone.run
+    this.ngZone.run(() => {
+      this.authenticated = true;
+    });
+  }
+
 }
