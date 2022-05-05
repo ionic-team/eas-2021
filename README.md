@@ -10,7 +10,7 @@ If you like the way authentication is handled in this app and would like to copy
 - [auth-guard.service.ts](src/app/services/auth-guard.service.ts) - The Angular service to check authentication when routing to a page
 - [app-routing.module.ts](src/app/app-routing.module.ts) - The configuration of which routes are protected by the auth guard
 - [app.component.ts](src/app/app.component.ts) - Authentication is checked on startup and resume
-- [environment.ts](environments/environment.ts) - Configuration of the authentication provider
+- [environment.ts](src/environments/environment.ts) - Configuration of the authentication provider
 
 Interested to know more? read on....
 
