@@ -49,7 +49,7 @@ export const webIonicAuthOptions: IonicAuthOptions = {
   // requested scopes from provider
   scope: 'openid offline_access email profile https://ioniccs.onmicrosoft.com/5a5ef942-0e44-46a8-bbac-6a8ba7654eb0/user_impersonation',
   // the URL to redirect to after log out
-  logoutUrl: 'http://localhost:8100/auth-transition',
+  logoutUrl: 'http://localhost:8100/auth-transition#logout',
   // The type of iOS webview to use. 'shared' will use a webview that can
   // share session/cookies on iOS to provide SSO across multiple apps but
   // will cause a prompt for the user which asks them to confirm they want
@@ -57,7 +57,7 @@ export const webIonicAuthOptions: IonicAuthOptions = {
   // not prompt the user but will not be able to share session/cookie data
   // either for true SSO across multiple apps.
   iosWebView: 'private',
-  implicitLogin: 'CURRENT',// 'POPUP',
+  implicitLogin: 'CURRENT'
 };
 
 /*

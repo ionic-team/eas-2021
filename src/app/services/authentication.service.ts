@@ -53,14 +53,14 @@ export class AuthenticationService extends IonicAuth {
 
 
   async onLoginSuccess(): Promise<void> {
-    // I've chosen to navigate to the root of the app without animation
-    // as the login window already animated out
-    this.navController.navigateRoot('/', { animated: false });
-
     // As authenticated could be bound to a view we would want the view to change
     // when the variable changes, so its wrapped with ngZone.run
     this.ngZone.run(() => {
       this.authenticated = true;
+
+      // I've chosen to navigate to the root of the app without animation
+      // as the login window already animated out
+      this.navController.navigateRoot('/', { animated: false });
     });
   }
 

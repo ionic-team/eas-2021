@@ -1,3 +1,10 @@
 ion-content {
-    --background: var(--ion-color-primary);
+    --background: var(--ion-color-light);
+}
+
+.center {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }

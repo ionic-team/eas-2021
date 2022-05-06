@@ -15,6 +15,15 @@ export class AuthTransitionPage implements OnInit {
   }
 
   async ionViewDidEnter() {
-    await this.auth.handleLogin();
+    try {
+      // Transitioning to logout or login
+      if (window.location.hash === '#logout') {
+        this.router.navigate(['login']);
+      } else {
+        await this.auth.handleLogin();
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 }

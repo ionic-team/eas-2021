@@ -1,9 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { AuthenticationService } from './services/authentication.service';
-import { distinct } from 'rxjs/operators';
 import { StatusBar } from '@capacitor/status-bar';
 import { Platform } from '@ionic/angular';
 
@@ -32,12 +31,18 @@ export class AppComponent {
   private async checkAuth() {
     try {
       // This will trigger a check of the vault and ensure we are authenticated
-      if (!await this.auth.isAuthenticated()) {
+      const authenticated = await this.auth.isAuthenticated();
+      if (!authenticated) {
         this.router.navigate(['login']);
       }
     } catch (error) {
-      // Any failure we'll route to login
-      this.router.navigate(['login']);
+      console.error('error', JSON.stringify(error));
+      if (error?.contains('Not authenticated')) {
+        this.auth.logout();
+      } else {
+        // Any failure we'll route to login
+        this.router.navigate(['login']);
+      }
     }
   }
 }
