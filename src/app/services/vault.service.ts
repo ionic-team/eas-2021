@@ -23,36 +23,23 @@ export class VaultService {
     vault: Vault | BrowserVault;
 
     constructor() {
-        this.vault = Capacitor.getPlatform() === 'web' ? new BrowserVault(this.config) : new Vault(this.config);
-        this.init();
     }
 
-    /**
-     * This method is called before the very first sign in is done.
-     * If the device does not have biometrics then switch the vault to Secure Storage
-     * otherwise it will use the default configuration of a biometric vault.
-     */
-    public async configureFirstTime() {
+    public async init() {
         if (Capacitor.getPlatform() === 'web') {
-            return;
+            this.vault = new BrowserVault(this.config);
+        } else {
+            if (!await this.hasBiometrics()) {
+                this.config = {
+                    ...this.config,
+                    key: 'io.ionic.conferences.cs.auth.alternate',
+                    type: VaultType.SecureStorage,
+                    deviceSecurityType: DeviceSecurityType.None
+                };
+            }
+            this.vault = new Vault(this.config);
         }
 
-        if (!await this.hasBiometrics() && await this.vault.isEmpty()) {
-            this.vault.updateConfig({
-                ...this.config,
-                type: VaultType.SecureStorage,
-                deviceSecurityType: DeviceSecurityType.None
-            });
-        }
-    }
-
-    private async hasBiometrics(): Promise<boolean> {
-        // For this app we only want to use biometrics if the device is capable of strong encryption
-        return await Device.isBiometricsEnabled() &&
-            (await Device.getBiometricStrengthLevel() === BiometricSecurityStrength.Strong);
-    }
-
-    private async init() {
         this.vault.onConfigChanged(() => {
             console.log('Vault configuration was changed', this.config);
         });
@@ -72,4 +59,12 @@ export class VaultService {
         // If you would like the privacy screen set to true
         await Device.setHideScreenOnBackground(false);
     }
+
+    private async hasBiometrics(): Promise<boolean> {
+        // For this app we only want to use biometrics if the device is capable of strong encryption
+        return await Device.isBiometricsEnabled() &&
+            (await Device.getBiometricStrengthLevel() === BiometricSecurityStrength.Strong);
+    }
+
+
 }

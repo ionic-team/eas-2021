@@ -24,14 +24,14 @@ export class LoginPage implements OnInit {
   async signIn() {
     try {
       this.busy = true;
-      this.vaultService.configureFirstTime();
       await this.authenticationService.login();
-    } finally {
       setTimeout(() => {
         // Timeout is used here because we may have logged in and are routing to the home page
         this.busy = false;
       }, 1000);
-
+    } catch (error) {
+      this.busy = false;
+      console.error('signIn', error);
     }
   }
 

@@ -30,7 +30,7 @@ const routes: Routes = [
   {
     path: 'auth-transition',
     loadChildren: () => import('./pages/auth-transition/auth-transition.module').then( m => m.AuthTransitionPageModule)
-  },
+  }
 ];
 
 @NgModule({
