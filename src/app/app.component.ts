@@ -5,6 +5,7 @@ import { SplashScreen } from '@capacitor/splash-screen';
 import { AuthenticationService } from './services/authentication.service';
 import { StatusBar } from '@capacitor/status-bar';
 import { Platform } from '@ionic/angular';
+import { VaultService } from './services/vault.service';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,15 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private auth: AuthenticationService, private router: Router, private platform: Platform, private ngZone: NgZone) {
+  constructor(
+    private auth: AuthenticationService,
+    private router: Router,
+    private vaultService: VaultService,
+    private platform: Platform,
+    private ngZone: NgZone) {
     this.initializeApp();
     platform.resume.subscribe(() => {
+      console.log('PlatformResult.checkAuth', this.router.url);
       this.checkAuth();
     });
   }
@@ -22,10 +29,8 @@ export class AppComponent {
   async initializeApp() {
     if (Capacitor.isNativePlatform()) {
       await StatusBar.hide();
-      SplashScreen.hide();
+      await SplashScreen.hide();
     }
-
-    this.checkAuth();
   }
 
   private routeToLogin() {
@@ -51,7 +56,8 @@ export class AppComponent {
       if (error?.message?.includes('Not authenticated')) {
         this.auth.logout();
       } else {
-        // Any failure we'll route to login
+        // Any failure we'll clear the vault and route to login
+        await this.vaultService.clear();
         this.routeToLogin();
       }
     }

@@ -53,11 +53,23 @@ export class VaultService {
         });
 
         this.vault.onError((error: VaultError) => {
-            console.log(error);
+            console.error('this.vault.onError', error);
         });
 
         // If you would like the privacy screen set to true
         await Device.setHideScreenOnBackground(false);
+    }
+
+    public async clear() {
+        await this.vault.clear();
+    }
+
+    public async set(key: string, value: any) {
+        await this.vault.setValue(key, value);
+    }
+
+    public async get(key: string): Promise<any> {
+        return await this.vault.getValue(key);
     }
 
     private async hasBiometrics(): Promise<boolean> {
@@ -65,6 +77,4 @@ export class VaultService {
         return await Device.isBiometricsEnabled() &&
             (await Device.getBiometricStrengthLevel() === BiometricSecurityStrength.Strong);
     }
-
-
 }
