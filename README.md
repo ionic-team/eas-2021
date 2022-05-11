@@ -10,6 +10,7 @@ If you like the way authentication is handled in this app and would like to copy
 - [auth-guard.service.ts](src/app/services/auth-guard.service.ts) - The Angular service to check authentication when routing to a page
 - [app-routing.module.ts](src/app/app-routing.module.ts) - The configuration of which routes are protected by the auth guard
 - [app.component.ts](src/app/app.component.ts) - Authentication is checked on startup and resume
+- [app.module.ts](src/app/app.module.ts) - Demonstrates initialization of the Vault before anything else can use the token
 - [environment.ts](src/environments/environment.ts) - Configuration of the authentication provider
 
 Interested to know more? read on....
@@ -53,6 +54,16 @@ Important Points:
 - Our application is responsible for calling to check authentication at key points (like app resume and page change)
 - We can choose which parts of our application require additional authentication
 
+## Web Example
+
+This recorded web video shows:
+- The same Login Page provided by Azure B2C
+- Code is the same as for iOS/Android with the exception of the redirect_uri
+
+https://user-images.githubusercontent.com/84595830/167944971-120e7898-1252-4612-9df9-54d59e9b462f.mp4
+
+Important Points:
+- No difference in code for Web vs Native
 
 ## Design
 
