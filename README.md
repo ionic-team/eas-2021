@@ -14,6 +14,26 @@ If you like the way authentication is handled in this app and would like to copy
 
 Interested to know more? read on....
 
+
+## Android Example
+This recorded Android video shows:
+- Login provided by Azure B2C (could be almost any OIDC provider)
+- Login page is customized in Azure B2C portal
+- Login page uses the devices default password manager (in this case it is 1password)
+- Login page returns a token which is secured by Identity Vault (we're securing it using Biometrics)
+- When exiting the app and returning the biometric prompt for fingerprint is shown and checked (hidden during recording video)
+- When logout is chosen we are logged out of the OIDC providers page
+
+https://user-images.githubusercontent.com/84595830/167924999-17fd018a-2319-4512-98bd-cd42127421d0.mp4
+
+Important Points:
+- The password manager and login page is secured by the device
+- The OIDC login page captures cookies so a session is active until logged out (ie subsequent login attempts automatically pass back a token)
+- In our code we are securing the token is a vault that requires biometrics to access
+- We fall back to securing the token on the keychain if biometrics are not available or strong enough (eg class 2 Face Id)
+- We chose to lock the vault if the user exits out of the app and requires unlocking to resume the app
+- If a user fails the biometric check they need to go through login again
+
 ## Design
 
 Knowing upfront how you want your authentication to be used in an Application is critical. In this application the requirements are:
