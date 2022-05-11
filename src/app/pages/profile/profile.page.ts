@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { IonRouterOutlet, ModalController, ToastController } from '@ionic/angular';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { VaultService } from 'src/app/services/vault.service';
 import { SwagModalPage } from '../../components/swag-modal/swag-modal.page';
 
 
@@ -13,15 +13,16 @@ import { SwagModalPage } from '../../components/swag-modal/swag-modal.page';
 export class ProfilePage implements OnInit {
 
   constructor(public modalController: ModalController,
-    private auth: AuthenticationService,
+    private authService: AuthenticationService,
+    private vaultService: VaultService,
     private routerOutlet: IonRouterOutlet, public toastController: ToastController) { }
 
   async ngOnInit() {
   }
 
   async ionViewDidEnter() {
-   const token = await this.auth.getAccessToken();
-   console.log(this.auth.decodeToken(token));
+    const token = await this.authService.getAccessToken();
+    console.log(this.authService.decodeToken(token));
   }
 
   async openSwagModal() {
@@ -43,7 +44,9 @@ export class ProfilePage implements OnInit {
   }
 
   public async signOut() {
-    await this.auth.logout();
+    await this.authService.logout();
+    await this.authService.clearStorage();
+    await this.vaultService.clear();
   }
 
   private async presentToast(): Promise<void> {

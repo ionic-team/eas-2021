@@ -17,7 +17,7 @@ export class AuthenticationService extends IonicAuth {
     private vaultService: VaultService) {
     super(platform.is('hybrid')
       ? { ...nativeIonicAuthOptions, tokenStorageProvider: vaultService.vault }
-      : { ...webIonicAuthOptions }
+      : { ...webIonicAuthOptions, tokenStorageProvider: vaultService.vault }
     );
   }
 
