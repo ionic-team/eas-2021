@@ -1,4 +1,4 @@
-# Enterprise Summit
+# App Summit
 
 This is a sample application demonstrating the combination of Auth Connect and Identity Vault in a real world application that is designed to run on iOS, Android and web.
 
@@ -33,6 +33,26 @@ Important Points:
 - We fall back to securing the token on the keychain if biometrics are not available or strong enough (eg class 2 Face Id)
 - We chose to lock the vault if the user exits out of the app and requires unlocking to resume the app
 - If a user fails the biometric check they need to go through login again
+
+## iOS Example
+This recorded iOS video shows:
+- A customized Login page provided by Azure B2C
+- Login page uses the devices default password manager (this is Apple's)
+- After login we return to the home page
+- Resuming the application we check Biometrics and fail which returns us to login
+- We sign in again, and then sign out
+
+https://user-images.githubusercontent.com/84595830/167928101-4cc6dc3f-8a88-4d74-8087-dd0fc4ea2070.mp4
+
+Important Points:
+- The OIDC login page is served by the device (in its secure context) so our application is not responsible for security of its web view
+- Ionic's Auth Connect is responsible for initiating the login and returning the token
+- Our application provides the minimal set of configuration needed
+- Ionic's Identity Vault is responsible for securing the access token (and refreshing it)
+- Our application is responsible for providing a configuration of the OIDC provider (eg Azure B2C, Auth0)
+- Our application is responsible for calling to check authentication at key points (like app resume and page change)
+- We can choose which parts of our application require additional authentication
+
 
 ## Design
 
