@@ -44,9 +44,11 @@ export class ProfilePage implements OnInit {
   }
 
   public async signOut() {
-    await this.authService.logout();
     await this.authService.clearStorage();
     await this.vaultService.clear();
+
+    // Note: Logout will cause the app to reload so we cannot await logout!
+    this.authService.logout();
   }
 
   private async presentToast(): Promise<void> {
