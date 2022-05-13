@@ -1,7 +1,8 @@
 import { Injectable, NgZone } from '@angular/core';
 import { IonicAuth } from '@ionic-enterprise/auth';
-import { NavController, Platform } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 import { nativeIonicAuthOptions, webIonicAuthOptions } from '../../environments/environment';
+import { RouteService } from './route.service';
 import { VaultService } from './vault.service';
 
 @Injectable({
@@ -13,7 +14,7 @@ export class AuthenticationService extends IonicAuth {
   constructor(
     private platform: Platform,
     private ngZone: NgZone,
-    private navController: NavController,
+    private routeService: RouteService,
     private vaultService: VaultService) {
     super(platform.is('hybrid')
       ? { ...nativeIonicAuthOptions, tokenStorageProvider: vaultService.vault }
@@ -27,11 +28,13 @@ export class AuthenticationService extends IonicAuth {
   }
 
   public async onLogout(): Promise<void> {
-    this.navController.navigateRoot('login', { animated: false });
+    this.routeService.returnToLogin();
     this.ngZone.run(() => {
       this.authenticated = false;
     });
   }
+
+
 
   /**
    * This code will decode a JWT token and return the JSON payload
@@ -53,15 +56,8 @@ export class AuthenticationService extends IonicAuth {
 
 
   async onLoginSuccess(): Promise<void> {
-    // As authenticated could be bound to a view we would want the view to change
-    // when the variable changes, so its wrapped with ngZone.run
-    this.ngZone.run(() => {
       this.authenticated = true;
-
-      // I've chosen to navigate to the root of the app without animation
-      // as the login window already animated out
-      this.navController.navigateRoot('/', { animated: false });
-    });
+      this.routeService.goToRoot();
   }
 
 }

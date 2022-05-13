@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { RouteService } from 'src/app/services/route.service';
 
 @Component({
   selector: 'app-auth-transition',
@@ -9,7 +9,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class AuthTransitionPage implements OnInit {
 
-  constructor(private router: Router, private auth: AuthenticationService) { }
+  constructor(private routeService: RouteService, private auth: AuthenticationService) { }
 
   ngOnInit() {
   }
@@ -18,7 +18,7 @@ export class AuthTransitionPage implements OnInit {
     try {
       // Transitioning to logout or login
       if (window.location.hash === '#logout') {
-        this.router.navigate(['login']);
+        this.routeService.returnToLogin();
       } else {
         await this.auth.handleLogin();
       }

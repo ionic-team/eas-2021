@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Router, CanActivate } from '@angular/router';
+import { CanActivate } from '@angular/router';
 import { AuthenticationService } from './authentication.service';
+import { RouteService } from './route.service';
 import { VaultService } from './vault.service';
 @Injectable()
 export class AuthGuardService implements CanActivate {
     constructor(
         private authService: AuthenticationService,
-        private router: Router,
+        private routeService: RouteService,
         private vaultService: VaultService) { }
     async canActivate(): Promise<boolean> {
         if (!await this.authService.isAuthenticated()) {
             this.vaultService.clear();
-            this.router.navigate(['login']);
+            this.routeService.returnToLogin();
             return false;
         } else {
             return true;
