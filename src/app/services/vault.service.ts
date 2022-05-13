@@ -3,8 +3,10 @@ import { Capacitor } from '@capacitor/core';
 import {
     BiometricSecurityStrength,
     BrowserVault, Device, DeviceSecurityType,
-    IdentityVaultConfig, Vault, VaultError, VaultType
+    IdentityVaultConfig, Vault, VaultError, VaultErrorCodes, VaultType
 } from '@ionic-enterprise/identity-vault';
+import { AuthenticationService } from './authentication.service';
+import { RouteService } from './route.service';
 
 @Injectable({
     providedIn: 'root'
@@ -22,7 +24,7 @@ export class VaultService {
 
     vault: Vault | BrowserVault;
 
-    constructor() {
+    constructor(private routeService: RouteService) {
     }
 
     public async init() {
@@ -54,6 +56,9 @@ export class VaultService {
 
         this.vault.onError((error: VaultError) => {
             console.error('this.vault.onError', error);
+            if (error.code === VaultErrorCodes.UserCanceledInteraction) {
+                this.routeService.returnToLogin();
+            }
         });
 
         // If you would like the privacy screen set to true
