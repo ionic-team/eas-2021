@@ -19,11 +19,11 @@ export const nativeIonicAuthOptions: IonicAuthOptions = {
   // OpenID configuration
   discoveryUrl: 'https://ioniccs.b2clogin.com/ioniccs.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1_SignUp',
   // the URI to redirect to after log in
-  redirectUri: 'ionic.cs://login',
+  redirectUri: 'ionic.cs.appsummit://login',
   // requested scopes from provider
   scope: 'openid offline_access email profile https://ioniccs.onmicrosoft.com/5a5ef942-0e44-46a8-bbac-6a8ba7654eb0/user_impersonation',
   // the URL to redirect to after log out
-  logoutUrl: 'ionic.cs://login',
+  logoutUrl: 'ionic.cs.appsummit://login',
   // The type of iOS webview to use. 'shared' will use a webview that can
   // share session/cookies on iOS to provide SSO across multiple apps but
   // will cause a prompt for the user which asks them to confirm they want

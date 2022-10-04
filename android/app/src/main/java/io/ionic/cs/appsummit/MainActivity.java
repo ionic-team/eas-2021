@@ -1,4 +1,4 @@
-package io.ionic.conferences.cs.auth;
+package io.ionic.cs.appsummit;
 
 import com.getcapacitor.BridgeActivity;
 
