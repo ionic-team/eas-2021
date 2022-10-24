@@ -22,7 +22,9 @@ export class AppComponent {
     this.initializeApp();
     platform.resume.subscribe(() => {
       console.log('PlatformResult.checkAuth', this.router.url);
-      this.checkAuth();
+      setTimeout(() => {
+        this.checkAuth();
+      },300); // This gives time for the vault to be locked because the vault uses lockAfterBackgrounded feature
     });
   }
 
@@ -44,10 +46,12 @@ export class AppComponent {
       // When Auth Connect returns to the app it will load the app again
       // We want it to load without checking authentication so that it can
       // capture the token when auth-transition is routed to.
+      console.log('checkAuth().window.location.hash.length', window.location.hash.length);
       return;
     }
     try {
       // This will trigger a check of the vault and ensure we are authenticated
+      console.log('checkAuth().isAuthenticated()');
       const authenticated = await this.auth.isAuthenticated();
       if (!authenticated) {
         this.routeToLogin();
