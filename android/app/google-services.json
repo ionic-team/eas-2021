@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1059053761816:android:b9669572b33aeabdc6da6d",
         "android_client_info": {
-          "package_name": "io.ionic.conferences.cs.auth"
+          "package_name": "io.ionic.cs.appsummit"
         }
       },
       "oauth_client": [
