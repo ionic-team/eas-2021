@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { AgendaItem, Speaker, Sponsor } from '../types';
+import { AgendaItem, Company, Speaker, Sponsor } from '../types';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,10 @@ export class ApiService {
 
   public async getSponsors(): Promise<Sponsor[]>  {
     return await this.get('sponsors.json');
+  }
+
+  public async getCompanies(): Promise<Company[]>  {
+    return await this.get('companies.json');
   }
 
   private async get(url: string) {

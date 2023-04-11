@@ -20,7 +20,7 @@ export class AppComponent {
     private platform: Platform,
     private ngZone: NgZone) {
     this.initializeApp();
-    platform.resume.subscribe(() => {
+    this.platform.resume.subscribe(() => {
       console.log('PlatformResult.checkAuth', this.router.url);
       setTimeout(() => {
         this.checkAuth();
