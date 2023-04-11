@@ -3,18 +3,17 @@
 
 <ion-content>
   <div class="frame" [ngClass]="showLogo ? 'show' : 'hide'">
-    <ion-img (ionImgDidLoad)="showLogo = true" [src]="isDark ? 'assets/ionic-dark.svg' : 'assets/ionic.svg'" class="logo">
+    <ion-img (ionImgDidLoad)="showLogo = true" [src]="isDark ? 'assets/ionic-dark.svg' : 'assets/ionic.svg'"
+      class="logo">
     </ion-img>
     <ion-text color="dark">
       <h2>Enterprise Summit</h2>
       <h2>&nbsp;</h2>
     </ion-text>
-
+    <ion-spinner *ngIf="busy" color="dark" name="crescent"></ion-spinner>
     <div class="buttons">
-      <ion-spinner [hidden]="!busy" color="dark" name="crescent"></ion-spinner>
-      <ion-button [hidden]="busy" (click)="signIn()" mode="ios" color="dark" fill="outline"
-        size="large">Sign In / Up</ion-button>
-      
+      <ion-button *ngIf="!busy" (click)="signIn()" mode="ios" color="dark" fill="outline" size="large">Sign In /
+        Up</ion-button>
     </div>
   </div>
 </ion-content>
