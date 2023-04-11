@@ -5,9 +5,7 @@ import { nativeIonicAuthOptions, webIonicAuthOptions } from '../../environments/
 import { RouteService } from './route.service';
 import { VaultService } from './vault.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class AuthenticationService {
   private provider: AzureProvider;
   private result: AuthResult | undefined;
@@ -57,6 +55,17 @@ export class AuthenticationService {
     if (!this.result) {
       console.error(`authResult is empty`);
     }
+    
+    // Hack
+    if (this.result.provider == undefined) {
+      this.result.provider = {
+        options: webIonicAuthOptions,
+        config: undefined, 
+        authorizeUrl: undefined,
+        manifest: await AuthConnect.fetchManifest(webIonicAuthOptions.discoveryUrl)
+      };
+    }
+    
     try {
       await AuthConnect.logout(this.provider, this.result!);
     } catch (error) {
