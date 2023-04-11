@@ -10,7 +10,6 @@ import { VaultService } from 'src/app/services/vault.service';
 })
 export class LoginPage implements OnInit {
   public busy = false;
-  public authenticated: boolean;
   public showLogo = false;
   public isDark = !window.matchMedia('(prefers-color-scheme: dark)').matches;
 

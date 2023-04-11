@@ -8,6 +8,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 3
         versionName "1.1"
+        manifestPlaceholders = [
+            'AUTH_URL_SCHEME': 'ionic.cs.appsummit'
+        ]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.

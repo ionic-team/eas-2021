@@ -32,7 +32,7 @@
     "@capacitor/push-notifications": "4.1.2",
     "@capacitor/splash-screen": "4.2.0",
     "@capacitor/status-bar": "4.1.1",
-    "@ionic-enterprise/auth": "3.9.5",
+    "@ionic-enterprise/auth": "4.0.0",
     "@ionic-enterprise/identity-vault": "5.9.6",
     "@ionic/angular": "6.3.9",
     "rxjs": "~6.6.0",

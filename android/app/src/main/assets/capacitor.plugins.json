@@ -34,5 +34,9 @@
 	{
 		"pkg": "@capacitor/status-bar",
 		"classpath": "com.capacitorjs.plugins.statusbar.StatusBarPlugin"
+	},
+	{
+		"pkg": "@ionic-enterprise/auth",
+		"classpath": "io.ionic.authconnect.AuthConnectPlugin"
 	}
 ]

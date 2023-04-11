@@ -1,5 +1,5 @@
-import { Injectable, NgZone } from '@angular/core';
-import { IonicAuth } from '@ionic-enterprise/auth';
+import { Injectable } from '@angular/core';
+import { AuthConnect, AuthResult, AzureProvider, ProviderOptions, TokenType } from '@ionic-enterprise/auth';
 import { Platform } from '@ionic/angular';
 import { nativeIonicAuthOptions, webIonicAuthOptions } from '../../environments/environment';
 import { RouteService } from './route.service';
@@ -8,56 +8,95 @@ import { VaultService } from './vault.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService extends IonicAuth {
-  public authenticated: boolean;
+export class AuthenticationService {
+  private provider: AzureProvider;
+  private result: AuthResult | undefined;
+  private options: ProviderOptions;
 
   constructor(
     private platform: Platform,
-    private ngZone: NgZone,
     private routeService: RouteService,
     private vaultService: VaultService) {
-    super(platform.is('hybrid')
-      ? { ...nativeIonicAuthOptions, tokenStorageProvider: vaultService.vault }
-      : { ...webIonicAuthOptions, tokenStorageProvider: vaultService.vault }
-    );
+    this.options = this.platform.is('hybrid') ? nativeIonicAuthOptions : webIonicAuthOptions;
+    this.provider = new AzureProvider();
+    this.init();
   }
 
-  // Called as part of CURRENT implicit login flow only
-  public async handleLogin() {
-    await super.handleLoginCallback();
-  }
-
-  public async onLogout(): Promise<void> {
-    this.routeService.returnToLogin();
-    this.ngZone.run(() => {
-      this.authenticated = false;
+  public async init() {
+    await AuthConnect.setup({
+      platform: this.platform.is('hybrid') ? 'capacitor' : 'web',
+      logLevel: 'DEBUG',
+      ios: {
+        webView: 'private',
+        safariWebViewOptions: { dismissButtonStyle: 'close', preferredBarTintColor: '#FFFFFF', preferredControlTintColor: '#333333' }
+      },
+      android: { isAnimated: false, showDefaultShareMenuItem: false },
+      web: { uiMode: 'current', authFlow: 'PKCE' }
     });
   }
 
+  public async login() {
+    this.result = await AuthConnect.login(this.provider, this.options);
+    await this.vaultService.set(this.result);
+    this.routeService.goToRoot();
+  }
 
+  // This is call for web and takes the auth info from query parameters and gives it to auth connect to handle
+  // We then store the token and redirect to the main page
+  public async handleLogin() {
+    const urlParams = new URLSearchParams(window.location.search);
+    this.result = await AuthConnect.handleLoginCallback({ code: urlParams.get('code')!, state: urlParams.get('state')! });
+    await this.vaultService.set(this.result);
+    this.routeService.goToRoot();
+  }
 
-  /**
-   * This code will decode a JWT token and return the JSON payload
-   * You can use this get access to claims such as the users name
-   * or profile image (depending on the OIDC provider)
-   *
-   * @param token
-   */
-  public decodeToken(token: string) {
-    const base64Url = token.split('.')[1];
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(atob(base64).split('').map((c) => {
-      const v = ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-      return `%${v}`;
-    }).join(''));
+  public async logout(): Promise<void> {
+    if (!this.provider) {
+      console.error(`provider is empty`);
+    }
+    if (!this.result) {
+      console.error(`authResult is empty`);
+    }
+    try {
+      await AuthConnect.logout(this.provider, this.result!);
+    } catch (error) {
+      console.error('AuthConnect.logout', error);
+    }
+    this.routeService.returnToLogin();
+  }
 
-    return JSON.parse(jsonPayload);
-  };
+  public async getAccessToken(): Promise<string | undefined> {
+    return await AuthConnect.getToken(TokenType.access, this.result!);
+  }
 
+  public decodeToken() {
+    return AuthConnect.decodeToken(TokenType.access, this.result!);
+  }
 
-  async onLoginSuccess(): Promise<void> {
-      this.authenticated = true;
-      this.routeService.goToRoot();
+  public async isAuthenticated(): Promise<boolean> {
+    try {
+      const authResult = await this.vaultService.get();
+      if (!authResult) {
+        return false;
+      }
+      const { idToken } = authResult;
+      if (!idToken) {
+        throw new Error('No ID Token');
+      }
+
+      const expired = await AuthConnect.isAccessTokenExpired(authResult);
+      if (!expired) {
+        return true;
+      }
+
+      const newAuthResult = await AuthConnect.refreshSession(this.provider, authResult);
+      await this.vaultService.set(newAuthResult);
+      return true;
+    } catch (e) {
+      console.error(e);
+      await this.vaultService.remove();
+      return false;
+    }
   }
 
 }
