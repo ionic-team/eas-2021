@@ -23,7 +23,7 @@ export class AuthenticationService {
   public async init() {
     await AuthConnect.setup({
       platform: this.platform.is('hybrid') ? 'capacitor' : 'web',
-      logLevel: 'DEBUG',
+      logLevel: 'ERROR',
       ios: {
         webView: 'private',
         safariWebViewOptions: { dismissButtonStyle: 'close', preferredBarTintColor: '#FFFFFF', preferredControlTintColor: '#333333' }

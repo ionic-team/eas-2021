@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { Sponsor, SponsorTier } from '../../types';
+import { Sponsor } from '../../types';
 import { SponsorService } from '../../services/sponsor.service';
-import { SponsorViewComponent } from '../sponsor-view/sponsor-view.component';
 import { Browser } from '@capacitor/browser';
 
 @Component({
@@ -17,12 +15,11 @@ export class SponsorCardComponent implements OnInit {
   public sponsor: Sponsor;
 
   constructor(
-    private sponsorService: SponsorService,
-    private modalController: ModalController
+    private sponsorService: SponsorService
   ) { }
 
-  ngOnInit() {
-    this.sponsor = this.sponsorService.getSponsor(this.id);
+  async ngOnInit() {
+    this.sponsor = await this.sponsorService.getSponsor(this.id);
   }
 
   async openLink(link: string) {

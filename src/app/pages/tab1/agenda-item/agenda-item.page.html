@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="page-content" [fullscreen]="true">
+<ion-content class="page-content" *ngIf="agendaItem" [fullscreen]="true">
   <div class="header ion-padding">
 
     <div class="avatars">

@@ -24,9 +24,9 @@ export class AgendaCardComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() {
-    this.agenda = this.agendaService.getAgendaItem(this.id);
-    this.speakers = this.speakerService.getSpeakers(this.agenda.speakerIds);
+  async ngOnInit() {
+    this.agenda = await this.agendaService.getAgendaItem(this.id);
+    this.speakers = await this.speakerService.getSpeakers(this.agenda.speakerIds);
     this.photoUrls = this.speakers.map(speaker => speaker.photoUrl);
   }
 

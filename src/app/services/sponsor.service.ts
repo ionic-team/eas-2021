@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Sponsor, SponsorTier } from '../types';
+import { ApiService } from './api.service';
 
 const LOREM_IPSUM = 'Details coming soon.';
 
@@ -118,13 +119,20 @@ export class SponsorService {
     },
   ];
 
-  constructor() {}
-
-  getSponsors(): Sponsor[] {
+  constructor(private apiService: ApiService) {}
+  
+  async getSponsors(): Promise<Sponsor[]> {
+    await this.init();
     return this.sponsors;
   }
 
-  getSponsor(id: number): Sponsor | undefined {
+  async getSponsor(id: number): Promise<Sponsor | undefined> {
+    await this.init();
     return this.sponsors.find(sponsor => sponsor.id === id);
+  }
+
+  private async init(): Promise<void> {
+    if (this.sponsors) return;
+    this.sponsors = await this.apiService.getSponsors();    
   }
 }

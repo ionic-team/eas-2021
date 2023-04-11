@@ -5,7 +5,8 @@
 import { ProviderOptions } from '@ionic-enterprise/auth';
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://ionic-app-summit.netlify.app'
 };
 
 export const nativeIonicAuthOptions: ProviderOptions = {

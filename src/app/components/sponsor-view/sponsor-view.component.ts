@@ -18,8 +18,8 @@ export class SponsorViewComponent implements OnInit {
     private modalController: ModalController
   ) { }
 
-  ngOnInit() {
-    this.sponsor = this.sponsorService.getSponsor(this.id);
+  async ngOnInit() {
+    this.sponsor = await this.sponsorService.getSponsor(this.id);
   }
 
   closeModal() {

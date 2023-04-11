@@ -19,11 +19,12 @@ export class Tab1Page implements OnInit {
     private modalController: ModalController,
     private pushNotificationService: PushNotificationService,
     private storageService: StorageService) {
-    this.agenda = this.agendaService.getAgenda();
+    
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.presentModal();
+    this.agenda = await this.agendaService.getAgenda();
   }
 
   trackItems(index: number, itemObject: AgendaItem) {
