@@ -27,7 +27,7 @@ export class VaultService {
     constructor(private routeService: RouteService) {
     }
 
-    public async init() {
+    public async init(): Promise<void> {
         if (Capacitor.getPlatform() === 'web') {
             this.vault = new BrowserVault(this.config);
         } else {

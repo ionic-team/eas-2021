@@ -34,6 +34,7 @@
     "@capacitor/status-bar": "4.1.1",
     "@ionic-enterprise/auth": "4.0.0",
     "@ionic-enterprise/identity-vault": "5.9.6",
+    "@ionic-enterprise/secure-storage": "3.0.0",
     "@ionic/angular": "7.0.1",
     "rxjs": "7.8.0",
     "tslib": "2.4.1",
