@@ -22,7 +22,7 @@ export class ProfilePage implements OnInit {
 
   async ionViewDidEnter() {
     const token = await this.authService.getAccessToken();
-    console.log(this.authService.decodeToken(token));
+    console.log(this.authService.decodeToken());
   }
 
   async openSwagModal() {
@@ -44,7 +44,6 @@ export class ProfilePage implements OnInit {
   }
 
   public async signOut() {
-    await this.authService.clearStorage();
     await this.vaultService.clear();
 
     // Note: Logout will cause the app to reload so we cannot await logout!

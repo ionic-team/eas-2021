@@ -28,3 +28,6 @@ project(':capacitor-splash-screen').projectDir = new File('../node_modules/@capa
 
 include ':capacitor-status-bar'
 project(':capacitor-status-bar').projectDir = new File('../node_modules/@capacitor/status-bar/android')
+
+include ':ionic-enterprise-auth'
+project(':ionic-enterprise-auth').projectDir = new File('../node_modules/@ionic-enterprise/auth/android')

@@ -12,10 +12,9 @@
 
     <div class="buttons">
       <ion-spinner [hidden]="!busy" color="dark" name="crescent"></ion-spinner>
-      <ion-button [hidden]="busy || authenticated" (click)="signIn()" mode="ios" color="dark" fill="outline"
+      <ion-button [hidden]="busy" (click)="signIn()" mode="ios" color="dark" fill="outline"
         size="large">Sign In / Up</ion-button>
-      <ion-button [hidden]="busy || !authenticated" (click)="signOut()" mode="ios" color="dark" fill="outline"
-        size="large">Sign Out</ion-button>
+      
     </div>
   </div>
 </ion-content>

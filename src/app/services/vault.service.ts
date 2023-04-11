@@ -5,8 +5,8 @@ import {
     BrowserVault, Device, DeviceSecurityType,
     IdentityVaultConfig, Vault, VaultError, VaultErrorCodes, VaultType
 } from '@ionic-enterprise/identity-vault';
-import { AuthenticationService } from './authentication.service';
 import { RouteService } from './route.service';
+import { AuthResult } from '@ionic-enterprise/auth';
 
 @Injectable({
     providedIn: 'root'
@@ -69,12 +69,18 @@ export class VaultService {
         await this.vault.clear();
     }
 
-    public async set(key: string, value: any) {
-        await this.vault.setValue(key, value);
+    public async set(value: AuthResult) {
+        await this.vault.setValue('auth', JSON.stringify(value));
     }
 
-    public async get(key: string): Promise<any> {
-        return await this.vault.getValue(key);
+    public async get(): Promise<AuthResult | undefined> {
+        const value = await this.vault.getValue('auth');
+        if (value == null) return undefined;
+        return JSON.parse(value);
+    }
+
+    public async remove(): Promise<void> {
+        return await this.vault.removeValue('auth');
     }
 
     private async hasBiometrics(): Promise<boolean> {
