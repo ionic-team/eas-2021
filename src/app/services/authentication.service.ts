@@ -9,13 +9,11 @@ import { checkAuthResult } from './util';
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
   private result: AuthResult | undefined;
-  private options: ProviderOptions;
 
   constructor(
     private platform: Platform,
     private routeService: RouteService,
     private vaultService: VaultService) {
-    this.options = this.platform.is('hybrid') ? nativeIonicAuthOptions : webIonicAuthOptions;
     this.init();
   }
 
@@ -28,11 +26,19 @@ export class AuthenticationService {
       logLevel: 'DEBUG',
       ios: {
         webView: 'private',
-        safariWebViewOptions: { dismissButtonStyle: 'close', preferredBarTintColor: '#FFFFFF', preferredControlTintColor: '#333333' }
+        safariWebViewOptions: { 
+          dismissButtonStyle: 'close', 
+          preferredBarTintColor: '#FFFFFF', 
+          preferredControlTintColor: '#333333' }
       },
-      android: { isAnimated: false, showDefaultShareMenuItem: false },
-      web: { uiMode: 'current', authFlow: 'PKCE' }
+      android: { 
+        isAnimated: false, 
+        showDefaultShareMenuItem: false },
+      web: { 
+        uiMode: 'current', 
+        authFlow: 'PKCE' }
     });
+
     try {
       this.result = await this.vaultService.get();
     } catch (error) {
@@ -41,8 +47,11 @@ export class AuthenticationService {
     }
   }
 
+  /**
+   * Login
+   */
   public async login() {
-    this.result = await AuthConnect.login(this.azureB2CProvider(), this.options);
+    this.result = await AuthConnect.login(this.azureB2CProvider(), this.getAuthOptions());
     await this.vaultService.set(this.result);
     this.routeService.goToRoot();
   }
@@ -58,12 +67,10 @@ export class AuthenticationService {
     this.routeService.goToRoot();
   }
 
-  public async logout(): Promise<void> {
-
-    if (!this.result) {
-      console.error(`authResult is empty`);
-    }
-
+  /**
+   * Logout
+   */
+  public async logout() {
     await checkAuthResult(this.result);
 
     try {
@@ -72,14 +79,6 @@ export class AuthenticationService {
       console.error('AuthConnect.logout', error);
     }
     this.routeService.returnToLogin();
-  }
-
-  public async getAccessToken(): Promise<string | undefined> {
-    return await AuthConnect.getToken(TokenType.access, this.result!);
-  }
-
-  public decodeToken() {
-    return AuthConnect.decodeToken(TokenType.id, this.result!);
   }
 
   public async isAuthenticated(): Promise<boolean> {
@@ -103,13 +102,25 @@ export class AuthenticationService {
       return true;
     } catch (e) {
       console.error(e);
-      await this.vaultService.remove();
+      await this.vaultService.clear();
       return false;
     }
   }
 
+  public async getAccessToken(): Promise<string | undefined> {
+    return await AuthConnect.getToken(TokenType.access, this.result!);
+  }
+
+  public decodeToken() {
+    return AuthConnect.decodeToken(TokenType.id, this.result!);
+  }
+
   private azureB2CProvider(): AzureProvider {
     return new AzureProvider();
+  }
+
+  private getAuthOptions(): ProviderOptions {
+    return this.platform.is('hybrid') ? nativeIonicAuthOptions : webIonicAuthOptions;
   }
 
 }

@@ -83,10 +83,6 @@ export class VaultService {
         return JSON.parse(value);
     }
 
-    public async remove(): Promise<void> {
-        return await this.vault.removeValue('auth');
-    }
-
     private async hasBiometrics(): Promise<boolean> {
         // For this app we only want to use biometrics if the device is capable of strong encryption
         return await Device.isBiometricsEnabled() &&
