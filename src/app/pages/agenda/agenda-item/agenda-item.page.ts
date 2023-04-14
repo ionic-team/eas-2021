@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SpeakerService } from '../../../services/speaker.service';
 import { AgendaService } from '../../../services/agenda.service';
@@ -14,7 +14,7 @@ import { Browser } from '@capacitor/browser';
   templateUrl: './agenda-item.page.html',
   styleUrls: ['./agenda-item.page.scss'],
 })
-export class AgendaItemPage {
+export class AgendaItemPage implements OnInit {
   public agendaItem: AgendaItem;
   public speakers: Speaker[];
   public photoUrls: string[] = [];
@@ -26,10 +26,12 @@ export class AgendaItemPage {
     private companyService: CompanyService,
     private talkReminderService: TalkReminderService,
     private toastController: ToastController
-  ) {
-    const agendaId = route.snapshot.paramMap.get('agendaId');
-    this.agendaItem = agendaService.getAgendaItem(parseInt(agendaId, 10));
-    this.speakers = speakerService.getSpeakers(this.agendaItem.speakerIds);
+  ) { }
+
+  async ngOnInit() {    
+    const agendaId = this.route.snapshot.paramMap.get('agendaId');
+    this.agendaItem = await this.agendaService.getAgendaItem(parseInt(agendaId, 10));
+    this.speakers = await this.speakerService.getSpeakers(this.agendaItem.speakerIds);
     this.photoUrls = this.speakers.map(speaker => speaker.photoUrl);
   }
 
@@ -47,7 +49,7 @@ export class AgendaItemPage {
   }
 
   async triggerBrowser() {
-    await Browser.open({ url: 'https://ionic.io/events/enterprise-app-summit-21'});
+    await Browser.open({ url: 'https://ionic.io/events/enterprise-app-summit-21' });
   }
 
   formatTalkTime(agendaItem: AgendaItem) {

@@ -6,6 +6,7 @@ import { PermissionsModalComponent } from 'src/app/components/permissions-modal/
 import { Capacitor } from '@capacitor/core';
 import { PushNotificationService } from 'src/app/services/push-notification.service';
 import { StorageService } from 'src/app/services/storage.service';
+import { CompanyService } from 'src/app/services/company.service';
 
 @Component({
   selector: 'app-tab1',
@@ -18,12 +19,15 @@ export class Tab1Page implements OnInit {
   constructor(private agendaService: AgendaService,
     private modalController: ModalController,
     private pushNotificationService: PushNotificationService,
+    private companyService: CompanyService,
     private storageService: StorageService) {
-    this.agenda = this.agendaService.getAgenda();
+    
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.presentModal();
+    await this.companyService.getCompanies();
+    this.agenda = await this.agendaService.getAgenda();
   }
 
   trackItems(index: number, itemObject: AgendaItem) {

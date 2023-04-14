@@ -9,10 +9,10 @@
 #   npx browserslist
 
 
-Chrome >=60
-ChromeAndroid >=60
-Firefox >=63
+Chrome >=79
+ChromeAndroid >=79
+Firefox >=70
 Firefox ESR
 Edge >=79
-Safari >=13
-iOS >=13
+Safari >=14
+iOS >=14

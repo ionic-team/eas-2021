@@ -1,0 +1,11 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Project to simulate a backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "netlify deploy --dir dist --prod"
+  },
+  "author": "Ionic",
+  "license": "MIT"
+}

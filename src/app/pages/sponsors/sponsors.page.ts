@@ -16,7 +16,11 @@ export class SponsorsPage implements OnInit {
   constructor(
     private sponsorService: SponsorService
   ) {
-    const sponsors = sponsorService.getSponsors();
+
+  }
+
+  async ngOnInit() {
+    const sponsors = await this.sponsorService.getSponsors();
     sponsors.forEach(sponsor => {
       switch (sponsor.tier) {
         case SponsorTier.Platinum:
@@ -47,9 +51,6 @@ export class SponsorsPage implements OnInit {
           break;
       }
     });
-  }
-
-  ngOnInit() {
   }
 
 }

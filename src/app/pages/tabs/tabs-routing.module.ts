@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'agenda',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../agenda/tab1.module').then(m => m.Tab1PageModule)
       },
       {
         path: 'speakers',

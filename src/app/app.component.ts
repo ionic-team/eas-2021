@@ -20,11 +20,11 @@ export class AppComponent {
     private platform: Platform,
     private ngZone: NgZone) {
     this.initializeApp();
-    platform.resume.subscribe(() => {
+    this.platform.resume.subscribe(() => {
       console.log('PlatformResult.checkAuth', this.router.url);
       setTimeout(() => {
         this.checkAuth();
-      },300); // This gives time for the vault to be locked because the vault uses lockAfterBackgrounded feature
+      }, 300); // This gives time for the vault to be locked because the vault uses lockAfterBackgrounded feature
     });
   }
 
@@ -51,9 +51,7 @@ export class AppComponent {
     }
     try {
       // This will trigger a check of the vault and ensure we are authenticated
-      console.log('checkAuth().isAuthenticated()');
-      const authenticated = await this.auth.isAuthenticated();
-      if (!authenticated) {
+      if (!await this.auth.isAuthenticated()) {
         this.routeToLogin();
       }
     } catch (error) {

@@ -34,7 +34,6 @@ export class ProfilePage implements OnInit {
   async openSwagModal() {
     const modal: HTMLIonModalElement = await this.modalController.create({
       component: SwagModalPage,
-      swipeToClose: true,
       presentingElement: this.routerOutlet.nativeEl,
       componentProps: {}
     });
