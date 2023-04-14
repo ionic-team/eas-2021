@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="app_name">App Summit</string>
-  <string name="title_activity_main">App Summit</string>
+  <string name="app_name">Conference App</string>
+  <string name="title_activity_main">Conference App</string>
   <string name="package_name">io.ionic.conferences.eas2021</string>
   <string name="custom_url_scheme">io.ionic.conferences.eas2021</string>
   <string name="ionic_app_id">60e11038</string>

@@ -1,8 +1,8 @@
 {
-  "name": "enterprise-summit",
+  "name": "conference-app",
   "version": "1.1.0",
   "author": "Ionic",
-  "homepage": "https://ionic.io/events/enterprise-app-summit-21",
+  "homepage": "https://github.com/dtarnawsky/eas-2021",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -73,5 +73,5 @@
     "ts-node": "8.10.2",
     "typescript": "4.8.3"
   },
-  "description": "Conference app for the 2021 Ionic Enterprise App Summit"
+  "description": "Conference App"
 }
