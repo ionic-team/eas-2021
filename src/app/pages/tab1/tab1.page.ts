@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AgendaItem } from '../../types';
 import { AgendaService } from '../../services/agenda.service';
 import { ModalController } from '@ionic/angular';
@@ -12,7 +12,7 @@ import { StorageService } from 'src/app/services/storage.service';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
   public agenda: AgendaItem[] = [];
 
   constructor(private agendaService: AgendaService,
@@ -23,6 +23,7 @@ export class Tab1Page {
   }
 
   ngOnInit() {
+    console.log('My app has initialized');
     this.presentModal();
   }
 
@@ -43,7 +44,7 @@ export class Tab1Page {
       else if (permStatus === 'prompt' && !(await this.storageService.getPushNotesModalShown())) {
         // On iOS, ask the user for permission first. only once.
         await this.storageService.setPushNotesModalShown();
-        
+
         const modal = await this.modalController.create({
           component: PermissionsModalComponent,
           initialBreakpoint: 1,
